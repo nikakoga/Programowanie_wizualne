@@ -67,7 +67,7 @@
             Controls.Add(clock);
             Margin = new Padding(3, 4, 3, 4);
             Name = "Form1";
-            Text = "Form1";
+            Text = "Clock";
             Load += Form1_Load;
             ResumeLayout(false);
             PerformLayout();
