@@ -28,43 +28,55 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.clock = new System.Windows.Forms.Label();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.SuspendLayout();
+            components = new System.ComponentModel.Container();
+            clock = new Label();
+            timer1 = new System.Windows.Forms.Timer(components);
+            button1 = new Button();
+            SuspendLayout();
             // 
             // clock
             // 
-            this.clock.AutoSize = true;
-            this.clock.Font = new System.Drawing.Font("Impact", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.clock.Location = new System.Drawing.Point(478, 187);
-            this.clock.Name = "clock";
-            this.clock.Size = new System.Drawing.Size(123, 27);
-            this.clock.TabIndex = 0;
-            this.clock.Text = "00:00:00 AM";
-            this.clock.Click += new System.EventHandler(this.label1_Click);
+            clock.AutoSize = true;
+            clock.Font = new Font("Impact", 16F, FontStyle.Regular, GraphicsUnit.Point);
+            clock.Location = new Point(82, 50);
+            clock.Name = "clock";
+            clock.Size = new Size(147, 34);
+            clock.TabIndex = 0;
+            clock.Text = "00:00:00 AM";
+            clock.Click += label1_Click;
             // 
             // timer1
             // 
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            timer1.Tick += timer1_Tick;
+            // 
+            // button1
+            // 
+            button1.Location = new Point(115, 111);
+            button1.Name = "button1";
+            button1.Size = new Size(94, 29);
+            button1.TabIndex = 1;
+            button1.Text = "Start";
+            button1.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.clock);
-            this.Name = "Form1";
-            this.Text = "Form1";
-            this.Load += new System.EventHandler(this.Form1_Load);
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(313, 211);
+            Controls.Add(button1);
+            Controls.Add(clock);
+            Margin = new Padding(3, 4, 3, 4);
+            Name = "Form1";
+            Text = "Form1";
+            Load += Form1_Load;
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
 
         private Label clock;
         private System.Windows.Forms.Timer timer1;
+        private Button button1;
     }
 }
