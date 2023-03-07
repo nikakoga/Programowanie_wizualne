@@ -28,8 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             StopButton = new Button();
             Stoper = new Label();
+            timer1 = new System.Windows.Forms.Timer(components);
             SuspendLayout();
             // 
             // StopButton
@@ -54,7 +56,10 @@
             Stoper.Size = new Size(94, 28);
             Stoper.TabIndex = 1;
             Stoper.Text = "00:00:00";
-            Stoper.Click += Stoper_Click;
+            // 
+            // timer1
+            // 
+            timer1.Tick += timer1_Tick;
             // 
             // Form2
             // 
@@ -67,6 +72,7 @@
             Font = new Font("Impact", 9F, FontStyle.Regular, GraphicsUnit.Point);
             Name = "Form2";
             Text = "Stopwatch";
+            Load += Form2_Load;
             ResumeLayout(false);
             PerformLayout();
         }
@@ -75,5 +81,6 @@
 
         private Button StopButton;
         private Label Stoper;
+        private System.Windows.Forms.Timer timer1;
     }
 }

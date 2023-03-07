@@ -38,6 +38,7 @@
             // 
             clock.AutoSize = true;
             clock.Font = new Font("Impact", 16F, FontStyle.Regular, GraphicsUnit.Point);
+            clock.ForeColor = Color.IndianRed;
             clock.Location = new Point(82, 50);
             clock.Name = "clock";
             clock.Size = new Size(147, 34);
@@ -51,9 +52,11 @@
             // 
             // button1
             // 
-            button1.Location = new Point(115, 111);
+            button1.Font = new Font("Verdana", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            button1.ForeColor = Color.IndianRed;
+            button1.Location = new Point(99, 113);
             button1.Name = "button1";
-            button1.Size = new Size(94, 29);
+            button1.Size = new Size(114, 46);
             button1.TabIndex = 1;
             button1.Text = "Start";
             button1.UseVisualStyleBackColor = true;
@@ -68,7 +71,7 @@
             Controls.Add(clock);
             Margin = new Padding(3, 4, 3, 4);
             Name = "Form1";
-            Text = "Clock";
+            Text = "s";
             Load += Form1_Load;
             ResumeLayout(false);
             PerformLayout();
