@@ -21,5 +21,11 @@ namespace WinFormsApp1
         {
             clock.Text = DateTime.Now.ToString("hh:mm:ss tt");
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            var newform = new Form2();
+            newform.Show();
+        }
     }
 }
