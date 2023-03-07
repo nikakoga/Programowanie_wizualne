@@ -35,8 +35,8 @@
             // StopButton
             // 
             StopButton.Font = new Font("Verdana", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            StopButton.ForeColor = Color.DarkSalmon;
-            StopButton.Location = new Point(108, 112);
+            StopButton.ForeColor = Color.LightCoral;
+            StopButton.Location = new Point(100, 116);
             StopButton.Name = "StopButton";
             StopButton.Size = new Size(84, 49);
             StopButton.TabIndex = 0;
@@ -49,7 +49,7 @@
             Stoper.AutoSize = true;
             Stoper.Font = new Font("Impact", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
             Stoper.ForeColor = Color.FloralWhite;
-            Stoper.Location = new Point(108, 67);
+            Stoper.Location = new Point(90, 66);
             Stoper.Name = "Stoper";
             Stoper.Size = new Size(94, 28);
             Stoper.TabIndex = 1;
