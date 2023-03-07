@@ -34,10 +34,11 @@
             // 
             // StopButton
             // 
-            StopButton.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            StopButton.Location = new Point(123, 118);
+            StopButton.Font = new Font("Verdana", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            StopButton.ForeColor = Color.DarkSalmon;
+            StopButton.Location = new Point(108, 112);
             StopButton.Name = "StopButton";
-            StopButton.Size = new Size(96, 52);
+            StopButton.Size = new Size(84, 49);
             StopButton.TabIndex = 0;
             StopButton.Text = "Stop";
             StopButton.UseVisualStyleBackColor = true;
@@ -46,21 +47,24 @@
             // Stoper
             // 
             Stoper.AutoSize = true;
-            Stoper.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
-            Stoper.Location = new Point(123, 71);
+            Stoper.Font = new Font("Impact", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
+            Stoper.ForeColor = Color.FloralWhite;
+            Stoper.Location = new Point(108, 67);
             Stoper.Name = "Stoper";
-            Stoper.Size = new Size(96, 31);
+            Stoper.Size = new Size(94, 28);
             Stoper.TabIndex = 1;
             Stoper.Text = "00:00:00";
             Stoper.Click += Stoper_Click;
             // 
             // Form2
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 19F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(323, 231);
+            BackColor = Color.DarkSalmon;
+            ClientSize = new Size(283, 219);
             Controls.Add(Stoper);
             Controls.Add(StopButton);
+            Font = new Font("Impact", 9F, FontStyle.Regular, GraphicsUnit.Point);
             Name = "Form2";
             Text = "Stopwatch";
             ResumeLayout(false);
