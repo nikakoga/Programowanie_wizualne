@@ -36,14 +36,15 @@
             textBoxName = new TextBox();
             textBoxSurname = new TextBox();
             textBox2 = new TextBox();
-            comboBox1 = new ComboBox();
-            comboBox2 = new ComboBox();
+            comboBoxMonth = new ComboBox();
+            comboBoxDay = new ComboBox();
+            buttonADD = new Button();
             SuspendLayout();
             // 
             // labelName
             // 
             labelName.AutoSize = true;
-            labelName.Location = new Point(76, 40);
+            labelName.Location = new Point(26, 40);
             labelName.Name = "labelName";
             labelName.Size = new Size(49, 20);
             labelName.TabIndex = 0;
@@ -53,7 +54,7 @@
             // labelSurname
             // 
             labelSurname.AutoSize = true;
-            labelSurname.Location = new Point(76, 107);
+            labelSurname.Location = new Point(26, 107);
             labelSurname.Name = "labelSurname";
             labelSurname.Size = new Size(67, 20);
             labelSurname.TabIndex = 1;
@@ -62,7 +63,7 @@
             // labelYearOfbirth
             // 
             labelYearOfbirth.AutoSize = true;
-            labelYearOfbirth.Location = new Point(74, 175);
+            labelYearOfbirth.Location = new Point(26, 173);
             labelYearOfbirth.Name = "labelYearOfbirth";
             labelYearOfbirth.Size = new Size(90, 20);
             labelYearOfbirth.TabIndex = 2;
@@ -71,65 +72,81 @@
             // LabelMonthOfBirth
             // 
             LabelMonthOfBirth.AutoSize = true;
-            LabelMonthOfBirth.Location = new Point(76, 249);
+            LabelMonthOfBirth.Location = new Point(306, 40);
             LabelMonthOfBirth.Name = "LabelMonthOfBirth";
             LabelMonthOfBirth.Size = new Size(105, 20);
             LabelMonthOfBirth.TabIndex = 3;
             LabelMonthOfBirth.Text = "Month of birth";
+            LabelMonthOfBirth.Click += LabelMonthOfBirth_Click;
             // 
             // labelDayOfBirth
             // 
             labelDayOfBirth.AutoSize = true;
-            labelDayOfBirth.Location = new Point(76, 333);
+            labelDayOfBirth.Location = new Point(569, 40);
             labelDayOfBirth.Name = "labelDayOfBirth";
             labelDayOfBirth.Size = new Size(88, 20);
             labelDayOfBirth.TabIndex = 4;
             labelDayOfBirth.Text = "Day of birth";
+            labelDayOfBirth.Click += labelDayOfBirth_Click;
             // 
             // textBoxName
             // 
-            textBoxName.Location = new Point(76, 63);
+            textBoxName.Location = new Point(26, 64);
             textBoxName.Name = "textBoxName";
             textBoxName.Size = new Size(246, 27);
             textBoxName.TabIndex = 5;
             // 
             // textBoxSurname
             // 
-            textBoxSurname.Location = new Point(76, 130);
+            textBoxSurname.Location = new Point(26, 130);
             textBoxSurname.Name = "textBoxSurname";
             textBoxSurname.Size = new Size(246, 27);
             textBoxSurname.TabIndex = 6;
             // 
             // textBox2
             // 
-            textBox2.Location = new Point(74, 207);
+            textBox2.Location = new Point(26, 208);
             textBox2.Name = "textBox2";
             textBox2.Size = new Size(246, 27);
             textBox2.TabIndex = 7;
             // 
-            // comboBox1
+            // comboBoxMonth
             // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(78, 287);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(151, 28);
-            comboBox1.TabIndex = 8;
+            comboBoxMonth.FormattingEnabled = true;
+            comboBoxMonth.Items.AddRange(new object[] { "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December" });
+            comboBoxMonth.Location = new Point(306, 64);
+            comboBoxMonth.Name = "comboBoxMonth";
+            comboBoxMonth.Size = new Size(203, 28);
+            comboBoxMonth.TabIndex = 8;
+            comboBoxMonth.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
             // 
-            // comboBox2
+            // comboBoxDay
             // 
-            comboBox2.FormattingEnabled = true;
-            comboBox2.Location = new Point(77, 370);
-            comboBox2.Name = "comboBox2";
-            comboBox2.Size = new Size(151, 28);
-            comboBox2.TabIndex = 9;
+            comboBoxDay.FormattingEnabled = true;
+            comboBoxDay.Items.AddRange(new object[] { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31" });
+            comboBoxDay.Location = new Point(569, 63);
+            comboBoxDay.Name = "comboBoxDay";
+            comboBoxDay.Size = new Size(88, 28);
+            comboBoxDay.TabIndex = 9;
+            // 
+            // buttonADD
+            // 
+            buttonADD.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            buttonADD.Location = new Point(88, 320);
+            buttonADD.Name = "buttonADD";
+            buttonADD.Size = new Size(94, 29);
+            buttonADD.TabIndex = 10;
+            buttonADD.Text = "ADD";
+            buttonADD.UseVisualStyleBackColor = true;
             // 
             // FormADD
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Controls.Add(comboBox2);
-            Controls.Add(comboBox1);
+            Controls.Add(buttonADD);
+            Controls.Add(comboBoxDay);
+            Controls.Add(comboBoxMonth);
             Controls.Add(textBox2);
             Controls.Add(textBoxSurname);
             Controls.Add(textBoxName);
@@ -154,7 +171,8 @@
         private TextBox textBoxName;
         private TextBox textBoxSurname;
         private TextBox textBox2;
-        private ComboBox comboBox1;
-        private ComboBox comboBox2;
+        private ComboBox comboBoxMonth;
+        private ComboBox comboBoxDay;
+        private Button buttonADD;
     }
 }

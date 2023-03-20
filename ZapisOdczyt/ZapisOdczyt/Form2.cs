@@ -21,5 +21,20 @@ namespace ZapisOdczyt
         {
 
         }
+
+        private void LabelMonthOfBirth_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labelDayOfBirth_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
