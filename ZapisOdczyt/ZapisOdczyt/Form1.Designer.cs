@@ -32,12 +32,19 @@
             buttonLOAD = new Button();
             buttonDELETE = new Button();
             buttonSAVE = new Button();
+            dataGridView1 = new DataGridView();
+            NameColumn = new DataGridViewTextBoxColumn();
+            ColumnSurname = new DataGridViewTextBoxColumn();
+            ColumnYear = new DataGridViewTextBoxColumn();
+            ColumnMonth = new DataGridViewTextBoxColumn();
+            ColumnDay = new DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
             // buttonADD
             // 
             buttonADD.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            buttonADD.Location = new Point(107, 66);
+            buttonADD.Location = new Point(41, 386);
             buttonADD.Name = "buttonADD";
             buttonADD.Size = new Size(94, 29);
             buttonADD.TabIndex = 0;
@@ -48,7 +55,7 @@
             // buttonLOAD
             // 
             buttonLOAD.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            buttonLOAD.Location = new Point(107, 304);
+            buttonLOAD.Location = new Point(629, 386);
             buttonLOAD.Name = "buttonLOAD";
             buttonLOAD.Size = new Size(94, 29);
             buttonLOAD.TabIndex = 1;
@@ -58,7 +65,7 @@
             // buttonDELETE
             // 
             buttonDELETE.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            buttonDELETE.Location = new Point(107, 135);
+            buttonDELETE.Location = new Point(239, 386);
             buttonDELETE.Name = "buttonDELETE";
             buttonDELETE.Size = new Size(94, 29);
             buttonDELETE.TabIndex = 2;
@@ -68,24 +75,74 @@
             // buttonSAVE
             // 
             buttonSAVE.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            buttonSAVE.Location = new Point(107, 216);
+            buttonSAVE.Location = new Point(434, 386);
             buttonSAVE.Name = "buttonSAVE";
             buttonSAVE.Size = new Size(94, 29);
             buttonSAVE.TabIndex = 3;
             buttonSAVE.Text = "SAVE";
             buttonSAVE.UseVisualStyleBackColor = true;
             // 
+            // dataGridView1
+            // 
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { NameColumn, ColumnSurname, ColumnYear, ColumnMonth, ColumnDay });
+            dataGridView1.Location = new Point(41, 66);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.RowHeadersWidth = 51;
+            dataGridView1.RowTemplate.Height = 29;
+            dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dataGridView1.Size = new Size(682, 284);
+            dataGridView1.TabIndex = 4;
+            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
+            // 
+            // NameColumn
+            // 
+            NameColumn.HeaderText = "Name";
+            NameColumn.MinimumWidth = 6;
+            NameColumn.Name = "NameColumn";
+            NameColumn.Width = 125;
+            // 
+            // ColumnSurname
+            // 
+            ColumnSurname.HeaderText = "Surname";
+            ColumnSurname.MinimumWidth = 6;
+            ColumnSurname.Name = "ColumnSurname";
+            ColumnSurname.Width = 125;
+            // 
+            // ColumnYear
+            // 
+            ColumnYear.HeaderText = "Year";
+            ColumnYear.MinimumWidth = 6;
+            ColumnYear.Name = "ColumnYear";
+            ColumnYear.Width = 125;
+            // 
+            // ColumnMonth
+            // 
+            ColumnMonth.HeaderText = "Month";
+            ColumnMonth.MinimumWidth = 6;
+            ColumnMonth.Name = "ColumnMonth";
+            ColumnMonth.Width = 125;
+            // 
+            // ColumnDay
+            // 
+            ColumnDay.HeaderText = "Day";
+            ColumnDay.MinimumWidth = 6;
+            ColumnDay.Name = "ColumnDay";
+            ColumnDay.Width = 125;
+            // 
             // FormMAIN
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(dataGridView1);
             Controls.Add(buttonSAVE);
             Controls.Add(buttonDELETE);
             Controls.Add(buttonLOAD);
             Controls.Add(buttonADD);
             Name = "FormMAIN";
             Text = "FormMAIN";
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
         }
 
@@ -95,5 +152,11 @@
         private Button buttonLOAD;
         private Button buttonDELETE;
         private Button buttonSAVE;
+        private DataGridView dataGridView1;
+        private DataGridViewTextBoxColumn NameColumn;
+        private DataGridViewTextBoxColumn ColumnSurname;
+        private DataGridViewTextBoxColumn ColumnYear;
+        private DataGridViewTextBoxColumn ColumnMonth;
+        private DataGridViewTextBoxColumn ColumnDay;
     }
 }

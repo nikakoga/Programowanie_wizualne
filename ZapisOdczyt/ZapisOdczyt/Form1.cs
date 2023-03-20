@@ -12,5 +12,10 @@ namespace ZapisOdczyt
             FormADD f2 = new FormADD();
             f2.ShowDialog(); // Shows Form2
         }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

@@ -105,7 +105,7 @@
             // 
             // textBox2
             // 
-            textBox2.Location = new Point(26, 208);
+            textBox2.Location = new Point(26, 196);
             textBox2.Name = "textBox2";
             textBox2.Size = new Size(246, 27);
             textBox2.TabIndex = 7;
