@@ -1,4 +1,4 @@
-namespace WinFormsApp1
+namespace ZapisOdczyt
 {
     internal static class Program
     {
