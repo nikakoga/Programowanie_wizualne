@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\weron\\source\\repos\\ZapisOdczyt\\ZapisOdczyt\\ZapisOdczyt.csproj": {}
+    "C:\\Users\\weron\\Documents\\Pani Informatyk\\Programowanie_wizualne\\ZapisOdczyt\\ZapisOdczyt\\ZapisOdczyt.csproj": {}
   },
   "projects": {
-    "C:\\Users\\weron\\source\\repos\\ZapisOdczyt\\ZapisOdczyt\\ZapisOdczyt.csproj": {
+    "C:\\Users\\weron\\Documents\\Pani Informatyk\\Programowanie_wizualne\\ZapisOdczyt\\ZapisOdczyt\\ZapisOdczyt.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\weron\\source\\repos\\ZapisOdczyt\\ZapisOdczyt\\ZapisOdczyt.csproj",
+        "projectUniqueName": "C:\\Users\\weron\\Documents\\Pani Informatyk\\Programowanie_wizualne\\ZapisOdczyt\\ZapisOdczyt\\ZapisOdczyt.csproj",
         "projectName": "ZapisOdczyt",
-        "projectPath": "C:\\Users\\weron\\source\\repos\\ZapisOdczyt\\ZapisOdczyt\\ZapisOdczyt.csproj",
+        "projectPath": "C:\\Users\\weron\\Documents\\Pani Informatyk\\Programowanie_wizualne\\ZapisOdczyt\\ZapisOdczyt\\ZapisOdczyt.csproj",
         "packagesPath": "C:\\Users\\weron\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\weron\\source\\repos\\ZapisOdczyt\\ZapisOdczyt\\obj\\",
+        "outputPath": "C:\\Users\\weron\\Documents\\Pani Informatyk\\Programowanie_wizualne\\ZapisOdczyt\\ZapisOdczyt\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

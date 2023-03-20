@@ -1,10 +1,16 @@
 namespace ZapisOdczyt
 {
-    public partial class Form1 : Form
+    public partial class FormMAIN : Form
     {
-        public Form1()
+        public FormMAIN()
         {
             InitializeComponent();
+        }
+
+        private void buttonADD_Click(object sender, EventArgs e)
+        {
+            FormADD f2 = new FormADD();
+            f2.ShowDialog(); // Shows Form2
         }
     }
 }
