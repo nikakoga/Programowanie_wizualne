@@ -84,9 +84,10 @@
             // 
             // dataGridView1
             // 
+            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Columns.AddRange(new DataGridViewColumn[] { NameColumn, ColumnSurname, ColumnYear, ColumnMonth, ColumnDay });
-            dataGridView1.Location = new Point(41, 66);
+            dataGridView1.Location = new Point(41, 48);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 51;
             dataGridView1.RowTemplate.Height = 29;
@@ -100,35 +101,30 @@
             NameColumn.HeaderText = "Name";
             NameColumn.MinimumWidth = 6;
             NameColumn.Name = "NameColumn";
-            NameColumn.Width = 125;
             // 
             // ColumnSurname
             // 
             ColumnSurname.HeaderText = "Surname";
             ColumnSurname.MinimumWidth = 6;
             ColumnSurname.Name = "ColumnSurname";
-            ColumnSurname.Width = 125;
             // 
             // ColumnYear
             // 
             ColumnYear.HeaderText = "Year";
             ColumnYear.MinimumWidth = 6;
             ColumnYear.Name = "ColumnYear";
-            ColumnYear.Width = 125;
             // 
             // ColumnMonth
             // 
             ColumnMonth.HeaderText = "Month";
             ColumnMonth.MinimumWidth = 6;
             ColumnMonth.Name = "ColumnMonth";
-            ColumnMonth.Width = 125;
             // 
             // ColumnDay
             // 
             ColumnDay.HeaderText = "Day";
             ColumnDay.MinimumWidth = 6;
             ColumnDay.Name = "ColumnDay";
-            ColumnDay.Width = 125;
             // 
             // FormMAIN
             // 

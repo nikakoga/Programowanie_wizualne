@@ -12,9 +12,11 @@ namespace ZapisOdczyt
 {
     public partial class FormADD : Form
     {
-        public FormADD()
+        FormMAIN fgrid;
+        public FormADD(FormMAIN fg)
         {
             InitializeComponent();
+            this.fgrid = fg;
         }
 
         private void labelName_Click(object sender, EventArgs e)
@@ -35,6 +37,12 @@ namespace ZapisOdczyt
         private void labelDayOfBirth_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void buttonADD_Click(object sender, EventArgs e)
+        {
+            fgrid.MyGrid.get();
+                
         }
     }
 }

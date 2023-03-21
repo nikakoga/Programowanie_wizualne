@@ -138,6 +138,7 @@
             buttonADD.TabIndex = 10;
             buttonADD.Text = "ADD";
             buttonADD.UseVisualStyleBackColor = true;
+            buttonADD.Click += buttonADD_Click;
             // 
             // FormADD
             // 
