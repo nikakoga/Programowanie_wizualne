@@ -31,7 +31,6 @@ namespace ZapisOdczyt
 
         private void buttonSAVE_2_Click(object sender, EventArgs e)
         {
-            main_form.Save_to_file(main_form.path);
             this.Close();
         }
     }

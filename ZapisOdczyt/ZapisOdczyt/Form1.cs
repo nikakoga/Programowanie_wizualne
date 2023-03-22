@@ -2,7 +2,8 @@ namespace ZapisOdczyt
 {
     public partial class FormMAIN : Form
     {
-        public string path;
+        private string path;
+
         
         public FormMAIN()
         {
@@ -65,7 +66,11 @@ namespace ZapisOdczyt
                     foreach (DataGridViewCell cell in row.Cells)
                     {
                         //Add the Data rows.
-                        csv += cell.Value.ToString() + ',';
+                        if(cell.Value!=null)
+                        {
+                            csv += cell.Value.ToString() + ',';
+                        }
+                        
                     }
 
                     //Add new line.
@@ -73,6 +78,7 @@ namespace ZapisOdczyt
                 }
 
                 //Exporting to CSV.
+              
                 File.WriteAllText(path, csv);
             }
 
@@ -90,6 +96,8 @@ namespace ZapisOdczyt
             string folder = save.textBoxFOLDER.Text;
             string filename = save.textBoxPLIK.Text;
             path = folder + "/" + filename + ".csv";
+            
+            Save_to_file(path);
         }
     }
 }
