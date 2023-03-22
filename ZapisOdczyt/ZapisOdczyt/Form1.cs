@@ -2,6 +2,8 @@ namespace ZapisOdczyt
 {
     public partial class FormMAIN : Form
     {
+        public string path;
+        
         public FormMAIN()
         {
             InitializeComponent();
@@ -41,7 +43,7 @@ namespace ZapisOdczyt
 
         }
 
-        private void Save_to_file(string path)
+        public void Save_to_file(string path)
         {
             try
             {
@@ -83,13 +85,11 @@ namespace ZapisOdczyt
 
         private void buttonSAVE_Click(object sender, EventArgs e)
         {
-            FormSAVE save = new FormSAVE();
+            FormSAVE save = new FormSAVE(this);
             save.ShowDialog();
             string folder = save.textBoxFOLDER.Text;
             string filename = save.textBoxPLIK.Text;
-            string path = folder + "/" + filename + ".csv";
-
-
+            path = folder + "/" + filename + ".csv";
         }
     }
 }

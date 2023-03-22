@@ -32,6 +32,7 @@
             textBoxPLIK = new TextBox();
             labelFOLDER = new Label();
             labelPLIK = new Label();
+            buttonSAVE_2 = new Button();
             SuspendLayout();
             // 
             // textBoxFOLDER
@@ -44,7 +45,7 @@
             // 
             // textBoxPLIK
             // 
-            textBoxPLIK.Location = new Point(132, 196);
+            textBoxPLIK.Location = new Point(123, 187);
             textBoxPLIK.Name = "textBoxPLIK";
             textBoxPLIK.Size = new Size(322, 27);
             textBoxPLIK.TabIndex = 1;
@@ -64,17 +65,29 @@
             // 
             labelPLIK.AutoSize = true;
             labelPLIK.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
-            labelPLIK.Location = new Point(233, 160);
+            labelPLIK.Location = new Point(224, 151);
             labelPLIK.Name = "labelPLIK";
             labelPLIK.Size = new Size(148, 23);
             labelPLIK.TabIndex = 3;
             labelPLIK.Text = "Podaj nazwe pliku";
             // 
+            // buttonSAVE_2
+            // 
+            buttonSAVE_2.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            buttonSAVE_2.Location = new Point(234, 265);
+            buttonSAVE_2.Name = "buttonSAVE_2";
+            buttonSAVE_2.Size = new Size(94, 29);
+            buttonSAVE_2.TabIndex = 4;
+            buttonSAVE_2.Text = "SAVE";
+            buttonSAVE_2.UseVisualStyleBackColor = true;
+            buttonSAVE_2.Click += buttonSAVE_2_Click;
+            // 
             // FormSAVE
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(585, 281);
+            ClientSize = new Size(585, 346);
+            Controls.Add(buttonSAVE_2);
             Controls.Add(labelPLIK);
             Controls.Add(labelFOLDER);
             Controls.Add(textBoxPLIK);
@@ -91,5 +104,6 @@
         public TextBox textBoxPLIK;
         private Label labelFOLDER;
         private Label labelPLIK;
+        private Button buttonSAVE_2;
     }
 }

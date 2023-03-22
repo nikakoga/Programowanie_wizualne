@@ -12,9 +12,11 @@ namespace ZapisOdczyt
 {
     public partial class FormSAVE : Form
     {
-        public FormSAVE()
+        FormMAIN main_form;
+        public FormSAVE(FormMAIN main)
         {
             InitializeComponent();
+            this.main_form = main;
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -27,6 +29,10 @@ namespace ZapisOdczyt
 
         }
 
-
+        private void buttonSAVE_2_Click(object sender, EventArgs e)
+        {
+            main_form.Save_to_file(main_form.path);
+            this.Close();
+        }
     }
 }
