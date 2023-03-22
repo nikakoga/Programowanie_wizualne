@@ -42,7 +42,7 @@ namespace ZapisOdczyt
         private void buttonADD_Click(object sender, EventArgs e)
         {
             fgrid.dataGridView1.Rows.Add(textBoxName.Text, textBoxSurname.Text, textBoxYear.Text, comboBoxMonth.SelectedIndex, comboBoxDay.SelectedIndex);
-
+            this.Close();
 
         }
     }

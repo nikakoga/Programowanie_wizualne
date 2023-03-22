@@ -61,6 +61,7 @@
             buttonLOAD.TabIndex = 1;
             buttonLOAD.Text = "LOAD";
             buttonLOAD.UseVisualStyleBackColor = true;
+            buttonLOAD.Click += buttonLOAD_Click;
             // 
             // buttonDELETE
             // 
@@ -82,6 +83,7 @@
             buttonSAVE.TabIndex = 3;
             buttonSAVE.Text = "SAVE";
             buttonSAVE.UseVisualStyleBackColor = true;
+            buttonSAVE.Click += buttonSAVE_Click;
             // 
             // dataGridView1
             // 
