@@ -18,5 +18,22 @@ namespace ZapisOdczyt
 
         }
 
+        private void buttonDELETE_Click(object sender, EventArgs e)
+        {
+            bool empty = true;
+
+            foreach (DataGridViewRow row in dataGridView1.SelectedRows)
+            {
+                empty = true;
+                foreach (DataGridViewCell cell in row.Cells)
+                {
+                    if (cell.Value != null)
+                        empty = false;
+                }
+                if (empty == false)
+                    dataGridView1.Rows.RemoveAt(row.Index);
+            }
+           
+        }
     }
 }
