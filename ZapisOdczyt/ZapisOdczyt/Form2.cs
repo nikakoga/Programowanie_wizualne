@@ -41,8 +41,9 @@ namespace ZapisOdczyt
 
         private void buttonADD_Click(object sender, EventArgs e)
         {
-            fgrid.MyGrid.get();
-                
+            fgrid.dataGridView1.Rows.Add(textBoxName.Text, textBoxSurname.Text, textBoxYear.Text, comboBoxMonth.SelectedIndex, comboBoxDay.SelectedIndex);
+
+
         }
     }
 }

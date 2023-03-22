@@ -148,11 +148,11 @@
         private Button buttonLOAD;
         private Button buttonDELETE;
         private Button buttonSAVE;
-        private DataGridView dataGridView1;
         private DataGridViewTextBoxColumn NameColumn;
         private DataGridViewTextBoxColumn ColumnSurname;
         private DataGridViewTextBoxColumn ColumnYear;
         private DataGridViewTextBoxColumn ColumnMonth;
         private DataGridViewTextBoxColumn ColumnDay;
+        public DataGridView dataGridView1;
     }
 }

@@ -13,15 +13,10 @@ namespace ZapisOdczyt
             f2.ShowDialog(); // Shows Form2
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        public void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }
 
-        public DataGridView MyGrid 
-        {
-            get { return dataGridView1; }
-            set { dataGridView1 = value; }
-        }
     }
 }

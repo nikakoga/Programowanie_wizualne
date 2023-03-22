@@ -35,7 +35,7 @@
             labelDayOfBirth = new Label();
             textBoxName = new TextBox();
             textBoxSurname = new TextBox();
-            textBox2 = new TextBox();
+            textBoxYear = new TextBox();
             comboBoxMonth = new ComboBox();
             comboBoxDay = new ComboBox();
             buttonADD = new Button();
@@ -103,12 +103,12 @@
             textBoxSurname.Size = new Size(246, 27);
             textBoxSurname.TabIndex = 6;
             // 
-            // textBox2
+            // textBoxYear
             // 
-            textBox2.Location = new Point(26, 196);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(246, 27);
-            textBox2.TabIndex = 7;
+            textBoxYear.Location = new Point(26, 196);
+            textBoxYear.Name = "textBoxYear";
+            textBoxYear.Size = new Size(246, 27);
+            textBoxYear.TabIndex = 7;
             // 
             // comboBoxMonth
             // 
@@ -148,7 +148,7 @@
             Controls.Add(buttonADD);
             Controls.Add(comboBoxDay);
             Controls.Add(comboBoxMonth);
-            Controls.Add(textBox2);
+            Controls.Add(textBoxYear);
             Controls.Add(textBoxSurname);
             Controls.Add(textBoxName);
             Controls.Add(labelDayOfBirth);
@@ -171,7 +171,7 @@
         private Label labelDayOfBirth;
         private TextBox textBoxName;
         private TextBox textBoxSurname;
-        private TextBox textBox2;
+        private TextBox textBoxYear;
         private ComboBox comboBoxMonth;
         private ComboBox comboBoxDay;
         private Button buttonADD;
