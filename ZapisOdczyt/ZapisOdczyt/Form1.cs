@@ -1,5 +1,6 @@
 namespace ZapisOdczyt
 {
+    
     public partial class FormMAIN : Form
     {
         private string path;
@@ -38,14 +39,35 @@ namespace ZapisOdczyt
             }
 
         }
+        private void Load_from_file (string path)
+        {
+            try
+            {
+                string[] lines = System.IO.File.ReadAllLines(path);
+               
+                //from 1 instead of 0 to avoid adding headers
+                for (int i=1;i<lines.Length;i++)
+                {    
+                    string[] cells = lines[i].Split(',');
+                    dataGridView1.Rows.Add(new object[] { cells[0], cells[1], cells[2], cells[3], cells[4] });
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
 
         private void buttonLOAD_Click(object sender, EventArgs e)
         {
-
+            OpenFileDialog ofd = new OpenFileDialog();
+            path = ofd.FileName;
+            Load_from_file(path);
         }
 
-        public void Save_to_file(string path)
+        private void Save_to_file(string path)
         {
+
             try
             {
                 //Build the CSV file data as a Comma separated string.
@@ -57,28 +79,40 @@ namespace ZapisOdczyt
                     csv += column.HeaderText + ',';
                 }
 
+                //To remove coma after last value in a row
+                csv = csv.Remove(csv.Length - 1);
+
                 //Add new line.
                 csv += "\r\n";
 
                 //Adding the Rows
+
                 foreach (DataGridViewRow row in dataGridView1.Rows)
                 {
+                   
                     foreach (DataGridViewCell cell in row.Cells)
                     {
                         //Add the Data rows.
                         if(cell.Value!=null)
                         {
                             csv += cell.Value.ToString() + ',';
+                            
                         }
                         
                     }
+
+                    //To remove coma after last value in a row
+                    csv = csv.Remove(csv.Length - 1);
 
                     //Add new line.
                     csv += "\r\n";
                 }
 
+                //To remove new line after last value in a row
+                csv = csv.Remove(csv.Length - 2);
+
                 //Exporting to CSV.
-              
+
                 File.WriteAllText(path, csv);
             }
 
@@ -91,13 +125,22 @@ namespace ZapisOdczyt
 
         private void buttonSAVE_Click(object sender, EventArgs e)
         {
-            FormSAVE save = new FormSAVE(this);
-            save.ShowDialog();
-            string folder = save.textBoxFOLDER.Text;
-            string filename = save.textBoxPLIK.Text;
-            path = folder + "/" + filename + ".csv";
             
-            Save_to_file(path);
+            SaveFileDialog sfd = new SaveFileDialog();
+            sfd.Filter = "CSV|*.csv";
+            if (sfd.ShowDialog() == DialogResult.OK)
+            {
+                try
+                {
+                    path = sfd.FileName;
+                    Save_to_file(path);
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex);
+                }
+            }
+            
         }
     }
 }

@@ -41,9 +41,21 @@ namespace ZapisOdczyt
 
         private void buttonADD_Click(object sender, EventArgs e)
         {
-            fgrid.dataGridView1.Rows.Add(textBoxName.Text, textBoxSurname.Text, textBoxYear.Text, comboBoxMonth.SelectedIndex, comboBoxDay.SelectedIndex);
+            //if month and day are picked than it goes to datagrid view
+            if(comboBoxMonth.SelectedIndex!=-1 && comboBoxDay.SelectedIndex!=-1)
+            {
+                fgrid.dataGridView1.Rows.Add(textBoxName.Text, textBoxSurname.Text, textBoxYear.Text, comboBoxMonth.Items[comboBoxMonth.SelectedIndex], comboBoxDay.Items[comboBoxDay.SelectedIndex]);
+            }
+            //if not than month and day are blank ""
+            else
+            {
+                fgrid.dataGridView1.Rows.Add(textBoxName.Text, textBoxSurname.Text, textBoxYear.Text,"", "");
+            }
+
+            
             this.Close();
 
+            
         }
     }
 }
