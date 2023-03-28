@@ -77,7 +77,7 @@ namespace ZapisOdczyt
 
         }
 
-        private void Save_to_file(string path)
+        private void Save_to_csv(string path)
         {
 
             try
@@ -139,13 +139,26 @@ namespace ZapisOdczyt
         {
 
             SaveFileDialog sfd = new SaveFileDialog();
-            sfd.Filter = "CSV|*.csv";
+            sfd.Filter = "CSV| *.csv |XML|*.xml";
             if (sfd.ShowDialog() == DialogResult.OK)
             {
                 try
                 {
-                    path = sfd.FileName;
-                    Save_to_file(path);
+                    string extension = Path.GetExtension(sfd.FileName);
+
+                    switch (extension.ToLower())
+                    {
+                        case ".csv":
+                            path = sfd.FileName;
+                            Save_to_csv(path);
+                            break;
+                        case ".xml":
+                            // ToDo: Save as XML
+                            break;
+                        default:
+                            throw new ArgumentOutOfRangeException(extension);
+                    }
+                    
                 }
                 catch (Exception ex)
                 {
