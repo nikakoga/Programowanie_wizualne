@@ -16,3 +16,4 @@ C:\Users\weron\Documents\Pani Informatyk\Programowanie_wizualne\ZapisOdczyt\Zapi
 C:\Users\weron\Documents\Pani Informatyk\Programowanie_wizualne\ZapisOdczyt\ZapisOdczyt\obj\Debug\net6.0-windows\ref\ZapisOdczyt.dll
 C:\Users\weron\Documents\Pani Informatyk\Programowanie_wizualne\ZapisOdczyt\ZapisOdczyt\obj\Debug\net6.0-windows\ZapisOdczyt.FormMAIN.resources
 C:\Users\weron\Documents\Pani Informatyk\Programowanie_wizualne\ZapisOdczyt\ZapisOdczyt\obj\Debug\net6.0-windows\ZapisOdczyt.FormADD.resources
+C:\Users\weron\Documents\Pani Informatyk\Programowanie_wizualne\ZapisOdczyt\ZapisOdczyt\obj\Debug\net6.0-windows\ZapisOdczyt.FormSEARCH.resources
