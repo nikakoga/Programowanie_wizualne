@@ -61,8 +61,20 @@ namespace ZapisOdczyt
         private void buttonLOAD_Click(object sender, EventArgs e)
         {
             OpenFileDialog ofd = new OpenFileDialog();
-            path = ofd.FileName;
-            Load_from_file(path);
+            
+            if (ofd.ShowDialog() == DialogResult.OK)
+            {
+                try
+                {
+                    string path_open = ofd.FileName;
+                    Load_from_file(path_open);
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex);
+                }
+            }
+            
         }
 
         private void Save_to_file(string path)
