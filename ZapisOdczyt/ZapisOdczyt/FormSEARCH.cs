@@ -51,12 +51,16 @@ namespace ZapisOdczyt
                         //Add the Data rows that matches.
                         if (cell.Value != null && cell.Value.ToString() == Text_search)
                         {
-                            
-                            dataGridViewSEARCH.Rows.Add(fm.dataGridView1.Rows[row_counter].Cells[0].Value.ToString(),
+
+                            //NA PIECHOTE ALE DZIALA
+                            /*dataGridViewSEARCH.Rows.Add(fm.dataGridView1.Rows[row_counter].Cells[0].Value.ToString(),
                                 fm.dataGridView1.Rows[row_counter].Cells[1].Value.ToString(), fm.dataGridView1.Rows[row_counter].Cells[2].Value.ToString(),
                                 fm.dataGridView1.Rows[row_counter].Cells[3].Value.ToString(),fm.dataGridView1.Rows[row_counter].Cells[4].Value.ToString());
-                            
-                           
+                            */
+
+                            //PYTANIE TYLKO CZY TAK JEST "LEPIEJ"
+                            List<string> Cells = CreateArgList(fm.dataGridView1, row_counter);
+                            dataGridViewSEARCH.Rows.Add(Cells[0], Cells[1], Cells[2], Cells[3], Cells[4]);
                         }
                         
                     }
