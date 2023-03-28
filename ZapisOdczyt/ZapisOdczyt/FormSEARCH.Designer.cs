@@ -35,7 +35,7 @@
             ColumnMonth = new DataGridViewTextBoxColumn();
             ColumnDay = new DataGridViewTextBoxColumn();
             buttonSEARCH = new Button();
-            textBox1 = new TextBox();
+            textBoxSEARCH = new TextBox();
             ((System.ComponentModel.ISupportInitialize)dataGridViewSEARCH).BeginInit();
             SuspendLayout();
             // 
@@ -91,20 +91,21 @@
             buttonSEARCH.TabIndex = 6;
             buttonSEARCH.Text = "SEARCH";
             buttonSEARCH.UseVisualStyleBackColor = true;
+            buttonSEARCH.Click += buttonSEARCH_Click;
             // 
-            // textBox1
+            // textBoxSEARCH
             // 
-            textBox1.Location = new Point(174, 64);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(323, 27);
-            textBox1.TabIndex = 7;
+            textBoxSEARCH.Location = new Point(174, 64);
+            textBoxSEARCH.Name = "textBoxSEARCH";
+            textBoxSEARCH.Size = new Size(323, 27);
+            textBoxSEARCH.TabIndex = 7;
             // 
             // FormSEARCH
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Controls.Add(textBox1);
+            Controls.Add(textBoxSEARCH);
             Controls.Add(buttonSEARCH);
             Controls.Add(dataGridViewSEARCH);
             Name = "FormSEARCH";
@@ -123,6 +124,6 @@
         private DataGridViewTextBoxColumn ColumnMonth;
         private DataGridViewTextBoxColumn ColumnDay;
         private Button buttonSEARCH;
-        private TextBox textBox1;
+        private TextBox textBoxSEARCH;
     }
 }

@@ -1,11 +1,11 @@
 namespace ZapisOdczyt
 {
-    
+
     public partial class FormMAIN : Form
     {
         private string path;
 
-        
+
         public FormMAIN()
         {
             InitializeComponent();
@@ -39,15 +39,15 @@ namespace ZapisOdczyt
             }
 
         }
-        private void Load_from_file (string path)
+        private void Load_from_file(string path)
         {
             try
             {
                 string[] lines = System.IO.File.ReadAllLines(path);
-               
+
                 //from 1 instead of 0 to avoid adding headers
-                for (int i=1;i<lines.Length;i++)
-                {    
+                for (int i = 1; i < lines.Length; i++)
+                {
                     string[] cells = lines[i].Split(',');
                     dataGridView1.Rows.Add(new object[] { cells[0], cells[1], cells[2], cells[3], cells[4] });
                 }
@@ -61,7 +61,7 @@ namespace ZapisOdczyt
         private void buttonLOAD_Click(object sender, EventArgs e)
         {
             OpenFileDialog ofd = new OpenFileDialog();
-            
+
             if (ofd.ShowDialog() == DialogResult.OK)
             {
                 try
@@ -74,7 +74,7 @@ namespace ZapisOdczyt
                     Console.WriteLine(ex);
                 }
             }
-            
+
         }
 
         private void Save_to_file(string path)
@@ -101,16 +101,16 @@ namespace ZapisOdczyt
 
                 foreach (DataGridViewRow row in dataGridView1.Rows)
                 {
-                   
+
                     foreach (DataGridViewCell cell in row.Cells)
                     {
                         //Add the Data rows.
-                        if(cell.Value!=null)
+                        if (cell.Value != null)
                         {
                             csv += cell.Value.ToString() + ',';
-                            
+
                         }
-                        
+
                     }
 
                     //To remove coma after last value in a row
@@ -132,12 +132,12 @@ namespace ZapisOdczyt
             {
                 MessageBox.Show(ex.Message);
             }
-            
+
         }
 
         private void buttonSAVE_Click(object sender, EventArgs e)
         {
-            
+
             SaveFileDialog sfd = new SaveFileDialog();
             sfd.Filter = "CSV|*.csv";
             if (sfd.ShowDialog() == DialogResult.OK)
@@ -152,6 +152,14 @@ namespace ZapisOdczyt
                     Console.WriteLine(ex);
                 }
             }
+
+        }
+
+        private void buttonSEARCH_Click(object sender, EventArgs e)
+        {
+            FormSEARCH search_form = new FormSEARCH(this);
+            search_form.ShowDialog();
+            
             
         }
     }

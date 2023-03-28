@@ -38,13 +38,14 @@
             ColumnYear = new DataGridViewTextBoxColumn();
             ColumnMonth = new DataGridViewTextBoxColumn();
             ColumnDay = new DataGridViewTextBoxColumn();
+            buttonSEARCH = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
             // buttonADD
             // 
             buttonADD.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            buttonADD.Location = new Point(41, 386);
+            buttonADD.Location = new Point(41, 352);
             buttonADD.Name = "buttonADD";
             buttonADD.Size = new Size(94, 29);
             buttonADD.TabIndex = 0;
@@ -55,7 +56,7 @@
             // buttonLOAD
             // 
             buttonLOAD.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            buttonLOAD.Location = new Point(629, 386);
+            buttonLOAD.Location = new Point(165, 399);
             buttonLOAD.Name = "buttonLOAD";
             buttonLOAD.Size = new Size(94, 29);
             buttonLOAD.TabIndex = 1;
@@ -66,7 +67,7 @@
             // buttonDELETE
             // 
             buttonDELETE.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            buttonDELETE.Location = new Point(239, 386);
+            buttonDELETE.Location = new Point(41, 400);
             buttonDELETE.Name = "buttonDELETE";
             buttonDELETE.Size = new Size(94, 29);
             buttonDELETE.TabIndex = 2;
@@ -77,7 +78,7 @@
             // buttonSAVE
             // 
             buttonSAVE.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            buttonSAVE.Location = new Point(434, 386);
+            buttonSAVE.Location = new Point(165, 352);
             buttonSAVE.Name = "buttonSAVE";
             buttonSAVE.Size = new Size(94, 29);
             buttonSAVE.TabIndex = 3;
@@ -129,11 +130,23 @@
             ColumnDay.MinimumWidth = 6;
             ColumnDay.Name = "ColumnDay";
             // 
+            // buttonSEARCH
+            // 
+            buttonSEARCH.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            buttonSEARCH.Location = new Point(283, 352);
+            buttonSEARCH.Name = "buttonSEARCH";
+            buttonSEARCH.Size = new Size(94, 29);
+            buttonSEARCH.TabIndex = 7;
+            buttonSEARCH.Text = "SEARCH";
+            buttonSEARCH.UseVisualStyleBackColor = true;
+            buttonSEARCH.Click += buttonSEARCH_Click;
+            // 
             // FormMAIN
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(buttonSEARCH);
             Controls.Add(dataGridView1);
             Controls.Add(buttonSAVE);
             Controls.Add(buttonDELETE);
@@ -157,5 +170,6 @@
         private DataGridViewTextBoxColumn ColumnMonth;
         private DataGridViewTextBoxColumn ColumnDay;
         public DataGridView dataGridView1;
+        private Button buttonSEARCH;
     }
 }
