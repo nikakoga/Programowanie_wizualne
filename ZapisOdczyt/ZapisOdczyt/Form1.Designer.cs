@@ -33,12 +33,12 @@
             buttonDELETE = new Button();
             buttonSAVE = new Button();
             dataGridView1 = new DataGridView();
-            NameColumn = new DataGridViewTextBoxColumn();
-            ColumnSurname = new DataGridViewTextBoxColumn();
-            ColumnYear = new DataGridViewTextBoxColumn();
-            ColumnMonth = new DataGridViewTextBoxColumn();
-            ColumnDay = new DataGridViewTextBoxColumn();
             buttonSEARCH = new Button();
+            FirstName = new DataGridViewTextBoxColumn();
+            Surname = new DataGridViewTextBoxColumn();
+            Year = new DataGridViewTextBoxColumn();
+            Month = new DataGridViewTextBoxColumn();
+            Day = new DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -90,7 +90,7 @@
             // 
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { NameColumn, ColumnSurname, ColumnYear, ColumnMonth, ColumnDay });
+            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { FirstName, Surname, Year, Month, Day });
             dataGridView1.Location = new Point(41, 48);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 51;
@@ -99,36 +99,6 @@
             dataGridView1.Size = new Size(682, 284);
             dataGridView1.TabIndex = 4;
             dataGridView1.CellContentClick += dataGridView1_CellContentClick;
-            // 
-            // NameColumn
-            // 
-            NameColumn.HeaderText = "Name";
-            NameColumn.MinimumWidth = 6;
-            NameColumn.Name = "NameColumn";
-            // 
-            // ColumnSurname
-            // 
-            ColumnSurname.HeaderText = "Surname";
-            ColumnSurname.MinimumWidth = 6;
-            ColumnSurname.Name = "ColumnSurname";
-            // 
-            // ColumnYear
-            // 
-            ColumnYear.HeaderText = "Year";
-            ColumnYear.MinimumWidth = 6;
-            ColumnYear.Name = "ColumnYear";
-            // 
-            // ColumnMonth
-            // 
-            ColumnMonth.HeaderText = "Month";
-            ColumnMonth.MinimumWidth = 6;
-            ColumnMonth.Name = "ColumnMonth";
-            // 
-            // ColumnDay
-            // 
-            ColumnDay.HeaderText = "Day";
-            ColumnDay.MinimumWidth = 6;
-            ColumnDay.Name = "ColumnDay";
             // 
             // buttonSEARCH
             // 
@@ -140,6 +110,36 @@
             buttonSEARCH.Text = "SEARCH";
             buttonSEARCH.UseVisualStyleBackColor = true;
             buttonSEARCH.Click += buttonSEARCH_Click;
+            // 
+            // FirstName
+            // 
+            FirstName.HeaderText = "Name";
+            FirstName.MinimumWidth = 6;
+            FirstName.Name = "FirstName";
+            // 
+            // Surname
+            // 
+            Surname.HeaderText = "Surname";
+            Surname.MinimumWidth = 6;
+            Surname.Name = "Surname";
+            // 
+            // Year
+            // 
+            Year.HeaderText = "Year";
+            Year.MinimumWidth = 6;
+            Year.Name = "Year";
+            // 
+            // Month
+            // 
+            Month.HeaderText = "Month";
+            Month.MinimumWidth = 6;
+            Month.Name = "Month";
+            // 
+            // Day
+            // 
+            Day.HeaderText = "Day";
+            Day.MinimumWidth = 6;
+            Day.Name = "Day";
             // 
             // FormMAIN
             // 
@@ -164,12 +164,12 @@
         private Button buttonLOAD;
         private Button buttonDELETE;
         private Button buttonSAVE;
-        private DataGridViewTextBoxColumn NameColumn;
-        private DataGridViewTextBoxColumn ColumnSurname;
-        private DataGridViewTextBoxColumn ColumnYear;
-        private DataGridViewTextBoxColumn ColumnMonth;
-        private DataGridViewTextBoxColumn ColumnDay;
         public DataGridView dataGridView1;
         private Button buttonSEARCH;
+        private DataGridViewTextBoxColumn FirstName;
+        private DataGridViewTextBoxColumn Surname;
+        private DataGridViewTextBoxColumn Year;
+        private DataGridViewTextBoxColumn Month;
+        private DataGridViewTextBoxColumn Day;
     }
 }

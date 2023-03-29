@@ -7,9 +7,6 @@
     <Compile Update="Form2.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="FormFileType.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Update="FormSEARCH.cs">
       <SubType>Form</SubType>
     </Compile>

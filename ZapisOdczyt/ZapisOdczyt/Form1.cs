@@ -1,3 +1,5 @@
+using System.Data;
+
 namespace ZapisOdczyt
 {
 
@@ -77,6 +79,49 @@ namespace ZapisOdczyt
 
         }
 
+        public static DataTable DataGridView_To_Datatable(DataGridView dg)
+        {
+            DataTable ExportDataTable = new DataTable();
+            foreach (DataGridViewColumn col in dg.Columns)
+            {
+                ExportDataTable.Columns.Add(col.Name);
+            }
+            bool empty = true;
+            foreach (DataGridViewRow row in dg.Rows)
+            {
+                DataRow dRow = ExportDataTable.NewRow();
+                empty = true;
+                foreach (DataGridViewCell cell in row.Cells)
+                {
+                    if(cell.Value!=null)
+                    {
+                        empty = false;
+                        dRow[cell.ColumnIndex] = cell.Value;
+                    }
+                    
+                }
+                if(!empty)
+                {
+                    ExportDataTable.Rows.Add(dRow);
+                }
+                
+            }
+            return ExportDataTable;
+        }
+        private void ExportDgvToXML(DataTable dt, string path)
+        {
+
+            try
+            {
+                dt.WriteXml(path);
+            }
+
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex);
+            }
+
+        }
         private void Save_to_csv(string path)
         {
 
@@ -135,6 +180,11 @@ namespace ZapisOdczyt
 
         }
 
+        private void Save_to_xml(DataGridView dataGridView1, string path)
+        {
+            ExportDgvToXML(DataGridView_To_Datatable(dataGridView1), path);
+
+        }
         private void buttonSAVE_Click(object sender, EventArgs e)
         {
 
@@ -145,30 +195,30 @@ namespace ZapisOdczyt
                 try
                 {
                     string extension = Path.GetExtension(sfd.FileName).ToLower();
+                    path = sfd.FileName;
 
                     switch (extension)
                     {
-                     
+
                         case ".csv":
                             {
-                                path = sfd.FileName;
                                 Save_to_csv(path);
                                 MessageBox.Show("Data is saved!");
                                 break;
                             }
-                            
+
                         case ".xml":
                             {
-                                // ToDo: Save as XML
+                                Save_to_xml(dataGridView1, path);
                                 MessageBox.Show("Data is saved!");
                                 break;
                             }
 
-                            
+
                         default:
                             throw new ArgumentOutOfRangeException(extension);
                     }
-                    
+
                 }
                 catch (Exception ex)
                 {
@@ -182,8 +232,8 @@ namespace ZapisOdczyt
         {
             FormSEARCH search_form = new FormSEARCH(this);
             search_form.ShowDialog();
-            
-            
+
+
         }
     }
 }
