@@ -81,7 +81,7 @@ namespace ZapisOdczyt
 
         public static DataTable DataGridView_To_Datatable(DataGridView dg)
         {
-            DataTable ExportDataTable = new DataTable();
+            DataTable ExportDataTable = new DataTable(dg.Name);
             foreach (DataGridViewColumn col in dg.Columns)
             {
                 ExportDataTable.Columns.Add(col.Name);
@@ -110,6 +110,10 @@ namespace ZapisOdczyt
         }
         private void ExportDgvToXML(DataTable dt, string path)
         {
+            //foreach (DataRow row in dt.Rows)
+            //{
+            //    Console.WriteLine(row.ToString());
+            //}
 
             try
             {
