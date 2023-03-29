@@ -24,6 +24,7 @@ namespace ZapisOdczyt
 
         }
 
+        
         private void buttonDELETE_Click(object sender, EventArgs e)
         {
             bool empty = true;
@@ -41,7 +42,7 @@ namespace ZapisOdczyt
             }
 
         }
-        private void Load_from_file(string path)
+        private void Load_from_csv(string path)
         {
             try
             {
@@ -60,21 +61,65 @@ namespace ZapisOdczyt
             }
         }
 
+        private void Load_from_xml(string path, DataGridView dgv)
+        {
+            DataSet dataSet = new DataSet();
+            dataSet.ReadXml(path);
+            
+            //from one to avoid adding columns names
+            for (int i=0; i<dataSet.Tables[0].Rows.Count;i++)
+            {
+                dgv.Rows.Add(dataSet.Tables[0].Rows[i][0], dataSet.Tables[0].Rows[i][1],
+                    dataSet.Tables[0].Rows[i][2], dataSet.Tables[0].Rows[i][3], dataSet.Tables[0].Rows[i][4]);
+            }
+
+        }
+
         private void buttonLOAD_Click(object sender, EventArgs e)
         {
             OpenFileDialog ofd = new OpenFileDialog();
 
+
             if (ofd.ShowDialog() == DialogResult.OK)
             {
-                try
+                string path_open = ofd.FileName;
+                string extension = Path.GetExtension(ofd.FileName).ToLower();
+
+                switch (extension)
                 {
-                    string path_open = ofd.FileName;
-                    Load_from_file(path_open);
+                    case ".csv":
+                        {
+                            try
+                            {
+
+                                Load_from_csv(path_open);
+                            }
+                            catch (Exception ex)
+                            {
+                                MessageBox.Show(ex.ToString());
+                            }
+                            break;
+                        }
+
+
+                    case ".xml":
+                        {
+                            try
+                            {
+                                Load_from_xml(path_open,dataGridView1);
+                            }
+                            catch (Exception ex)
+                            {
+                                MessageBox.Show(ex.ToString());
+                            }
+                            break;
+                        }
+                    default:
+                        throw new ArgumentOutOfRangeException(extension);
+
                 }
-                catch (Exception ex)
-                {
-                    Console.WriteLine(ex);
-                }
+
+
             }
 
         }
@@ -93,18 +138,18 @@ namespace ZapisOdczyt
                 empty = true;
                 foreach (DataGridViewCell cell in row.Cells)
                 {
-                    if(cell.Value!=null)
+                    if (cell.Value != null)
                     {
                         empty = false;
                         dRow[cell.ColumnIndex] = cell.Value;
                     }
-                    
+
                 }
-                if(!empty)
+                if (!empty)
                 {
                     ExportDataTable.Rows.Add(dRow);
                 }
-                
+
             }
             return ExportDataTable;
         }
@@ -122,7 +167,7 @@ namespace ZapisOdczyt
 
             catch (Exception ex)
             {
-                Console.WriteLine(ex);
+                MessageBox.Show(ex.ToString());
             }
 
         }
@@ -226,7 +271,7 @@ namespace ZapisOdczyt
                 }
                 catch (Exception ex)
                 {
-                    Console.WriteLine(ex);
+                    MessageBox.Show(ex.ToString());
                 }
             }
 

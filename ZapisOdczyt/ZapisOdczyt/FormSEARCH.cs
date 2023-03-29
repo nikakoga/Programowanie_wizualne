@@ -26,10 +26,10 @@ namespace ZapisOdczyt
 
         }
 
-        private List<string> CreateArgList (DataGridView dgv, int row)
+        private List<string> CreateArgList(DataGridView dgv, int row)
         {
-            List<string> ArgList = new List<string> ();
-            
+            List<string> ArgList = new List<string>();
+
             foreach (DataGridViewCell cell in dgv.Rows[row].Cells)
             {
                 ArgList.Add(cell.Value.ToString());
@@ -39,10 +39,14 @@ namespace ZapisOdczyt
         private void buttonSEARCH_Click(object sender, EventArgs e)
         {
             Text_search = "";
+            dataGridViewSEARCH.DataSource = null;
+            dataGridViewSEARCH.Rows.Clear();
+            
+
             int row_counter = 0;
-            if (textBoxSEARCH!=null)
+            if (textBoxSEARCH != null)
             {
-                Text_search= textBoxSEARCH.Text;
+                Text_search = textBoxSEARCH.Text;
                 foreach (DataGridViewRow row in fm.dataGridView1.Rows)
                 {
 
@@ -62,7 +66,7 @@ namespace ZapisOdczyt
                             List<string> Cells = CreateArgList(fm.dataGridView1, row_counter);
                             dataGridViewSEARCH.Rows.Add(Cells[0], Cells[1], Cells[2], Cells[3], Cells[4]);
                         }
-                        
+
                     }
                     row_counter++;
                 }

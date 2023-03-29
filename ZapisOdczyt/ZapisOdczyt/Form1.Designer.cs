@@ -113,7 +113,7 @@
             // 
             // FirstName
             // 
-            FirstName.HeaderText = "Name";
+            FirstName.HeaderText = "FirstName";
             FirstName.MinimumWidth = 6;
             FirstName.Name = "FirstName";
             // 
