@@ -115,7 +115,8 @@ namespace ZapisOdczyt
                             break;
                         }
                     default:
-                        throw new ArgumentOutOfRangeException(extension);
+                        MessageBox.Show("Wrong file type");
+                        break;
 
                 }
 
