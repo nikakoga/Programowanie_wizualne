@@ -16,5 +16,10 @@ namespace Solver_Algorytm_Floyda
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

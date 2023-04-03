@@ -20,7 +20,9 @@ namespace Solver_Algorytm_Floyda
         {
             if (IsAnswearCorrect(TextBoxPanelSize.Text))
             {
-
+                Form FormPanelCreator = new Form();
+                FormPanelCreator
+                FormPanelCreator.Show();
             }
             
         }
