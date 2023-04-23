@@ -46,7 +46,6 @@
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 9;
             pictureBox1.TabStop = false;
-            
             // 
             // OnlyGreenButton
             // 
@@ -67,6 +66,7 @@
             TurnButton.TabIndex = 11;
             TurnButton.Text = "TURN";
             TurnButton.UseVisualStyleBackColor = true;
+            TurnButton.Click += TurnButton_Click;
             // 
             // VerticalMirrorButton
             // 
@@ -77,6 +77,7 @@
             VerticalMirrorButton.TabIndex = 12;
             VerticalMirrorButton.Text = "VERTICLE MIRROR";
             VerticalMirrorButton.UseVisualStyleBackColor = true;
+            VerticalMirrorButton.Click += VerticalMirrorButton_Click;
             // 
             // HorizontalMirrorButton
             // 
@@ -87,6 +88,7 @@
             HorizontalMirrorButton.TabIndex = 13;
             HorizontalMirrorButton.Text = "HORIZONTAL MIRROR";
             HorizontalMirrorButton.UseVisualStyleBackColor = true;
+            HorizontalMirrorButton.Click += HorizontalMirrorButton_Click;
             // 
             // NegativeButton
             // 
