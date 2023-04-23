@@ -1,0 +1,4 @@
+1. sprawdzać czy wybrany miesiąc ma tyle dni 
+2. sprawdzać czy wybrany jest miesiąc/dzień z listy a nie wpisany nieistniejący
+3. liczenie wieku wszystkich
+4. sortowanie po najmłodszym i najstarszym 
