@@ -56,6 +56,7 @@
             OnlyGreenButton.TabIndex = 10;
             OnlyGreenButton.Text = "ONLY GREEN";
             OnlyGreenButton.UseVisualStyleBackColor = true;
+            OnlyGreenButton.Click += OnlyGreenButton_Click;
             // 
             // TurnButton
             // 

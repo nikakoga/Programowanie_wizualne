@@ -34,25 +34,29 @@ namespace Edycja_picturebox
 
             if (bmp != null)
             {
-            int width = bmp.Width;
-            int height = bmp.Height;
+                int width = bmp.Width;
+                int height = bmp.Height;
 
-            
+
                 for (int y = 0; y < height; y++)
                 {
                     for (int x = 0; x < width; x++)
                     {
+                        //get pixel value
                         Color p = bmp.GetPixel(x, y);
 
+                        //extract ARGB
                         int a = p.A;
                         int r = p.R;
                         int g = p.G;
                         int b = p.B;
 
+                        //convert to negative
                         r = 255 - r;
                         g = 255 - g;
                         b = 255 - b;
 
+                        //set new ARGB for pixel
                         bmp.SetPixel(x, y, Color.FromArgb(a, r, g, b));
                     }
                 }
@@ -60,6 +64,24 @@ namespace Edycja_picturebox
                 pictureBox1.Image = bmp;
             }
         }
-           
+
+        private void OnlyGreenButton_Click(object sender, EventArgs e)
+        {
+            Bitmap bmp = (Bitmap)pictureBox1.Image;
+            
+            if (bmp != null)
+            {
+                Graphics graphics = Graphics.FromImage(bmp);
+                graphics.DrawImage(pictureBox1.Image, 0, 0);
+
+                int width = bmp.Width;
+                int height = bmp.Height;
+
+                graphics.FillRectangle(new SolidBrush(Color.FromArgb(100, Color.Green)), 0, 0, width, height);
+                pictureBox1.Image = bmp;
+            }
+        }
+
+            
     }
 }
