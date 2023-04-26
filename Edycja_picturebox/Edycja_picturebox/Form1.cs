@@ -1,3 +1,6 @@
+using System.Drawing;
+using System.Windows.Forms;
+
 namespace Edycja_picturebox
 {
     public partial class Form1 : Form
@@ -28,6 +31,27 @@ namespace Edycja_picturebox
 
         }
 
+        private void TurnButton_Click(object sender, EventArgs e)
+        {
+            Bitmap bmp = (Bitmap)pictureBox1.Image;
+            if (bmp != null)
+            {
+                bmp.RotateFlip(RotateFlipType.Rotate90FlipXY);
+                pictureBox1.Image = bmp;
+            }
+
+        }
+
+        private void VerticalMirrorButton_Click(object sender, EventArgs e)
+        {
+            Bitmap bmp = (Bitmap)pictureBox1.Image;
+            if (bmp != null)
+            {
+                bmp.RotateFlip(RotateFlipType.Rotate180FlipY);
+
+                pictureBox1.Image = bmp;
+            }
+        }
         private void NegativeButton_Click(object sender, EventArgs e)
         {
             Bitmap bmp = (Bitmap)pictureBox1.Image;
@@ -65,6 +89,16 @@ namespace Edycja_picturebox
             }
         }
 
+        private void HorizontalMirrorButton_Click(object sender, EventArgs e)
+        {
+            Bitmap bmp = (Bitmap)pictureBox1.Image;
+            if (bmp != null)
+            {
+                bmp.RotateFlip(RotateFlipType.Rotate180FlipX);
+                pictureBox1.Image = bmp;
+            }
+        }
+        
         private void OnlyGreenButton_Click(object sender, EventArgs e)
         {
             Bitmap bmp = (Bitmap)pictureBox1.Image;
@@ -80,8 +114,6 @@ namespace Edycja_picturebox
                 graphics.FillRectangle(new SolidBrush(Color.FromArgb(100, Color.Green)), 0, 0, width, height);
                 pictureBox1.Image = bmp;
             }
-        }
-
-            
+        }            
     }
 }
