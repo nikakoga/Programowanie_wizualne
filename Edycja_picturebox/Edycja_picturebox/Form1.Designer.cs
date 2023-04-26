@@ -46,7 +46,6 @@
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 9;
             pictureBox1.TabStop = false;
-            
             // 
             // OnlyGreenButton
             // 
@@ -57,6 +56,7 @@
             OnlyGreenButton.TabIndex = 10;
             OnlyGreenButton.Text = "ONLY GREEN";
             OnlyGreenButton.UseVisualStyleBackColor = true;
+            OnlyGreenButton.Click += OnlyGreenButton_Click;
             // 
             // TurnButton
             // 
@@ -97,6 +97,7 @@
             NegativeButton.TabIndex = 14;
             NegativeButton.Text = "NEGATIVE";
             NegativeButton.UseVisualStyleBackColor = true;
+            NegativeButton.Click += NegativeButton_Click;
             // 
             // LoadPictureButton
             // 
