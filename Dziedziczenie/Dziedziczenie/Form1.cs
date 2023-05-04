@@ -38,7 +38,7 @@ namespace Dziedziczenie
                     }
                 default:
                     {
-                        MessageBox.Show("First Select witch form to open");
+                        MessageBox.Show("First select witch form to open");
                         break;
                     }
 
