@@ -14,18 +14,26 @@ namespace Dziedziczenie
             {
                 case 0:
                     {
+                        TopicCard topicCard = new TopicCard();
+                        topicCard.Show();
                         break;
                     }
                 case 1:
                     {
+                        PromorsOpinion promotorsOpinion = new PromorsOpinion();
+                        promotorsOpinion.Show();
                         break;
                     }
                     case 2:
                     { 
+                        ReviewersOpinion reviewersOpinion = new ReviewersOpinion();
+                        reviewersOpinion.Show();
                         break;
                     }
                     case 3:
                     {
+                        ExamProtocol examProtocol = new ExamProtocol();
+                        examProtocol.Show();
                         break;
                     }
                 default:
@@ -33,7 +41,6 @@ namespace Dziedziczenie
                         MessageBox.Show("First Select witch form to open");
                         break;
                     }
-
 
             }
 
