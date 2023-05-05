@@ -30,16 +30,16 @@
         {
             label1 = new Label();
             label2 = new Label();
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
+            NameSurenameTextBox = new TextBox();
+            DateOfBirthTextBox = new TextBox();
             label3 = new Label();
-            textBox3 = new TextBox();
+            StudentIDTextBox = new TextBox();
             label4 = new Label();
-            textBox4 = new TextBox();
-            label5 = new Label();
-            textBox5 = new TextBox();
+            PlaceOfBirthTextBox = new TextBox();
+            labelx = new Label();
+            TitleOfDiplomaThesisTextBox = new TextBox();
             label6 = new Label();
-            textBox6 = new TextBox();
+            DateOfDiplomaExaminationTextBox = new TextBox();
             label7 = new Label();
             label8 = new Label();
             label9 = new Label();
@@ -51,42 +51,41 @@
             ProfileOfStudyTextBox = new TextBox();
             AreaOfStudyTextBox = new TextBox();
             FieldOfStudyTextBox = new TextBox();
-            textBox7 = new TextBox();
+            DateOfStudyCommencementTextBox = new TextBox();
             label10 = new Label();
             label14 = new Label();
             label15 = new Label();
             label17 = new Label();
             label16 = new Label();
-            textBox8 = new TextBox();
+            ChairpersonTextBox = new TextBox();
             label18 = new Label();
             label19 = new Label();
             label20 = new Label();
-            textBox9 = new TextBox();
-            textBox10 = new TextBox();
+            SupervisorTextBox = new TextBox();
+            ReviewerTextBox = new TextBox();
             label21 = new Label();
             label22 = new Label();
             label23 = new Label();
-            textBox11 = new TextBox();
-            textBox12 = new TextBox();
-            textBox13 = new TextBox();
-            textBox14 = new TextBox();
-            textBox15 = new TextBox();
-            textBox16 = new TextBox();
-            textBox17 = new TextBox();
+            DefenseOfDiplomaThesisTextBox = new TextBox();
+            QuestionGrade1TextBox = new TextBox();
+            Question1TextBox = new TextBox();
+            Question2TextBox = new TextBox();
+            QuestionGrade2TextBox = new TextBox();
+            Question3TextBox = new TextBox();
+            QuestionGrade3TextBox = new TextBox();
             label24 = new Label();
             label25 = new Label();
             label26 = new Label();
             label27 = new Label();
-            textBox18 = new TextBox();
-            textBox19 = new TextBox();
-            textBox20 = new TextBox();
-            textBox21 = new TextBox();
-            textBox22 = new TextBox();
-            textBox23 = new TextBox();
-            textBox24 = new TextBox();
-            textBox25 = new TextBox();
-            textBox26 = new TextBox();
-            textBox27 = new TextBox();
+            DiplomaExaminationGradeTextBox = new TextBox();
+            WeightedAverageOfGradesTextBox = new TextBox();
+            GradeForTheDiplomaThesisTextBox = new TextBox();
+            AnotherExaminationGradeTextBox = new TextBox();
+            FinalResultOfStudiesTextBox = new TextBox();
+            AnotherExaminationGradeXTextBox = new TextBox();
+            GradeForTheDiplomaThesisXTextBox = new TextBox();
+            WeightedAverageOfGradesXTextBox = new TextBox();
+            FinalResultOfStudiesLetterTextBox = new TextBox();
             label28 = new Label();
             label29 = new Label();
             label30 = new Label();
@@ -97,6 +96,7 @@
             label33 = new Label();
             label34 = new Label();
             label35 = new Label();
+            FinalResultOfStudiesNumericTextBox = new TextBox();
             SuspendLayout();
             // 
             // label1
@@ -118,35 +118,35 @@
             label2.TabIndex = 1;
             label2.Text = "Name and surname";
             // 
-            // textBox1
+            // NameSurenameTextBox
             // 
-            textBox1.Location = new Point(141, 97);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(218, 27);
-            textBox1.TabIndex = 2;
+            NameSurenameTextBox.Location = new Point(141, 97);
+            NameSurenameTextBox.Name = "NameSurenameTextBox";
+            NameSurenameTextBox.Size = new Size(218, 27);
+            NameSurenameTextBox.TabIndex = 2;
             // 
-            // textBox2
+            // DateOfBirthTextBox
             // 
-            textBox2.Location = new Point(141, 129);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(218, 27);
-            textBox2.TabIndex = 4;
+            DateOfBirthTextBox.Location = new Point(141, 129);
+            DateOfBirthTextBox.Name = "DateOfBirthTextBox";
+            DateOfBirthTextBox.Size = new Size(218, 27);
+            DateOfBirthTextBox.TabIndex = 4;
             // 
             // label3
             // 
             label3.AutoSize = true;
             label3.Location = new Point(36, 129);
             label3.Name = "label3";
-            label3.Size = new Size(99, 20);
+            label3.Size = new Size(94, 20);
             label3.TabIndex = 3;
-            label3.Text = "Date of borth";
+            label3.Text = "Date of birth";
             // 
-            // textBox3
+            // StudentIDTextBox
             // 
-            textBox3.Location = new Point(141, 193);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(218, 27);
-            textBox3.TabIndex = 8;
+            StudentIDTextBox.Location = new Point(141, 193);
+            StudentIDTextBox.Name = "StudentIDTextBox";
+            StudentIDTextBox.Size = new Size(218, 27);
+            StudentIDTextBox.TabIndex = 8;
             // 
             // label4
             // 
@@ -157,28 +157,28 @@
             label4.TabIndex = 7;
             label4.Text = "Student ID No";
             // 
-            // textBox4
+            // PlaceOfBirthTextBox
             // 
-            textBox4.Location = new Point(141, 160);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(218, 27);
-            textBox4.TabIndex = 6;
+            PlaceOfBirthTextBox.Location = new Point(141, 160);
+            PlaceOfBirthTextBox.Name = "PlaceOfBirthTextBox";
+            PlaceOfBirthTextBox.Size = new Size(218, 27);
+            PlaceOfBirthTextBox.TabIndex = 6;
             // 
-            // label5
+            // labelx
             // 
-            label5.AutoSize = true;
-            label5.Location = new Point(38, 160);
-            label5.Name = "label5";
-            label5.Size = new Size(97, 20);
-            label5.TabIndex = 5;
-            label5.Text = "Place of birth";
+            labelx.AutoSize = true;
+            labelx.Location = new Point(38, 160);
+            labelx.Name = "labelx";
+            labelx.Size = new Size(97, 20);
+            labelx.TabIndex = 5;
+            labelx.Text = "Place of birth";
             // 
-            // textBox5
+            // TitleOfDiplomaThesisTextBox
             // 
-            textBox5.Location = new Point(218, 323);
-            textBox5.Name = "textBox5";
-            textBox5.Size = new Size(473, 27);
-            textBox5.TabIndex = 12;
+            TitleOfDiplomaThesisTextBox.Location = new Point(218, 323);
+            TitleOfDiplomaThesisTextBox.Name = "TitleOfDiplomaThesisTextBox";
+            TitleOfDiplomaThesisTextBox.Size = new Size(473, 27);
+            TitleOfDiplomaThesisTextBox.TabIndex = 12;
             // 
             // label6
             // 
@@ -189,12 +189,12 @@
             label6.TabIndex = 11;
             label6.Text = "examination";
             // 
-            // textBox6
+            // DateOfDiplomaExaminationTextBox
             // 
-            textBox6.Location = new Point(141, 226);
-            textBox6.Name = "textBox6";
-            textBox6.Size = new Size(218, 27);
-            textBox6.TabIndex = 10;
+            DateOfDiplomaExaminationTextBox.Location = new Point(141, 226);
+            DateOfDiplomaExaminationTextBox.Name = "DateOfDiplomaExaminationTextBox";
+            DateOfDiplomaExaminationTextBox.Size = new Size(218, 27);
+            DateOfDiplomaExaminationTextBox.TabIndex = 10;
             // 
             // label7
             // 
@@ -285,12 +285,12 @@
             FieldOfStudyTextBox.Size = new Size(191, 27);
             FieldOfStudyTextBox.TabIndex = 26;
             // 
-            // textBox7
+            // DateOfStudyCommencementTextBox
             // 
-            textBox7.Location = new Point(500, 262);
-            textBox7.Name = "textBox7";
-            textBox7.Size = new Size(191, 27);
-            textBox7.TabIndex = 37;
+            DateOfStudyCommencementTextBox.Location = new Point(500, 262);
+            DateOfStudyCommencementTextBox.Name = "DateOfStudyCommencementTextBox";
+            DateOfStudyCommencementTextBox.Size = new Size(191, 27);
+            DateOfStudyCommencementTextBox.TabIndex = 37;
             // 
             // label10
             // 
@@ -337,12 +337,12 @@
             label16.TabIndex = 43;
             label16.Text = "Name";
             // 
-            // textBox8
+            // ChairpersonTextBox
             // 
-            textBox8.Location = new Point(187, 419);
-            textBox8.Name = "textBox8";
-            textBox8.Size = new Size(260, 27);
-            textBox8.TabIndex = 44;
+            ChairpersonTextBox.Location = new Point(187, 419);
+            ChairpersonTextBox.Name = "ChairpersonTextBox";
+            ChairpersonTextBox.Size = new Size(260, 27);
+            ChairpersonTextBox.TabIndex = 44;
             // 
             // label18
             // 
@@ -371,19 +371,19 @@
             label20.TabIndex = 47;
             label20.Text = "Reviewer";
             // 
-            // textBox9
+            // SupervisorTextBox
             // 
-            textBox9.Location = new Point(187, 452);
-            textBox9.Name = "textBox9";
-            textBox9.Size = new Size(260, 27);
-            textBox9.TabIndex = 48;
+            SupervisorTextBox.Location = new Point(187, 452);
+            SupervisorTextBox.Name = "SupervisorTextBox";
+            SupervisorTextBox.Size = new Size(260, 27);
+            SupervisorTextBox.TabIndex = 48;
             // 
-            // textBox10
+            // ReviewerTextBox
             // 
-            textBox10.Location = new Point(187, 485);
-            textBox10.Name = "textBox10";
-            textBox10.Size = new Size(260, 27);
-            textBox10.TabIndex = 49;
+            ReviewerTextBox.Location = new Point(187, 485);
+            ReviewerTextBox.Name = "ReviewerTextBox";
+            ReviewerTextBox.Size = new Size(260, 27);
+            ReviewerTextBox.TabIndex = 49;
             // 
             // label21
             // 
@@ -412,54 +412,54 @@
             label23.TabIndex = 52;
             label23.Text = "Questions asked (only in the case of a positive thesis defense)\t";
             // 
-            // textBox11
+            // DefenseOfDiplomaThesisTextBox
             // 
-            textBox11.Location = new Point(532, 597);
-            textBox11.Name = "textBox11";
-            textBox11.Size = new Size(165, 27);
-            textBox11.TabIndex = 53;
+            DefenseOfDiplomaThesisTextBox.Location = new Point(532, 597);
+            DefenseOfDiplomaThesisTextBox.Name = "DefenseOfDiplomaThesisTextBox";
+            DefenseOfDiplomaThesisTextBox.Size = new Size(165, 27);
+            DefenseOfDiplomaThesisTextBox.TabIndex = 53;
             // 
-            // textBox12
+            // QuestionGrade1TextBox
             // 
-            textBox12.Location = new Point(532, 678);
-            textBox12.Name = "textBox12";
-            textBox12.Size = new Size(165, 27);
-            textBox12.TabIndex = 54;
+            QuestionGrade1TextBox.Location = new Point(532, 678);
+            QuestionGrade1TextBox.Name = "QuestionGrade1TextBox";
+            QuestionGrade1TextBox.Size = new Size(165, 27);
+            QuestionGrade1TextBox.TabIndex = 54;
             // 
-            // textBox13
+            // Question1TextBox
             // 
-            textBox13.Location = new Point(38, 678);
-            textBox13.Name = "textBox13";
-            textBox13.Size = new Size(473, 27);
-            textBox13.TabIndex = 55;
+            Question1TextBox.Location = new Point(38, 678);
+            Question1TextBox.Name = "Question1TextBox";
+            Question1TextBox.Size = new Size(473, 27);
+            Question1TextBox.TabIndex = 55;
             // 
-            // textBox14
+            // Question2TextBox
             // 
-            textBox14.Location = new Point(38, 711);
-            textBox14.Name = "textBox14";
-            textBox14.Size = new Size(473, 27);
-            textBox14.TabIndex = 57;
+            Question2TextBox.Location = new Point(38, 711);
+            Question2TextBox.Name = "Question2TextBox";
+            Question2TextBox.Size = new Size(473, 27);
+            Question2TextBox.TabIndex = 57;
             // 
-            // textBox15
+            // QuestionGrade2TextBox
             // 
-            textBox15.Location = new Point(532, 711);
-            textBox15.Name = "textBox15";
-            textBox15.Size = new Size(165, 27);
-            textBox15.TabIndex = 56;
+            QuestionGrade2TextBox.Location = new Point(532, 711);
+            QuestionGrade2TextBox.Name = "QuestionGrade2TextBox";
+            QuestionGrade2TextBox.Size = new Size(165, 27);
+            QuestionGrade2TextBox.TabIndex = 56;
             // 
-            // textBox16
+            // Question3TextBox
             // 
-            textBox16.Location = new Point(38, 744);
-            textBox16.Name = "textBox16";
-            textBox16.Size = new Size(473, 27);
-            textBox16.TabIndex = 59;
+            Question3TextBox.Location = new Point(38, 744);
+            Question3TextBox.Name = "Question3TextBox";
+            Question3TextBox.Size = new Size(473, 27);
+            Question3TextBox.TabIndex = 59;
             // 
-            // textBox17
+            // QuestionGrade3TextBox
             // 
-            textBox17.Location = new Point(532, 744);
-            textBox17.Name = "textBox17";
-            textBox17.Size = new Size(165, 27);
-            textBox17.TabIndex = 58;
+            QuestionGrade3TextBox.Location = new Point(532, 744);
+            QuestionGrade3TextBox.Name = "QuestionGrade3TextBox";
+            QuestionGrade3TextBox.Size = new Size(165, 27);
+            QuestionGrade3TextBox.TabIndex = 58;
             // 
             // label24
             // 
@@ -498,75 +498,68 @@
             label27.TabIndex = 63;
             label27.Text = "(grade point average when the diploma examination is passed)";
             // 
-            // textBox18
+            // DiplomaExaminationGradeTextBox
             // 
-            textBox18.Location = new Point(532, 792);
-            textBox18.Name = "textBox18";
-            textBox18.Size = new Size(165, 27);
-            textBox18.TabIndex = 64;
+            DiplomaExaminationGradeTextBox.Location = new Point(532, 792);
+            DiplomaExaminationGradeTextBox.Name = "DiplomaExaminationGradeTextBox";
+            DiplomaExaminationGradeTextBox.Size = new Size(165, 27);
+            DiplomaExaminationGradeTextBox.TabIndex = 64;
             // 
-            // textBox19
+            // WeightedAverageOfGradesTextBox
             // 
-            textBox19.Location = new Point(243, 852);
-            textBox19.Name = "textBox19";
-            textBox19.Size = new Size(165, 27);
-            textBox19.TabIndex = 65;
+            WeightedAverageOfGradesTextBox.Location = new Point(243, 852);
+            WeightedAverageOfGradesTextBox.Name = "WeightedAverageOfGradesTextBox";
+            WeightedAverageOfGradesTextBox.Size = new Size(165, 27);
+            WeightedAverageOfGradesTextBox.TabIndex = 65;
             // 
-            // textBox20
+            // GradeForTheDiplomaThesisTextBox
             // 
-            textBox20.Location = new Point(243, 885);
-            textBox20.Name = "textBox20";
-            textBox20.Size = new Size(165, 27);
-            textBox20.TabIndex = 66;
+            GradeForTheDiplomaThesisTextBox.Location = new Point(243, 885);
+            GradeForTheDiplomaThesisTextBox.Name = "GradeForTheDiplomaThesisTextBox";
+            GradeForTheDiplomaThesisTextBox.Size = new Size(165, 27);
+            GradeForTheDiplomaThesisTextBox.TabIndex = 66;
             // 
-            // textBox21
+            // AnotherExaminationGradeTextBox
             // 
-            textBox21.Location = new Point(243, 918);
-            textBox21.Name = "textBox21";
-            textBox21.Size = new Size(165, 27);
-            textBox21.TabIndex = 67;
+            AnotherExaminationGradeTextBox.Location = new Point(243, 918);
+            AnotherExaminationGradeTextBox.Name = "AnotherExaminationGradeTextBox";
+            AnotherExaminationGradeTextBox.Size = new Size(165, 27);
+            AnotherExaminationGradeTextBox.TabIndex = 67;
             // 
-            // textBox22
+            // FinalResultOfStudiesTextBox
             // 
-            textBox22.Location = new Point(243, 951);
-            textBox22.Name = "textBox22";
-            textBox22.Size = new Size(165, 27);
-            textBox22.TabIndex = 68;
+            FinalResultOfStudiesTextBox.Location = new Point(243, 951);
+            FinalResultOfStudiesTextBox.Name = "FinalResultOfStudiesTextBox";
+            FinalResultOfStudiesTextBox.Size = new Size(165, 27);
+            FinalResultOfStudiesTextBox.TabIndex = 68;
             // 
-            // textBox23
+            // AnotherExaminationGradeXTextBox
             // 
-            textBox23.Location = new Point(532, 918);
-            textBox23.Name = "textBox23";
-            textBox23.Size = new Size(165, 27);
-            textBox23.TabIndex = 71;
+            AnotherExaminationGradeXTextBox.Location = new Point(533, 919);
+            AnotherExaminationGradeXTextBox.Name = "AnotherExaminationGradeXTextBox";
+            AnotherExaminationGradeXTextBox.Size = new Size(165, 27);
+            AnotherExaminationGradeXTextBox.TabIndex = 71;
             // 
-            // textBox24
+            // GradeForTheDiplomaThesisXTextBox
             // 
-            textBox24.Location = new Point(532, 885);
-            textBox24.Name = "textBox24";
-            textBox24.Size = new Size(165, 27);
-            textBox24.TabIndex = 70;
+            GradeForTheDiplomaThesisXTextBox.Location = new Point(533, 886);
+            GradeForTheDiplomaThesisXTextBox.Name = "GradeForTheDiplomaThesisXTextBox";
+            GradeForTheDiplomaThesisXTextBox.Size = new Size(165, 27);
+            GradeForTheDiplomaThesisXTextBox.TabIndex = 70;
             // 
-            // textBox25
+            // WeightedAverageOfGradesXTextBox
             // 
-            textBox25.Location = new Point(532, 852);
-            textBox25.Name = "textBox25";
-            textBox25.Size = new Size(165, 27);
-            textBox25.TabIndex = 69;
+            WeightedAverageOfGradesXTextBox.Location = new Point(533, 853);
+            WeightedAverageOfGradesXTextBox.Name = "WeightedAverageOfGradesXTextBox";
+            WeightedAverageOfGradesXTextBox.Size = new Size(165, 27);
+            WeightedAverageOfGradesXTextBox.TabIndex = 69;
             // 
-            // textBox26
+            // FinalResultOfStudiesLetterTextBox
             // 
-            textBox26.Location = new Point(413, 952);
-            textBox26.Name = "textBox26";
-            textBox26.Size = new Size(111, 27);
-            textBox26.TabIndex = 72;
-            // 
-            // textBox27
-            // 
-            textBox27.Location = new Point(532, 951);
-            textBox27.Name = "textBox27";
-            textBox27.Size = new Size(165, 27);
-            textBox27.TabIndex = 73;
+            FinalResultOfStudiesLetterTextBox.Location = new Point(413, 952);
+            FinalResultOfStudiesLetterTextBox.Name = "FinalResultOfStudiesLetterTextBox";
+            FinalResultOfStudiesLetterTextBox.Size = new Size(111, 27);
+            FinalResultOfStudiesLetterTextBox.TabIndex = 72;
             // 
             // label28
             // 
@@ -589,7 +582,7 @@
             // label30
             // 
             label30.AutoSize = true;
-            label30.Location = new Point(474, 929);
+            label30.Location = new Point(474, 925);
             label30.Name = "label30";
             label30.Size = new Size(49, 20);
             label30.TabIndex = 76;
@@ -655,17 +648,24 @@
             // 
             label35.AutoSize = true;
             label35.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            label35.Location = new Point(12, 951);
+            label35.Location = new Point(13, 952);
             label35.Name = "label35";
             label35.Size = new Size(157, 20);
             label35.TabIndex = 83;
             label35.Text = "final result of studies";
             // 
+            // FinalResultOfStudiesNumericTextBox
+            // 
+            FinalResultOfStudiesNumericTextBox.Location = new Point(532, 951);
+            FinalResultOfStudiesNumericTextBox.Name = "FinalResultOfStudiesNumericTextBox";
+            FinalResultOfStudiesNumericTextBox.Size = new Size(165, 27);
+            FinalResultOfStudiesNumericTextBox.TabIndex = 73;
+            // 
             // ExamProtocol
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 1055);
+            ClientSize = new Size(753, 1055);
             Controls.Add(label35);
             Controls.Add(label34);
             Controls.Add(label33);
@@ -676,42 +676,42 @@
             Controls.Add(label30);
             Controls.Add(label29);
             Controls.Add(label28);
-            Controls.Add(textBox27);
-            Controls.Add(textBox26);
-            Controls.Add(textBox23);
-            Controls.Add(textBox24);
-            Controls.Add(textBox25);
-            Controls.Add(textBox22);
-            Controls.Add(textBox21);
-            Controls.Add(textBox20);
-            Controls.Add(textBox19);
-            Controls.Add(textBox18);
+            Controls.Add(FinalResultOfStudiesNumericTextBox);
+            Controls.Add(FinalResultOfStudiesLetterTextBox);
+            Controls.Add(AnotherExaminationGradeXTextBox);
+            Controls.Add(GradeForTheDiplomaThesisXTextBox);
+            Controls.Add(WeightedAverageOfGradesXTextBox);
+            Controls.Add(FinalResultOfStudiesTextBox);
+            Controls.Add(AnotherExaminationGradeTextBox);
+            Controls.Add(GradeForTheDiplomaThesisTextBox);
+            Controls.Add(WeightedAverageOfGradesTextBox);
+            Controls.Add(DiplomaExaminationGradeTextBox);
             Controls.Add(label27);
             Controls.Add(label26);
             Controls.Add(label25);
             Controls.Add(label24);
-            Controls.Add(textBox16);
-            Controls.Add(textBox17);
-            Controls.Add(textBox14);
-            Controls.Add(textBox15);
-            Controls.Add(textBox13);
-            Controls.Add(textBox12);
-            Controls.Add(textBox11);
+            Controls.Add(Question3TextBox);
+            Controls.Add(QuestionGrade3TextBox);
+            Controls.Add(Question2TextBox);
+            Controls.Add(QuestionGrade2TextBox);
+            Controls.Add(Question1TextBox);
+            Controls.Add(QuestionGrade1TextBox);
+            Controls.Add(DefenseOfDiplomaThesisTextBox);
             Controls.Add(label23);
             Controls.Add(label22);
             Controls.Add(label21);
-            Controls.Add(textBox10);
-            Controls.Add(textBox9);
+            Controls.Add(ReviewerTextBox);
+            Controls.Add(SupervisorTextBox);
             Controls.Add(label20);
             Controls.Add(label19);
             Controls.Add(label18);
-            Controls.Add(textBox8);
+            Controls.Add(ChairpersonTextBox);
             Controls.Add(label16);
             Controls.Add(label17);
             Controls.Add(label15);
             Controls.Add(label14);
             Controls.Add(label10);
-            Controls.Add(textBox7);
+            Controls.Add(DateOfStudyCommencementTextBox);
             Controls.Add(label8);
             Controls.Add(label9);
             Controls.Add(label11);
@@ -722,17 +722,17 @@
             Controls.Add(ProfileOfStudyTextBox);
             Controls.Add(AreaOfStudyTextBox);
             Controls.Add(FieldOfStudyTextBox);
-            Controls.Add(textBox5);
+            Controls.Add(TitleOfDiplomaThesisTextBox);
             Controls.Add(label6);
-            Controls.Add(textBox6);
+            Controls.Add(DateOfDiplomaExaminationTextBox);
             Controls.Add(label7);
-            Controls.Add(textBox3);
+            Controls.Add(StudentIDTextBox);
             Controls.Add(label4);
-            Controls.Add(textBox4);
-            Controls.Add(label5);
-            Controls.Add(textBox2);
+            Controls.Add(PlaceOfBirthTextBox);
+            Controls.Add(labelx);
+            Controls.Add(DateOfBirthTextBox);
             Controls.Add(label3);
-            Controls.Add(textBox1);
+            Controls.Add(NameSurenameTextBox);
             Controls.Add(label2);
             Controls.Add(label1);
             Name = "ExamProtocol";
@@ -746,16 +746,16 @@
 
         private Label label1;
         private Label label2;
-        private TextBox textBox1;
-        private TextBox textBox2;
+        private TextBox NameSurenameTextBox;
+        private TextBox DateOfBirthTextBox;
         private Label label3;
-        private TextBox textBox3;
+        private TextBox StudentIDTextBox;
         private Label label4;
-        private TextBox textBox4;
-        private Label label5;
-        private TextBox textBox5;
+        private TextBox PlaceOfBirthTextBox;
+        private Label labelx;
+        private TextBox TitleOfDiplomaThesisTextBox;
         private Label label6;
-        private TextBox textBox6;
+        private TextBox DateOfDiplomaExaminationTextBox;
         private Label label7;
         private Label label8;
         private Label label9;
@@ -767,42 +767,41 @@
         private TextBox ProfileOfStudyTextBox;
         private TextBox AreaOfStudyTextBox;
         private TextBox FieldOfStudyTextBox;
-        private TextBox textBox7;
+        private TextBox DateOfStudyCommencementTextBox;
         private Label label10;
         private Label label14;
         private Label label15;
         private Label label17;
         private Label label16;
-        private TextBox textBox8;
+        private TextBox ChairpersonTextBox;
         private Label label18;
         private Label label19;
         private Label label20;
-        private TextBox textBox9;
-        private TextBox textBox10;
+        private TextBox SupervisorTextBox;
+        private TextBox ReviewerTextBox;
         private Label label21;
         private Label label22;
         private Label label23;
-        private TextBox textBox11;
-        private TextBox textBox12;
-        private TextBox textBox13;
-        private TextBox textBox14;
-        private TextBox textBox15;
-        private TextBox textBox16;
-        private TextBox textBox17;
+        private TextBox DefenseOfDiplomaThesisTextBox;
+        private TextBox QuestionGrade1TextBox;
+        private TextBox Question1TextBox;
+        private TextBox Question2TextBox;
+        private TextBox QuestionGrade2TextBox;
+        private TextBox Question3TextBox;
+        private TextBox QuestionGrade3TextBox;
         private Label label24;
         private Label label25;
         private Label label26;
         private Label label27;
-        private TextBox textBox18;
-        private TextBox textBox19;
-        private TextBox textBox20;
-        private TextBox textBox21;
-        private TextBox textBox22;
-        private TextBox textBox23;
-        private TextBox textBox24;
-        private TextBox textBox25;
-        private TextBox textBox26;
-        private TextBox textBox27;
+        private TextBox DiplomaExaminationGradeTextBox;
+        private TextBox WeightedAverageOfGradesTextBox;
+        private TextBox GradeForTheDiplomaThesisTextBox;
+        private TextBox AnotherExaminationGradeTextBox;
+        private TextBox FinalResultOfStudiesTextBox;
+        private TextBox AnotherExaminationGradeXTextBox;
+        private TextBox GradeForTheDiplomaThesisXTextBox;
+        private TextBox WeightedAverageOfGradesXTextBox;
+        private TextBox FinalResultOfStudiesLetterTextBox;
         private Label label28;
         private Label label29;
         private Label label30;
@@ -813,5 +812,6 @@
         private Label label33;
         private Label label34;
         private Label label35;
+        private TextBox FinalResultOfStudiesNumericTextBox;
     }
 }
