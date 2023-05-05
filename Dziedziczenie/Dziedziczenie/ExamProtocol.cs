@@ -16,5 +16,20 @@ namespace Dziedziczenie
         {
             InitializeComponent();
         }
+
+        private void label33_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label32_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ExamProtocol_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
