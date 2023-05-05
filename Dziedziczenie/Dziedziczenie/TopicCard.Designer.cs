@@ -28,19 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
-            textBox3 = new TextBox();
-            textBox4 = new TextBox();
-            textBox5 = new TextBox();
-            textBox6 = new TextBox();
+            UniversityTextBox = new TextBox();
+            FieldOfStudyTextBox = new TextBox();
+            AreaOfStudyTextBox = new TextBox();
+            LevelOfStudiesTextBox = new TextBox();
+            FormOfStudiesTextBox = new TextBox();
+            ProfileOfStudyTextBox = new TextBox();
             label1 = new Label();
-            textBox7 = new TextBox();
-            textBox8 = new TextBox();
-            textBox9 = new TextBox();
-            textBox10 = new TextBox();
-            textBox11 = new TextBox();
-            textBox12 = new TextBox();
+            Student3NameTextBox = new TextBox();
+            Student2NameTextBox = new TextBox();
+            Student1NameTextBox = new TextBox();
+            Student3IDTextBox = new TextBox();
+            Student2IDTextBox = new TextBox();
+            Student1IDTextBox = new TextBox();
             textBox13 = new TextBox();
             textBox14 = new TextBox();
             textBox15 = new TextBox();
@@ -56,9 +56,6 @@
             label8 = new Label();
             label9 = new Label();
             label10 = new Label();
-            label11 = new Label();
-            label12 = new Label();
-            label13 = new Label();
             label14 = new Label();
             label15 = new Label();
             label16 = new Label();
@@ -69,346 +66,349 @@
             label21 = new Label();
             label22 = new Label();
             textBox19 = new TextBox();
+            label24 = new Label();
+            Student4IDTextBox = new TextBox();
+            Student4NameTextBox = new TextBox();
             SuspendLayout();
             // 
-            // textBox1
+            // UniversityTextBox
             // 
-            textBox1.Location = new Point(93, 72);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(191, 27);
-            textBox1.TabIndex = 0;
+            UniversityTextBox.Location = new Point(124, 75);
+            UniversityTextBox.Name = "UniversityTextBox";
+            UniversityTextBox.Size = new Size(191, 27);
+            UniversityTextBox.TabIndex = 0;
             // 
-            // textBox2
+            // FieldOfStudyTextBox
             // 
-            textBox2.Location = new Point(93, 119);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(191, 27);
-            textBox2.TabIndex = 1;
+            FieldOfStudyTextBox.Location = new Point(124, 119);
+            FieldOfStudyTextBox.Name = "FieldOfStudyTextBox";
+            FieldOfStudyTextBox.Size = new Size(191, 27);
+            FieldOfStudyTextBox.TabIndex = 1;
             // 
-            // textBox3
+            // AreaOfStudyTextBox
             // 
-            textBox3.Location = new Point(93, 168);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(191, 27);
-            textBox3.TabIndex = 2;
+            AreaOfStudyTextBox.Location = new Point(124, 168);
+            AreaOfStudyTextBox.Name = "AreaOfStudyTextBox";
+            AreaOfStudyTextBox.Size = new Size(191, 27);
+            AreaOfStudyTextBox.TabIndex = 2;
             // 
-            // textBox4
+            // LevelOfStudiesTextBox
             // 
-            textBox4.Location = new Point(513, 168);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(191, 27);
-            textBox4.TabIndex = 5;
+            LevelOfStudiesTextBox.Location = new Point(513, 168);
+            LevelOfStudiesTextBox.Name = "LevelOfStudiesTextBox";
+            LevelOfStudiesTextBox.Size = new Size(191, 27);
+            LevelOfStudiesTextBox.TabIndex = 5;
             // 
-            // textBox5
+            // FormOfStudiesTextBox
             // 
-            textBox5.Location = new Point(513, 119);
-            textBox5.Name = "textBox5";
-            textBox5.Size = new Size(191, 27);
-            textBox5.TabIndex = 4;
+            FormOfStudiesTextBox.Location = new Point(513, 119);
+            FormOfStudiesTextBox.Name = "FormOfStudiesTextBox";
+            FormOfStudiesTextBox.Size = new Size(191, 27);
+            FormOfStudiesTextBox.TabIndex = 4;
             // 
-            // textBox6
+            // ProfileOfStudyTextBox
             // 
-            textBox6.Location = new Point(513, 72);
-            textBox6.Name = "textBox6";
-            textBox6.Size = new Size(191, 27);
-            textBox6.TabIndex = 3;
+            ProfileOfStudyTextBox.Location = new Point(513, 72);
+            ProfileOfStudyTextBox.Name = "ProfileOfStudyTextBox";
+            ProfileOfStudyTextBox.Size = new Size(191, 27);
+            ProfileOfStudyTextBox.TabIndex = 3;
             // 
             // label1
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.Location = new Point(257, 15);
+            label1.Location = new Point(228, 19);
             label1.Name = "label1";
             label1.Size = new Size(310, 28);
             label1.TabIndex = 6;
             label1.Text = "Engineering  diploma thesis card";
             label1.Click += label1_Click;
             // 
-            // textBox7
+            // Student3NameTextBox
             // 
-            textBox7.Location = new Point(93, 344);
-            textBox7.Name = "textBox7";
-            textBox7.Size = new Size(258, 27);
-            textBox7.TabIndex = 9;
+            Student3NameTextBox.Location = new Point(93, 344);
+            Student3NameTextBox.Name = "Student3NameTextBox";
+            Student3NameTextBox.Size = new Size(397, 27);
+            Student3NameTextBox.TabIndex = 9;
             // 
-            // textBox8
+            // Student2NameTextBox
             // 
-            textBox8.Location = new Point(93, 295);
-            textBox8.Name = "textBox8";
-            textBox8.Size = new Size(258, 27);
-            textBox8.TabIndex = 8;
+            Student2NameTextBox.Location = new Point(93, 295);
+            Student2NameTextBox.Name = "Student2NameTextBox";
+            Student2NameTextBox.Size = new Size(397, 27);
+            Student2NameTextBox.TabIndex = 8;
             // 
-            // textBox9
+            // Student1NameTextBox
             // 
-            textBox9.Location = new Point(93, 248);
-            textBox9.Name = "textBox9";
-            textBox9.Size = new Size(258, 27);
-            textBox9.TabIndex = 7;
+            Student1NameTextBox.Location = new Point(93, 248);
+            Student1NameTextBox.Name = "Student1NameTextBox";
+            Student1NameTextBox.Size = new Size(397, 27);
+            Student1NameTextBox.TabIndex = 7;
             // 
-            // textBox10
+            // Student3IDTextBox
             // 
-            textBox10.Location = new Point(513, 344);
-            textBox10.Name = "textBox10";
-            textBox10.Size = new Size(191, 27);
-            textBox10.TabIndex = 12;
+            Student3IDTextBox.Location = new Point(513, 344);
+            Student3IDTextBox.Name = "Student3IDTextBox";
+            Student3IDTextBox.Size = new Size(191, 27);
+            Student3IDTextBox.TabIndex = 12;
             // 
-            // textBox11
+            // Student2IDTextBox
             // 
-            textBox11.Location = new Point(513, 295);
-            textBox11.Name = "textBox11";
-            textBox11.Size = new Size(191, 27);
-            textBox11.TabIndex = 11;
+            Student2IDTextBox.Location = new Point(513, 295);
+            Student2IDTextBox.Name = "Student2IDTextBox";
+            Student2IDTextBox.Size = new Size(191, 27);
+            Student2IDTextBox.TabIndex = 11;
             // 
-            // textBox12
+            // Student1IDTextBox
             // 
-            textBox12.Location = new Point(513, 248);
-            textBox12.Name = "textBox12";
-            textBox12.Size = new Size(191, 27);
-            textBox12.TabIndex = 10;
+            Student1IDTextBox.Location = new Point(513, 248);
+            Student1IDTextBox.Name = "Student1IDTextBox";
+            Student1IDTextBox.Size = new Size(191, 27);
+            Student1IDTextBox.TabIndex = 10;
             // 
             // textBox13
             // 
-            textBox13.Location = new Point(93, 504);
+            textBox13.Location = new Point(248, 552);
             textBox13.Name = "textBox13";
-            textBox13.Size = new Size(611, 27);
+            textBox13.Size = new Size(456, 27);
             textBox13.TabIndex = 15;
             // 
             // textBox14
             // 
-            textBox14.Location = new Point(93, 455);
+            textBox14.Location = new Point(248, 503);
             textBox14.Name = "textBox14";
-            textBox14.Size = new Size(611, 27);
+            textBox14.Size = new Size(456, 27);
             textBox14.TabIndex = 14;
             // 
             // textBox15
             // 
-            textBox15.Location = new Point(93, 408);
+            textBox15.Location = new Point(248, 456);
             textBox15.Name = "textBox15";
-            textBox15.Size = new Size(611, 27);
+            textBox15.Size = new Size(456, 27);
             textBox15.TabIndex = 13;
             // 
             // textBox16
             // 
-            textBox16.Location = new Point(93, 649);
+            textBox16.Location = new Point(248, 697);
             textBox16.Name = "textBox16";
-            textBox16.Size = new Size(611, 27);
+            textBox16.Size = new Size(456, 27);
             textBox16.TabIndex = 18;
             // 
             // textBox17
             // 
-            textBox17.Location = new Point(93, 600);
+            textBox17.Location = new Point(248, 648);
             textBox17.Name = "textBox17";
-            textBox17.Size = new Size(611, 27);
+            textBox17.Size = new Size(456, 27);
             textBox17.TabIndex = 17;
             // 
             // textBox18
             // 
-            textBox18.Location = new Point(93, 553);
+            textBox18.Location = new Point(248, 601);
             textBox18.Name = "textBox18";
-            textBox18.Size = new Size(611, 27);
+            textBox18.Size = new Size(456, 27);
             textBox18.TabIndex = 16;
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(427, 74);
+            label2.Location = new Point(398, 75);
             label2.Name = "label2";
-            label2.Size = new Size(50, 20);
+            label2.Size = new Size(109, 20);
             label2.TabIndex = 19;
-            label2.Text = "label2";
+            label2.Text = "Profile of study";
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(427, 126);
+            label3.Location = new Point(398, 126);
             label3.Name = "label3";
-            label3.Size = new Size(50, 20);
+            label3.Size = new Size(111, 20);
             label3.TabIndex = 20;
-            label3.Text = "label3";
+            label3.Text = "Form of studies";
             // 
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(427, 175);
+            label4.Location = new Point(396, 175);
             label4.Name = "label4";
-            label4.Size = new Size(50, 20);
+            label4.Size = new Size(111, 20);
             label4.TabIndex = 21;
-            label4.Text = "label4";
+            label4.Text = "Level of studies";
             // 
             // label5
             // 
             label5.AutoSize = true;
             label5.Location = new Point(12, 72);
             label5.Name = "label5";
-            label5.Size = new Size(50, 20);
+            label5.Size = new Size(73, 20);
             label5.TabIndex = 22;
-            label5.Text = "label5";
+            label5.Text = "University";
+            label5.Click += label5_Click;
             // 
             // label6
             // 
             label6.AutoSize = true;
             label6.Location = new Point(12, 122);
             label6.Name = "label6";
-            label6.Size = new Size(50, 20);
+            label6.Size = new Size(98, 20);
             label6.TabIndex = 23;
-            label6.Text = "label6";
+            label6.Text = "Field of study";
             // 
             // label7
             // 
             label7.AutoSize = true;
             label7.Location = new Point(12, 171);
             label7.Name = "label7";
-            label7.Size = new Size(50, 20);
+            label7.Size = new Size(97, 20);
             label7.TabIndex = 24;
-            label7.Text = "label7";
+            label7.Text = "Area of study";
             // 
             // label8
             // 
             label8.AutoSize = true;
             label8.Location = new Point(12, 248);
             label8.Name = "label8";
-            label8.Size = new Size(50, 20);
+            label8.Size = new Size(60, 20);
             label8.TabIndex = 25;
-            label8.Text = "label8";
+            label8.Text = "Student";
             // 
             // label9
             // 
             label9.AutoSize = true;
             label9.Location = new Point(12, 295);
             label9.Name = "label9";
-            label9.Size = new Size(50, 20);
+            label9.Size = new Size(60, 20);
             label9.TabIndex = 26;
-            label9.Text = "label9";
+            label9.Text = "Student";
             // 
             // label10
             // 
             label10.AutoSize = true;
             label10.Location = new Point(12, 344);
             label10.Name = "label10";
-            label10.Size = new Size(58, 20);
+            label10.Size = new Size(60, 20);
             label10.TabIndex = 27;
-            label10.Text = "label10";
-            // 
-            // label11
-            // 
-            label11.AutoSize = true;
-            label11.Location = new Point(427, 248);
-            label11.Name = "label11";
-            label11.Size = new Size(58, 20);
-            label11.TabIndex = 28;
-            label11.Text = "label11";
-            // 
-            // label12
-            // 
-            label12.AutoSize = true;
-            label12.Location = new Point(427, 295);
-            label12.Name = "label12";
-            label12.Size = new Size(58, 20);
-            label12.TabIndex = 29;
-            label12.Text = "label12";
-            // 
-            // label13
-            // 
-            label13.AutoSize = true;
-            label13.Location = new Point(427, 347);
-            label13.Name = "label13";
-            label13.Size = new Size(58, 20);
-            label13.TabIndex = 30;
-            label13.Text = "label13";
+            label10.Text = "Student";
             // 
             // label14
             // 
             label14.AutoSize = true;
             label14.Location = new Point(169, 225);
             label14.Name = "label14";
-            label14.Size = new Size(58, 20);
+            label14.Size = new Size(146, 20);
             label14.TabIndex = 31;
-            label14.Text = "label14";
+            label14.Text = "Name and surename";
             // 
             // label15
             // 
             label15.AutoSize = true;
             label15.Location = new Point(575, 225);
             label15.Name = "label15";
-            label15.Size = new Size(58, 20);
+            label15.Size = new Size(79, 20);
             label15.TabIndex = 32;
-            label15.Text = "label15";
+            label15.Text = "Student ID";
             // 
             // label16
             // 
             label16.AutoSize = true;
-            label16.Location = new Point(12, 411);
+            label16.Location = new Point(12, 459);
             label16.Name = "label16";
-            label16.Size = new Size(58, 20);
+            label16.Size = new Size(122, 20);
             label16.TabIndex = 33;
-            label16.Text = "label16";
+            label16.Text = "Title of the thesis";
             // 
             // label17
             // 
             label17.AutoSize = true;
-            label17.Location = new Point(12, 458);
+            label17.Location = new Point(12, 506);
             label17.Name = "label17";
-            label17.Size = new Size(58, 20);
+            label17.Size = new Size(200, 20);
             label17.TabIndex = 34;
-            label17.Text = "label17";
+            label17.Text = "English version of the title\t\t     ";
             // 
             // label18
             // 
             label18.AutoSize = true;
-            label18.Location = new Point(12, 511);
+            label18.Location = new Point(12, 559);
             label18.Name = "label18";
-            label18.Size = new Size(58, 20);
+            label18.Size = new Size(77, 20);
             label18.TabIndex = 35;
-            label18.Text = "label18";
+            label18.Text = "Input data";
             // 
             // label19
             // 
             label19.AutoSize = true;
-            label19.Location = new Point(12, 560);
+            label19.Location = new Point(12, 608);
             label19.Name = "label19";
-            label19.Size = new Size(58, 20);
+            label19.Size = new Size(124, 20);
             label19.TabIndex = 36;
-            label19.Text = "label19";
+            label19.Text = "Scope of work\t\t     ";
             // 
             // label20
             // 
             label20.AutoSize = true;
-            label20.Location = new Point(12, 603);
+            label20.Location = new Point(12, 651);
             label20.Name = "label20";
-            label20.Size = new Size(58, 20);
+            label20.Size = new Size(230, 20);
             label20.TabIndex = 37;
-            label20.Text = "label20";
+            label20.Text = "Deadline for thesis submission\t\t     ";
             // 
             // label21
             // 
             label21.AutoSize = true;
-            label21.Location = new Point(12, 649);
+            label21.Location = new Point(12, 697);
             label21.Name = "label21";
-            label21.Size = new Size(58, 20);
+            label21.Size = new Size(98, 20);
             label21.TabIndex = 38;
-            label21.Text = "label21";
+            label21.Text = "Supervisor\t\t     ";
             // 
             // label22
             // 
             label22.AutoSize = true;
-            label22.Location = new Point(12, 698);
+            label22.Location = new Point(12, 749);
             label22.Name = "label22";
-            label22.Size = new Size(58, 20);
+            label22.Size = new Size(216, 20);
             label22.TabIndex = 39;
-            label22.Text = "label22";
+            label22.Text = "Supervisor’s organizational unit";
             // 
             // textBox19
             // 
-            textBox19.Location = new Point(93, 698);
+            textBox19.Location = new Point(248, 746);
             textBox19.Name = "textBox19";
-            textBox19.Size = new Size(611, 27);
+            textBox19.Size = new Size(456, 27);
             textBox19.TabIndex = 40;
+            // 
+            // label24
+            // 
+            label24.AutoSize = true;
+            label24.Location = new Point(12, 391);
+            label24.Name = "label24";
+            label24.Size = new Size(60, 20);
+            label24.TabIndex = 43;
+            label24.Text = "Student";
+            // 
+            // Student4IDTextBox
+            // 
+            Student4IDTextBox.Location = new Point(513, 391);
+            Student4IDTextBox.Name = "Student4IDTextBox";
+            Student4IDTextBox.Size = new Size(191, 27);
+            Student4IDTextBox.TabIndex = 42;
+            // 
+            // Student4NameTextBox
+            // 
+            Student4NameTextBox.Location = new Point(93, 391);
+            Student4NameTextBox.Name = "Student4NameTextBox";
+            Student4NameTextBox.Size = new Size(397, 27);
+            Student4NameTextBox.TabIndex = 41;
             // 
             // TopicCard
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 859);
+            Controls.Add(label24);
+            Controls.Add(Student4IDTextBox);
+            Controls.Add(Student4NameTextBox);
             Controls.Add(textBox19);
             Controls.Add(label22);
             Controls.Add(label21);
@@ -419,9 +419,6 @@
             Controls.Add(label16);
             Controls.Add(label15);
             Controls.Add(label14);
-            Controls.Add(label13);
-            Controls.Add(label12);
-            Controls.Add(label11);
             Controls.Add(label10);
             Controls.Add(label9);
             Controls.Add(label8);
@@ -437,19 +434,19 @@
             Controls.Add(textBox13);
             Controls.Add(textBox14);
             Controls.Add(textBox15);
-            Controls.Add(textBox10);
-            Controls.Add(textBox11);
-            Controls.Add(textBox12);
-            Controls.Add(textBox7);
-            Controls.Add(textBox8);
-            Controls.Add(textBox9);
+            Controls.Add(Student3IDTextBox);
+            Controls.Add(Student2IDTextBox);
+            Controls.Add(Student1IDTextBox);
+            Controls.Add(Student3NameTextBox);
+            Controls.Add(Student2NameTextBox);
+            Controls.Add(Student1NameTextBox);
             Controls.Add(label1);
-            Controls.Add(textBox4);
-            Controls.Add(textBox5);
-            Controls.Add(textBox6);
-            Controls.Add(textBox3);
-            Controls.Add(textBox2);
-            Controls.Add(textBox1);
+            Controls.Add(LevelOfStudiesTextBox);
+            Controls.Add(FormOfStudiesTextBox);
+            Controls.Add(ProfileOfStudyTextBox);
+            Controls.Add(AreaOfStudyTextBox);
+            Controls.Add(FieldOfStudyTextBox);
+            Controls.Add(UniversityTextBox);
             Name = "TopicCard";
             Text = "TopicCard";
             ResumeLayout(false);
@@ -458,19 +455,19 @@
 
         #endregion
 
-        private TextBox textBox1;
-        private TextBox textBox2;
-        private TextBox textBox3;
-        private TextBox textBox4;
-        private TextBox textBox5;
-        private TextBox textBox6;
+        private TextBox UniversityTextBox;
+        private TextBox FieldOfStudyTextBox;
+        private TextBox AreaOfStudyTextBox;
+        private TextBox LevelOfStudiesTextBox;
+        private TextBox FormOfStudiesTextBox;
+        private TextBox ProfileOfStudyTextBox;
         private Label label1;
-        private TextBox textBox7;
-        private TextBox textBox8;
-        private TextBox textBox9;
-        private TextBox textBox10;
-        private TextBox textBox11;
-        private TextBox textBox12;
+        private TextBox Student3NameTextBox;
+        private TextBox Student2NameTextBox;
+        private TextBox Student1NameTextBox;
+        private TextBox Student3IDTextBox;
+        private TextBox Student2IDTextBox;
+        private TextBox Student1IDTextBox;
         private TextBox textBox13;
         private TextBox textBox14;
         private TextBox textBox15;
@@ -486,9 +483,6 @@
         private Label label8;
         private Label label9;
         private Label label10;
-        private Label label11;
-        private Label label12;
-        private Label label13;
         private Label label14;
         private Label label15;
         private Label label16;
@@ -499,5 +493,8 @@
         private Label label21;
         private Label label22;
         private TextBox textBox19;
+        private Label label24;
+        private TextBox Student4IDTextBox;
+        private TextBox Student4NameTextBox;
     }
 }
