@@ -77,7 +77,7 @@
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
             label1.Location = new Point(151, 36);
-            label1.Name = "OpinionTitle";
+            label1.Name = "label1";
             label1.Size = new Size(511, 28);
             label1.TabIndex = 0;
             label1.Text = "Reviewer's Opinion on the Engineering Diploma Thesis";
@@ -87,7 +87,7 @@
             label2.AutoSize = true;
             label2.Location = new Point(151, 109);
             label2.Name = "label2";
-            label2.Size = new Size(257, 20);
+            label2.Size = new Size(237, 20);
             label2.TabIndex = 1;
             label2.Text = "INFORMATION ON THE REVIEWER";
             // 
@@ -417,7 +417,7 @@
             SaveButton.Text = "SAVE";
             SaveButton.UseVisualStyleBackColor = true;
             // 
-            // ReviewersOpinion
+            // Opinion
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -464,7 +464,7 @@
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);
-            Name = "ReviewersOpinion";
+            Name = "Opinion";
             Text = "ReviewersOpinion";
             ResumeLayout(false);
             PerformLayout();

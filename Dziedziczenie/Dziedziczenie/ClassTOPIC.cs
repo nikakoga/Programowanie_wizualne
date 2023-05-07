@@ -6,7 +6,12 @@ using System.Threading.Tasks;
 
 namespace Dziedziczenie
 {
-    internal class ClassTOPIC
+    public class ClassTOPIC : ClassFORM
     {
+        string university;
+        string[] students;
+        float[] studentsID;
+        string englishTitle,inputData,Scope,Deadline,Supervisor,Unit;
+
     }
 }

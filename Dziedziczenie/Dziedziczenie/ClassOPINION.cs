@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace Dziedziczenie
 {
-    internal class ClassOPINION : ClassFORM
+    public class ClassOPINION : ClassFORM
     {
         string who, unit, degree;
         int A,B,C,D,E,F,G;
-        string summary, grade_letter;
+        string summary, gradeLetter;
         int grade;
     }
 }

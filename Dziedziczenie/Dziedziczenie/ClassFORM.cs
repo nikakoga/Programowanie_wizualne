@@ -6,9 +6,10 @@ using System.Threading.Tasks;
 
 namespace Dziedziczenie
 {
-    internal abstract class ClassFORM
+    public abstract class ClassFORM
     {
-        int StudentIDNo;
+        int StudentID;
         string ThesisTitle, FieldOfStudy, AreaOfStudy;
+        string studyProfile, studyForm, studyLevel;
     }
 }

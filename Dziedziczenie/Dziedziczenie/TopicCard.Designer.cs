@@ -471,7 +471,6 @@
             Controls.Add(UniversityTextBox);
             Name = "TopicCard";
             Text = "TopicCard";
-            Load += TopicCard_Load;
             ResumeLayout(false);
             PerformLayout();
         }

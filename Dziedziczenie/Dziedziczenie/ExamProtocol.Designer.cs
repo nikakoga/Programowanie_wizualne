@@ -89,8 +89,8 @@
             label28 = new Label();
             label29 = new Label();
             label30 = new Label();
-            button1 = new Button();
-            button2 = new Button();
+            SaveButton = new Button();
+            ReadButton = new Button();
             label31 = new Label();
             label32 = new Label();
             label33 = new Label();
@@ -105,9 +105,9 @@
             label1.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
             label1.Location = new Point(141, 21);
             label1.Name = "label1";
-            label1.Size = new Size(387, 28);
+            label1.Size = new Size(402, 28);
             label1.TabIndex = 0;
-            label1.Text = "Engineering Diploma Examination Raport";
+            label1.Text = "Engineering Diploma Examination Protocol";
             // 
             // label2
             // 
@@ -588,24 +588,24 @@
             label30.TabIndex = 76;
             label30.Text = "x 0,2=";
             // 
-            // button1
+            // SaveButton
             // 
-            button1.Location = new Point(359, 1000);
-            button1.Name = "button1";
-            button1.Size = new Size(94, 29);
-            button1.TabIndex = 77;
-            button1.Text = "SAVE";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
+            SaveButton.Location = new Point(385, 1000);
+            SaveButton.Name = "SaveButton";
+            SaveButton.Size = new Size(94, 29);
+            SaveButton.TabIndex = 77;
+            SaveButton.Text = "SAVE";
+            SaveButton.UseVisualStyleBackColor = true;
+            SaveButton.Click += button1_Click;
             // 
-            // button2
+            // ReadButton
             // 
-            button2.Location = new Point(258, 1000);
-            button2.Name = "button2";
-            button2.Size = new Size(94, 29);
-            button2.TabIndex = 78;
-            button2.Text = "READ";
-            button2.UseVisualStyleBackColor = true;
+            ReadButton.Location = new Point(187, 1000);
+            ReadButton.Name = "ReadButton";
+            ReadButton.Size = new Size(94, 29);
+            ReadButton.TabIndex = 78;
+            ReadButton.Text = "READ";
+            ReadButton.UseVisualStyleBackColor = true;
             // 
             // label31
             // 
@@ -672,8 +672,8 @@
             Controls.Add(label33);
             Controls.Add(label32);
             Controls.Add(label31);
-            Controls.Add(button2);
-            Controls.Add(button1);
+            Controls.Add(ReadButton);
+            Controls.Add(SaveButton);
             Controls.Add(label30);
             Controls.Add(label29);
             Controls.Add(label28);
@@ -806,8 +806,8 @@
         private Label label28;
         private Label label29;
         private Label label30;
-        private Button button1;
-        private Button button2;
+        private Button SaveButton;
+        private Button ReadButton;
         private Label label31;
         private Label label32;
         private Label label33;

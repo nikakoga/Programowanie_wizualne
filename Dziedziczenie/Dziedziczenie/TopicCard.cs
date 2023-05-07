@@ -17,12 +17,10 @@ namespace Dziedziczenie
             InitializeComponent();
         }
 
+        //private void TopicCard_Load(object sender, EventArgs e)
+        //{
 
-
-        private void TopicCard_Load(object sender, EventArgs e)
-        {
-
-        }
+        //}
 
 
         private void SaveButton_Click(object sender, EventArgs e)
