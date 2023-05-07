@@ -1,60 +1,112 @@
-﻿namespace Dziedziczenie
+﻿using Dziedziczenie.Models;
+
+namespace Dziedziczenie
 {
-    public partial class ExamProtocol : ClassPROTOCOL
+    public partial class ExamProtocol : Form
     {
+        private FormDataExamProtocol Data { get; set; }
+
         public ExamProtocol()
         {
             InitializeComponent();
+            Data = new FormDataExamProtocol()
+            {
+                Questions = new string[3],
+                QuestionGrade = new double[3],
+            };
         }
 
 
         private void ReadButton_Click(object sender, EventArgs e)
         {
+            if (Data.Load())
+            {
+                AreaOfStudyTextBox.Text = Data.AreaOfStudy;
+                FormOfStudiesTextBox.Text = Data.StudyForm;
+                LevelOfStudiesTextBox.Text = Data.StudyLevel;
+                FieldOfStudyTextBox.Text = Data.FieldOfStudy;
+                TitleOfDiplomaThesisTextBox.Text = Data.ThesisTitle;
 
+                // From FormDataProtocolBase
+                ProfileOfStudyTextBox.Text = Data.StudyProfile;
+                StudentIDTextBox.Text = Data.StudentID.ToString();
+
+                // From FormDataExamProtocol
+                NameSurenameTextBox.Text = Data.NameSurname;
+                DateOfBirthTextBox.Text = Data.DateBirth;
+                PlaceOfBirthTextBox.Text = Data.PlaceBirth;
+                DateOfDiplomaExaminationTextBox.Text = Data.DateExamination;
+                DateOfStudyCommencementTextBox.Text = Data.DateCommencement;
+                ChairpersonTextBox.Text = Data.ChairPerson;
+                SupervisorTextBox.Text = Data.Supervisor;
+                ReviewerTextBox.Text = Data.Reviewer;
+                DefenseOfDiplomaThesisTextBox.Text = Data.DefenseGrade.ToString();
+                DiplomaExaminationGradeTextBox.Text = Data.DiplomaGrade.ToString();
+
+                Question1TextBox.Text = Data.Questions[0];
+                Question2TextBox.Text = Data.Questions[1];
+                Question3TextBox.Text = Data.Questions[2];
+
+                QuestionGrade1TextBox.Text = Data.QuestionGrade[0].ToString();
+                QuestionGrade2TextBox.Text = Data.QuestionGrade[1].ToString();
+                QuestionGrade3TextBox.Text = Data.QuestionGrade[2].ToString();
+
+                weightAverageTextBox.Text = Data.WeightAverage.ToString();
+                weightThesisTextBox.Text = Data.WeightThesis.ToString();
+                weightexamTextBox.Text = Data.WeightExam.ToString();
+                weightx06TextBox.Text = Data.WeightX06.ToString();
+                weightx02thesisTextBox.Text = Data.WeightX02Thesis.ToString();
+                weightx02examxTextBox.Text = Data.WeightX02Exam.ToString();
+                resultWordTextBox.Text = Data.ResultWord;
+                resultLetterTextBox.Text = Data.ResultLetter;
+                resultNumberTextBox.Text = Data.ResultNumber.ToString();
+            }
         }
 
         private void SaveButton_Click(object sender, EventArgs e)
         {
-            //From ClassFORM
-            this.AreaOfStudy = AreaOfStudyTextBox.Text;
-            this.studyForm = FormOfStudiesTextBox.Text;
-            this.studyLevel = LevelOfStudiesTextBox.Text;
-            this.FieldOfStudy = FieldOfStudyTextBox.Text;
-            this.ThesisTitle = TitleOfDiplomaThesisTextBox.Text;
-            this.studyProfile = ProfileOfStudyTextBox.Text;
-            this.StudentID = Convert.ToInt32(StudentIDTextBox.Text);
+            // From FormDataBase
+            Data.AreaOfStudy = AreaOfStudyTextBox.Text;
+            Data.StudyForm = FormOfStudiesTextBox.Text;
+            Data.StudyLevel = LevelOfStudiesTextBox.Text;
+            Data.FieldOfStudy = FieldOfStudyTextBox.Text;
+            Data.ThesisTitle = TitleOfDiplomaThesisTextBox.Text;
 
-            //From ClassPROTOCOL
-            this.nameSurname = NameSurenameTextBox.Text;
-            this.dateBirth = DateOfBirthTextBox.Text;
-            this.placeBirth = PlaceOfBirthTextBox.Text;
-            this.dateExamination = DateOfDiplomaExaminationTextBox.Text;
-            this.dateCommencement = DateOfStudyCommencementTextBox.Text;
-            this.chairperson = ChairpersonTextBox.Text;
-            this.supervisor = SupervisorTextBox.Text;
-            this.reviewer = ReviewerTextBox.Text;
-            this.defenseGrade = Convert.ToDouble(DefenseOfDiplomaThesisTextBox.Text);
-            this.diplomaGrade = Convert.ToDouble(DiplomaExaminationGradeTextBox.Text);
+            // From FormDataProtocolBase
+            Data.StudyProfile = ProfileOfStudyTextBox.Text;
+            Data.StudentID = Convert.ToInt32(StudentIDTextBox.Text);
 
-            this.questions[0] = Question1TextBox.Text;
-            this.questions[1] = Question2TextBox.Text;
-            this.questions[2] = Question3TextBox.Text;
+            // From FormDataExamProtocol
+            Data.NameSurname = NameSurenameTextBox.Text;
+            Data.DateBirth = DateOfBirthTextBox.Text;
+            Data.PlaceBirth = PlaceOfBirthTextBox.Text;
+            Data.DateExamination = DateOfDiplomaExaminationTextBox.Text;
+            Data.DateCommencement = DateOfStudyCommencementTextBox.Text;
+            Data.ChairPerson = ChairpersonTextBox.Text;
+            Data.Supervisor = SupervisorTextBox.Text;
+            Data.Reviewer = ReviewerTextBox.Text;
+            Data.DefenseGrade = Convert.ToDouble(DefenseOfDiplomaThesisTextBox.Text);
+            Data.DiplomaGrade = Convert.ToDouble(DiplomaExaminationGradeTextBox.Text);
 
-            this.questionGrade[0] = Convert.ToDouble(QuestionGrade1TextBox.Text);
-            this.questionGrade[1] = Convert.ToDouble(QuestionGrade2TextBox.Text);
-            this.questionGrade[2] = Convert.ToDouble(QuestionGrade2TextBox.Text);
+            Data.Questions[0] = Question1TextBox.Text;
+            Data.Questions[1] = Question2TextBox.Text;
+            Data.Questions[2] = Question3TextBox.Text;
 
-            this.weightAverage = Convert.ToDouble(weightAverageTextBox.Text);
-            this.weightthesis = Convert.ToDouble(weightThesisTextBox.Text);
-            this.weightexam = Convert.ToDouble(weightexamTextBox.Text);
-            this.weightx06 = Convert.ToDouble(weightx06TextBox.Text);
-            this.weightx02thesis = Convert.ToDouble(weightx02thesisTextBox.Text);
-            this.weightx02examx = Convert.ToDouble(weightx02examxTextBox.Text);
-            this.resultWord = resultWordTextBox.Text;
-            this.resultLetter = resultLetterTextBox.Text;
-            this.resultNumber = Convert.ToDouble(resultNumberTextBox.Text);
+            Data.QuestionGrade[0] = Convert.ToDouble(QuestionGrade1TextBox.Text);
+            Data.QuestionGrade[1] = Convert.ToDouble(QuestionGrade2TextBox.Text);
+            Data.QuestionGrade[2] = Convert.ToDouble(QuestionGrade3TextBox.Text);
 
-            this.Save();
+            Data.WeightAverage = Convert.ToDouble(weightAverageTextBox.Text);
+            Data.WeightThesis = Convert.ToDouble(weightThesisTextBox.Text);
+            Data.WeightExam = Convert.ToDouble(weightexamTextBox.Text);
+            Data.WeightX06 = Convert.ToDouble(weightx06TextBox.Text);
+            Data.WeightX02Thesis = Convert.ToDouble(weightx02thesisTextBox.Text);
+            Data.WeightX02Exam = Convert.ToDouble(weightx02examxTextBox.Text);
+            Data.ResultWord = resultWordTextBox.Text;
+            Data.ResultLetter = resultLetterTextBox.Text;
+            Data.ResultNumber = Convert.ToDouble(resultNumberTextBox.Text);
+
+            Data.Save();
         }
     }
 }

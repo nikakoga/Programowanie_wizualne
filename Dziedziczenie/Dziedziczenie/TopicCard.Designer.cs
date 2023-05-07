@@ -409,6 +409,7 @@
             ReadButton.TabIndex = 80;
             ReadButton.Text = "READ";
             ReadButton.UseVisualStyleBackColor = true;
+            ReadButton.Click += ReadButton_Click;
             // 
             // SaveButton
             // 
