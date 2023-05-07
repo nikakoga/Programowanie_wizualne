@@ -416,6 +416,7 @@
             SaveButton.TabIndex = 47;
             SaveButton.Text = "SAVE";
             SaveButton.UseVisualStyleBackColor = true;
+            SaveButton.Click += SaveButton_Click;
             // 
             // Opinion
             // 

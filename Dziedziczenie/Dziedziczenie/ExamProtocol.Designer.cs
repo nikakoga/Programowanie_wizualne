@@ -596,7 +596,7 @@
             SaveButton.TabIndex = 77;
             SaveButton.Text = "SAVE";
             SaveButton.UseVisualStyleBackColor = true;
-            SaveButton.Click += button1_Click;
+            
             // 
             // ReadButton
             // 
@@ -606,6 +606,7 @@
             ReadButton.TabIndex = 78;
             ReadButton.Text = "READ";
             ReadButton.UseVisualStyleBackColor = true;
+            ReadButton.Click += ReadButton_Click;
             // 
             // label31
             // 
@@ -624,7 +625,7 @@
             label32.Size = new Size(214, 20);
             label32.TabIndex = 80;
             label32.Text = "obtained in the course of study";
-            label32.Click += label32_Click;
+            
             // 
             // label33
             // 
@@ -634,7 +635,7 @@
             label33.Size = new Size(197, 20);
             label33.TabIndex = 81;
             label33.Text = "grade for the diploma thesis";
-            label33.Click += label33_Click;
+            
             // 
             // label34
             // 
@@ -738,7 +739,7 @@
             Controls.Add(label1);
             Name = "ExamProtocol";
             Text = "ExamProtocol";
-            Load += ExamProtocol_Load;
+           
             ResumeLayout(false);
             PerformLayout();
         }

@@ -35,18 +35,18 @@
             FormOfStudiesTextBox = new TextBox();
             ProfileOfStudyTextBox = new TextBox();
             label1 = new Label();
-            Student3NameTextBox = new TextBox();
-            Student2NameTextBox = new TextBox();
-            Student1NameTextBox = new TextBox();
-            Student3IDTextBox = new TextBox();
-            Student2IDTextBox = new TextBox();
-            Student1IDTextBox = new TextBox();
-            textBox13 = new TextBox();
-            textBox14 = new TextBox();
-            textBox15 = new TextBox();
-            textBox16 = new TextBox();
-            textBox17 = new TextBox();
-            textBox18 = new TextBox();
+            student2 = new TextBox();
+            student1 = new TextBox();
+            student0 = new TextBox();
+            student2ID = new TextBox();
+            student1ID = new TextBox();
+            student0ID = new TextBox();
+            InputTextBox = new TextBox();
+            EnglishTitleTextBox = new TextBox();
+            ThesisTitleTextBox = new TextBox();
+            SupervisorTextBox = new TextBox();
+            DeadlineTextBox = new TextBox();
+            ScopeTextBox = new TextBox();
             label2 = new Label();
             label3 = new Label();
             label4 = new Label();
@@ -65,10 +65,10 @@
             label20 = new Label();
             label21 = new Label();
             label22 = new Label();
-            textBox19 = new TextBox();
+            SupervisorUnitTextBox = new TextBox();
             label24 = new Label();
-            Student4IDTextBox = new TextBox();
-            Student4NameTextBox = new TextBox();
+            student3ID = new TextBox();
+            student3 = new TextBox();
             ReadButton = new Button();
             SaveButton = new Button();
             SuspendLayout();
@@ -125,89 +125,89 @@
             label1.TabIndex = 6;
             label1.Text = "Engineering  Diploma Thesis Card";
             // 
-            // Student3NameTextBox
+            // student2
             // 
-            Student3NameTextBox.Location = new Point(93, 344);
-            Student3NameTextBox.Name = "Student3NameTextBox";
-            Student3NameTextBox.Size = new Size(397, 27);
-            Student3NameTextBox.TabIndex = 9;
+            student2.Location = new Point(93, 337);
+            student2.Name = "student2";
+            student2.Size = new Size(397, 27);
+            student2.TabIndex = 9;
             // 
-            // Student2NameTextBox
+            // student1
             // 
-            Student2NameTextBox.Location = new Point(93, 295);
-            Student2NameTextBox.Name = "Student2NameTextBox";
-            Student2NameTextBox.Size = new Size(397, 27);
-            Student2NameTextBox.TabIndex = 8;
+            student1.Location = new Point(93, 295);
+            student1.Name = "student1";
+            student1.Size = new Size(397, 27);
+            student1.TabIndex = 8;
             // 
-            // Student1NameTextBox
+            // student0
             // 
-            Student1NameTextBox.Location = new Point(93, 248);
-            Student1NameTextBox.Name = "Student1NameTextBox";
-            Student1NameTextBox.Size = new Size(397, 27);
-            Student1NameTextBox.TabIndex = 7;
+            student0.Location = new Point(93, 248);
+            student0.Name = "student0";
+            student0.Size = new Size(397, 27);
+            student0.TabIndex = 7;
             // 
-            // Student3IDTextBox
+            // student2ID
             // 
-            Student3IDTextBox.Location = new Point(513, 344);
-            Student3IDTextBox.Name = "Student3IDTextBox";
-            Student3IDTextBox.Size = new Size(191, 27);
-            Student3IDTextBox.TabIndex = 12;
+            student2ID.Location = new Point(513, 344);
+            student2ID.Name = "student2ID";
+            student2ID.Size = new Size(191, 27);
+            student2ID.TabIndex = 12;
             // 
-            // Student2IDTextBox
+            // student1ID
             // 
-            Student2IDTextBox.Location = new Point(513, 295);
-            Student2IDTextBox.Name = "Student2IDTextBox";
-            Student2IDTextBox.Size = new Size(191, 27);
-            Student2IDTextBox.TabIndex = 11;
+            student1ID.Location = new Point(513, 295);
+            student1ID.Name = "student1ID";
+            student1ID.Size = new Size(191, 27);
+            student1ID.TabIndex = 11;
             // 
-            // Student1IDTextBox
+            // student0ID
             // 
-            Student1IDTextBox.Location = new Point(513, 248);
-            Student1IDTextBox.Name = "Student1IDTextBox";
-            Student1IDTextBox.Size = new Size(191, 27);
-            Student1IDTextBox.TabIndex = 10;
+            student0ID.Location = new Point(513, 248);
+            student0ID.Name = "student0ID";
+            student0ID.Size = new Size(191, 27);
+            student0ID.TabIndex = 10;
             // 
-            // textBox13
+            // InputTextBox
             // 
-            textBox13.Location = new Point(248, 552);
-            textBox13.Name = "textBox13";
-            textBox13.Size = new Size(456, 27);
-            textBox13.TabIndex = 15;
+            InputTextBox.Location = new Point(248, 552);
+            InputTextBox.Name = "InputTextBox";
+            InputTextBox.Size = new Size(456, 27);
+            InputTextBox.TabIndex = 15;
             // 
-            // textBox14
+            // EnglishTitleTextBox
             // 
-            textBox14.Location = new Point(248, 503);
-            textBox14.Name = "textBox14";
-            textBox14.Size = new Size(456, 27);
-            textBox14.TabIndex = 14;
+            EnglishTitleTextBox.Location = new Point(248, 503);
+            EnglishTitleTextBox.Name = "EnglishTitleTextBox";
+            EnglishTitleTextBox.Size = new Size(456, 27);
+            EnglishTitleTextBox.TabIndex = 14;
             // 
-            // textBox15
+            // ThesisTitleTextBox
             // 
-            textBox15.Location = new Point(248, 456);
-            textBox15.Name = "textBox15";
-            textBox15.Size = new Size(456, 27);
-            textBox15.TabIndex = 13;
+            ThesisTitleTextBox.Location = new Point(248, 456);
+            ThesisTitleTextBox.Name = "ThesisTitleTextBox";
+            ThesisTitleTextBox.Size = new Size(456, 27);
+            ThesisTitleTextBox.TabIndex = 13;
             // 
-            // textBox16
+            // SupervisorTextBox
             // 
-            textBox16.Location = new Point(248, 697);
-            textBox16.Name = "textBox16";
-            textBox16.Size = new Size(456, 27);
-            textBox16.TabIndex = 18;
+            SupervisorTextBox.Location = new Point(248, 697);
+            SupervisorTextBox.Name = "SupervisorTextBox";
+            SupervisorTextBox.Size = new Size(456, 27);
+            SupervisorTextBox.TabIndex = 18;
             // 
-            // textBox17
+            // DeadlineTextBox
             // 
-            textBox17.Location = new Point(248, 648);
-            textBox17.Name = "textBox17";
-            textBox17.Size = new Size(456, 27);
-            textBox17.TabIndex = 17;
+            DeadlineTextBox.Location = new Point(248, 648);
+            DeadlineTextBox.Name = "DeadlineTextBox";
+            DeadlineTextBox.Size = new Size(456, 27);
+            DeadlineTextBox.TabIndex = 17;
             // 
-            // textBox18
+            // ScopeTextBox
             // 
-            textBox18.Location = new Point(248, 601);
-            textBox18.Name = "textBox18";
-            textBox18.Size = new Size(456, 27);
-            textBox18.TabIndex = 16;
+            ScopeTextBox.Location = new Point(248, 601);
+            ScopeTextBox.Name = "ScopeTextBox";
+            ScopeTextBox.Size = new Size(456, 27);
+            ScopeTextBox.TabIndex = 16;
             // 
             // label2
             // 
@@ -371,12 +371,12 @@
             label22.TabIndex = 39;
             label22.Text = "Supervisor’s organizational unit";
             // 
-            // textBox19
+            // SupervisorUnitTextBox
             // 
-            textBox19.Location = new Point(248, 746);
-            textBox19.Name = "textBox19";
-            textBox19.Size = new Size(456, 27);
-            textBox19.TabIndex = 40;
+            SupervisorUnitTextBox.Location = new Point(248, 746);
+            SupervisorUnitTextBox.Name = "SupervisorUnitTextBox";
+            SupervisorUnitTextBox.Size = new Size(456, 27);
+            SupervisorUnitTextBox.TabIndex = 40;
             // 
             // label24
             // 
@@ -387,19 +387,19 @@
             label24.TabIndex = 43;
             label24.Text = "Student";
             // 
-            // Student4IDTextBox
+            // student3ID
             // 
-            Student4IDTextBox.Location = new Point(513, 391);
-            Student4IDTextBox.Name = "Student4IDTextBox";
-            Student4IDTextBox.Size = new Size(191, 27);
-            Student4IDTextBox.TabIndex = 42;
+            student3ID.Location = new Point(513, 391);
+            student3ID.Name = "student3ID";
+            student3ID.Size = new Size(191, 27);
+            student3ID.TabIndex = 42;
             // 
-            // Student4NameTextBox
+            // student3
             // 
-            Student4NameTextBox.Location = new Point(93, 391);
-            Student4NameTextBox.Name = "Student4NameTextBox";
-            Student4NameTextBox.Size = new Size(397, 27);
-            Student4NameTextBox.TabIndex = 41;
+            student3.Location = new Point(93, 391);
+            student3.Name = "student3";
+            student3.Size = new Size(397, 27);
+            student3.TabIndex = 41;
             // 
             // ReadButton
             // 
@@ -409,7 +409,6 @@
             ReadButton.TabIndex = 80;
             ReadButton.Text = "READ";
             ReadButton.UseVisualStyleBackColor = true;
-            
             // 
             // SaveButton
             // 
@@ -429,9 +428,9 @@
             Controls.Add(ReadButton);
             Controls.Add(SaveButton);
             Controls.Add(label24);
-            Controls.Add(Student4IDTextBox);
-            Controls.Add(Student4NameTextBox);
-            Controls.Add(textBox19);
+            Controls.Add(student3ID);
+            Controls.Add(student3);
+            Controls.Add(SupervisorUnitTextBox);
             Controls.Add(label22);
             Controls.Add(label21);
             Controls.Add(label20);
@@ -450,18 +449,18 @@
             Controls.Add(label4);
             Controls.Add(label3);
             Controls.Add(label2);
-            Controls.Add(textBox16);
-            Controls.Add(textBox17);
-            Controls.Add(textBox18);
-            Controls.Add(textBox13);
-            Controls.Add(textBox14);
-            Controls.Add(textBox15);
-            Controls.Add(Student3IDTextBox);
-            Controls.Add(Student2IDTextBox);
-            Controls.Add(Student1IDTextBox);
-            Controls.Add(Student3NameTextBox);
-            Controls.Add(Student2NameTextBox);
-            Controls.Add(Student1NameTextBox);
+            Controls.Add(SupervisorTextBox);
+            Controls.Add(DeadlineTextBox);
+            Controls.Add(ScopeTextBox);
+            Controls.Add(InputTextBox);
+            Controls.Add(EnglishTitleTextBox);
+            Controls.Add(ThesisTitleTextBox);
+            Controls.Add(student2ID);
+            Controls.Add(student1ID);
+            Controls.Add(student0ID);
+            Controls.Add(student2);
+            Controls.Add(student1);
+            Controls.Add(student0);
             Controls.Add(label1);
             Controls.Add(LevelOfStudiesTextBox);
             Controls.Add(FormOfStudiesTextBox);
@@ -484,18 +483,18 @@
         private TextBox FormOfStudiesTextBox;
         private TextBox ProfileOfStudyTextBox;
         private Label label1;
-        private TextBox Student3NameTextBox;
-        private TextBox Student2NameTextBox;
-        private TextBox Student1NameTextBox;
-        private TextBox Student3IDTextBox;
-        private TextBox Student2IDTextBox;
-        private TextBox Student1IDTextBox;
-        private TextBox textBox13;
-        private TextBox textBox14;
-        private TextBox textBox15;
-        private TextBox textBox16;
-        private TextBox textBox17;
-        private TextBox textBox18;
+        private TextBox student2;
+        private TextBox student1;
+        private TextBox student0;
+        private TextBox student2ID;
+        private TextBox student1ID;
+        private TextBox student0ID;
+        private TextBox InputTextBox;
+        private TextBox EnglishTitleTextBox;
+        private TextBox ThesisTitleTextBox;
+        private TextBox SupervisorTextBox;
+        private TextBox DeadlineTextBox;
+        private TextBox ScopeTextBox;
         private Label label2;
         private Label label3;
         private Label label4;
@@ -514,10 +513,10 @@
         private Label label20;
         private Label label21;
         private Label label22;
-        private TextBox textBox19;
+        private TextBox SupervisorUnitTextBox;
         private Label label24;
-        private TextBox Student4IDTextBox;
-        private TextBox Student4NameTextBox;
+        private TextBox student3ID;
+        private TextBox student3;
         private Button ReadButton;
         private Button SaveButton;
     }
