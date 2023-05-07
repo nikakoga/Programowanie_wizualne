@@ -17,17 +17,15 @@ namespace Dziedziczenie
             InitializeComponent();
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
+
+
+        private void TopicCard_Load(object sender, EventArgs e)
         {
 
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
 
-        }
-
-        private void label5_Click(object sender, EventArgs e)
+        private void SaveButton_Click(object sender, EventArgs e)
         {
 
         }

@@ -69,6 +69,8 @@
             label24 = new Label();
             Student4IDTextBox = new TextBox();
             Student4NameTextBox = new TextBox();
+            ReadButton = new Button();
+            SaveButton = new Button();
             SuspendLayout();
             // 
             // UniversityTextBox
@@ -119,10 +121,9 @@
             label1.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
             label1.Location = new Point(228, 19);
             label1.Name = "label1";
-            label1.Size = new Size(310, 28);
+            label1.Size = new Size(319, 28);
             label1.TabIndex = 6;
-            label1.Text = "Engineering  diploma thesis card";
-            label1.Click += label1_Click;
+            label1.Text = "Engineering  Diploma Thesis Card";
             // 
             // Student3NameTextBox
             // 
@@ -243,7 +244,6 @@
             label5.Size = new Size(73, 20);
             label5.TabIndex = 22;
             label5.Text = "University";
-            label5.Click += label5_Click;
             // 
             // label6
             // 
@@ -401,11 +401,33 @@
             Student4NameTextBox.Size = new Size(397, 27);
             Student4NameTextBox.TabIndex = 41;
             // 
+            // ReadButton
+            // 
+            ReadButton.Location = new Point(221, 808);
+            ReadButton.Name = "ReadButton";
+            ReadButton.Size = new Size(94, 29);
+            ReadButton.TabIndex = 80;
+            ReadButton.Text = "READ";
+            ReadButton.UseVisualStyleBackColor = true;
+            
+            // 
+            // SaveButton
+            // 
+            SaveButton.Location = new Point(439, 808);
+            SaveButton.Name = "SaveButton";
+            SaveButton.Size = new Size(94, 29);
+            SaveButton.TabIndex = 79;
+            SaveButton.Text = "SAVE";
+            SaveButton.UseVisualStyleBackColor = true;
+            SaveButton.Click += SaveButton_Click;
+            // 
             // TopicCard
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 859);
+            Controls.Add(ReadButton);
+            Controls.Add(SaveButton);
             Controls.Add(label24);
             Controls.Add(Student4IDTextBox);
             Controls.Add(Student4NameTextBox);
@@ -449,6 +471,7 @@
             Controls.Add(UniversityTextBox);
             Name = "TopicCard";
             Text = "TopicCard";
+            Load += TopicCard_Load;
             ResumeLayout(false);
             PerformLayout();
         }
@@ -496,5 +519,7 @@
         private Label label24;
         private TextBox Student4IDTextBox;
         private TextBox Student4NameTextBox;
+        private Button ReadButton;
+        private Button SaveButton;
     }
 }
