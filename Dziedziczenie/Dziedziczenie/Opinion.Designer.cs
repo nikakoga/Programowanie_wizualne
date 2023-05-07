@@ -1,6 +1,6 @@
 ﻿namespace Dziedziczenie
 {
-    partial class ReviewersOpinion
+    partial class Opinion
     {
         /// <summary>
         /// Required designer variable.
@@ -77,7 +77,7 @@
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
             label1.Location = new Point(151, 36);
-            label1.Name = "label1";
+            label1.Name = "OpinionTitle";
             label1.Size = new Size(511, 28);
             label1.TabIndex = 0;
             label1.Text = "Reviewer's Opinion on the Engineering Diploma Thesis";
@@ -89,7 +89,7 @@
             label2.Name = "label2";
             label2.Size = new Size(257, 20);
             label2.TabIndex = 1;
-            label2.Text = "\t     INFORMATION ON THE REVIEWER";
+            label2.Text = "INFORMATION ON THE REVIEWER";
             // 
             // label3
             // 
@@ -243,7 +243,6 @@
             label19.Size = new Size(584, 20);
             label19.TabIndex = 18;
             label19.Text = "    \t     SUMMARY OF THE SUBSTANTIVE ASSESSMENT OF WORK AND OTHER REMARKS";
-            label19.Click += label19_Click;
             // 
             // label20
             // 
@@ -271,7 +270,6 @@
             label22.Size = new Size(65, 20);
             label22.TabIndex = 21;
             label22.Text = "In words";
-            label22.Click += label22_Click;
             // 
             // AreaOfStudyTextBox
             // 

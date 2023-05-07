@@ -20,13 +20,15 @@ namespace Dziedziczenie
                     }
                 case 1:
                     {
-                        PromorsOpinion promotorsOpinion = new PromorsOpinion();
+                        string who = "Supervisor";
+                        Opinion promotorsOpinion = new Opinion(who);
                         promotorsOpinion.Show();
                         break;
                     }
                     case 2:
-                    { 
-                        ReviewersOpinion reviewersOpinion = new ReviewersOpinion();
+                    {
+                        string who = "Reviewer";
+                        Opinion reviewersOpinion = new Opinion(who);
                         reviewersOpinion.Show();
                         break;
                     }

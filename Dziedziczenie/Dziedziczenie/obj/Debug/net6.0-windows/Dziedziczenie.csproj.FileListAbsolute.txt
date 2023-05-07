@@ -16,6 +16,5 @@ C:\Users\weron\Documents\Pani Informatyk\Programowanie_wizualne\Dziedziczenie\Dz
 C:\Users\weron\Documents\Pani Informatyk\Programowanie_wizualne\Dziedziczenie\Dziedziczenie\obj\Debug\net6.0-windows\Dziedziczenie.genruntimeconfig.cache
 C:\Users\weron\Documents\Pani Informatyk\Programowanie_wizualne\Dziedziczenie\Dziedziczenie\obj\Debug\net6.0-windows\ref\Dziedziczenie.dll
 C:\Users\weron\Documents\Pani Informatyk\Programowanie_wizualne\Dziedziczenie\Dziedziczenie\obj\Debug\net6.0-windows\Dziedziczenie.ExamProtocol.resources
-C:\Users\weron\Documents\Pani Informatyk\Programowanie_wizualne\Dziedziczenie\Dziedziczenie\obj\Debug\net6.0-windows\Dziedziczenie.PromorsOpinion.resources
-C:\Users\weron\Documents\Pani Informatyk\Programowanie_wizualne\Dziedziczenie\Dziedziczenie\obj\Debug\net6.0-windows\Dziedziczenie.ReviewersOpinion.resources
 C:\Users\weron\Documents\Pani Informatyk\Programowanie_wizualne\Dziedziczenie\Dziedziczenie\obj\Debug\net6.0-windows\Dziedziczenie.TopicCard.resources
+C:\Users\weron\Documents\Pani Informatyk\Programowanie_wizualne\Dziedziczenie\Dziedziczenie\obj\Debug\net6.0-windows\Dziedziczenie.Opinion.resources

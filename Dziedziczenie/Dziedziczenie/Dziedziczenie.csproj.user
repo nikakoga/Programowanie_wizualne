@@ -7,10 +7,7 @@
     <Compile Update="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="PromorsOpinion.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="ReviewersOpinion.cs">
+    <Compile Update="Opinion.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="TopicCard.cs">

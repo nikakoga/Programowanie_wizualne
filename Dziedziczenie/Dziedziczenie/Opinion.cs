@@ -10,21 +10,17 @@ using System.Windows.Forms;
 
 namespace Dziedziczenie
 {
-    public partial class ReviewersOpinion : Form
+    public partial class Opinion : Form
     {
-        public ReviewersOpinion()
+        public Opinion(string who)
         {
             InitializeComponent();
-        }
-
-        private void label22_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label19_Click(object sender, EventArgs e)
-        {
+            label3.Text = who;
+            label1.Text = who + "'s Opinion on the Engineering Diploma Thesis";
+            label2.Text = "INFORMATION ON THE " + who.ToUpper();
 
         }
+
+
     }
 }
