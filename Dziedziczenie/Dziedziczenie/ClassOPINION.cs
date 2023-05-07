@@ -9,10 +9,10 @@ namespace Dziedziczenie
 {
     public class ClassOPINION : ClassFORM
     {
-        public string who, unit, degree;
-        public double A,B,C,D,E,F,G;
-        public string summary, gradeLetter;
-        public double grade;
+        protected string who, unit, degree;
+        protected double A,B,C,D,E,F,G;
+        protected string summary, gradeLetter;
+        protected double grade;
 
     }
 }

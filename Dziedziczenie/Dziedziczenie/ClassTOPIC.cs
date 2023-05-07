@@ -8,10 +8,10 @@ namespace Dziedziczenie
 {
     public class ClassTOPIC : ClassFORM
     {
-        public string university;
-        public string[] students;
-        public double[] studentsID;
-        public string englishTitle,inputData,Scope,Deadline,Supervisor,Unit;
+        protected string university;
+        protected string[] students;
+        protected int[] studentsID;
+        protected string englishTitle,inputData,Scope,Deadline,Supervisor,Unit;
 
     }
 }

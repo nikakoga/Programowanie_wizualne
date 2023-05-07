@@ -10,14 +10,13 @@ using System.Windows.Forms;
 
 namespace Dziedziczenie
 {
-    public partial class TopicCard : Form
+    public partial class TopicCard : ClassTOPIC
     {
-        ClassTOPIC topic;
-
         public TopicCard()
         {
             InitializeComponent();
-            topic = new ClassTOPIC();
+            students = new string[4];
+            studentsID = new int[4];
         }
 
         
@@ -25,34 +24,33 @@ namespace Dziedziczenie
         {
 
             //From ClassFORM
-            topic.AreaOfStudy = AreaOfStudyTextBox.Text;
-            topic.studyForm = FormOfStudiesTextBox.Text;
-            topic.studyLevel = LevelOfStudiesTextBox.Text;
-            topic.FieldOfStudy = FieldOfStudyTextBox.Text;
-            topic.ThesisTitle = ThesisTitleTextBox.Text;
-            topic.studyProfile = ProfileOfStudyTextBox.Text;
+            this.AreaOfStudy = AreaOfStudyTextBox.Text;
+            this.studyForm = FormOfStudiesTextBox.Text;
+            this.studyLevel = LevelOfStudiesTextBox.Text;
+            this.FieldOfStudy = FieldOfStudyTextBox.Text;
+            this.ThesisTitle = ThesisTitleTextBox.Text;
+            this.studyProfile = ProfileOfStudyTextBox.Text;
 
             //From ClassTOPIC
-            topic.university = UniversityTextBox.Text;
-            topic.englishTitle = EnglishTitleTextBox.Text;
-            topic.inputData = InputTextBox.Text;
-            topic.Scope = ScopeTextBox.Text;
-            topic.Deadline = DeadlineTextBox.Text;
-            topic.Supervisor = SupervisorTextBox.Text;
-            topic.Unit = SupervisorUnitTextBox.Text;
+            this.university = UniversityTextBox.Text;
+            this.englishTitle = EnglishTitleTextBox.Text;
+            this.inputData = InputTextBox.Text;
+            this.Scope = ScopeTextBox.Text;
+            this.Deadline = DeadlineTextBox.Text;
+            this.Supervisor = SupervisorTextBox.Text;
+            this.Unit = SupervisorUnitTextBox.Text;
 
-            topic.students[2] = student2.Text;
-            topic.students[3] = student3.Text;
-            topic.students[0]=student0.Text;
-            topic.students[1]=student1.Text;
-            
+            this.students[0]=student0.Text;
+            this.students[1]=student1.Text;
+            this.students[2]=student2.Text;
+            this.students[3]=student3.Text;
 
-            topic.studentsID[0] = Convert.ToDouble(student0ID.Text);
-            topic.studentsID[1] = Convert.ToDouble(student1ID.Text);
-            topic.studentsID[2] = Convert.ToDouble(student2ID.Text);
-            topic.studentsID[3] = Convert.ToDouble(student3ID.Text);
+            this.studentsID[0] = Convert.ToInt32(student0ID.Text);
+            this.studentsID[1] = Convert.ToInt32(student1ID.Text);
+            this.studentsID[2] = Convert.ToInt32(student2ID.Text);
+            this.studentsID[3] = Convert.ToInt32(student3ID.Text);
 
-            topic.Save(this);
+            this.Save();
 
         }
     }

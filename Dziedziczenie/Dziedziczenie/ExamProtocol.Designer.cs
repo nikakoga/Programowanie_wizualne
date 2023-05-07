@@ -78,14 +78,14 @@
             label26 = new Label();
             label27 = new Label();
             DiplomaExaminationGradeTextBox = new TextBox();
-            WeightedAverageOfGradesTextBox = new TextBox();
-            GradeForTheDiplomaThesisTextBox = new TextBox();
-            AnotherExaminationGradeTextBox = new TextBox();
-            FinalResultOfStudiesTextBox = new TextBox();
-            AnotherExaminationGradeXTextBox = new TextBox();
-            GradeForTheDiplomaThesisXTextBox = new TextBox();
-            WeightedAverageOfGradesXTextBox = new TextBox();
-            FinalResultOfStudiesLetterTextBox = new TextBox();
+            weightAverageTextBox = new TextBox();
+            weightThesisTextBox = new TextBox();
+            weightexamTextBox = new TextBox();
+            resultWordTextBox = new TextBox();
+            weightx02examxTextBox = new TextBox();
+            weightx02thesisTextBox = new TextBox();
+            weightx06TextBox = new TextBox();
+            resultLetterTextBox = new TextBox();
             label28 = new Label();
             label29 = new Label();
             label30 = new Label();
@@ -96,7 +96,7 @@
             label33 = new Label();
             label34 = new Label();
             label35 = new Label();
-            FinalResultOfStudiesNumericTextBox = new TextBox();
+            resultNumberTextBox = new TextBox();
             SuspendLayout();
             // 
             // label1
@@ -505,61 +505,61 @@
             DiplomaExaminationGradeTextBox.Size = new Size(165, 27);
             DiplomaExaminationGradeTextBox.TabIndex = 64;
             // 
-            // WeightedAverageOfGradesTextBox
+            // weightAverage
             // 
-            WeightedAverageOfGradesTextBox.Location = new Point(243, 852);
-            WeightedAverageOfGradesTextBox.Name = "WeightedAverageOfGradesTextBox";
-            WeightedAverageOfGradesTextBox.Size = new Size(165, 27);
-            WeightedAverageOfGradesTextBox.TabIndex = 65;
+            weightAverageTextBox.Location = new Point(243, 852);
+            weightAverageTextBox.Name = "weightAverage";
+            weightAverageTextBox.Size = new Size(165, 27);
+            weightAverageTextBox.TabIndex = 65;
             // 
-            // GradeForTheDiplomaThesisTextBox
+            // weightthesis
             // 
-            GradeForTheDiplomaThesisTextBox.Location = new Point(243, 885);
-            GradeForTheDiplomaThesisTextBox.Name = "GradeForTheDiplomaThesisTextBox";
-            GradeForTheDiplomaThesisTextBox.Size = new Size(165, 27);
-            GradeForTheDiplomaThesisTextBox.TabIndex = 66;
+            weightThesisTextBox.Location = new Point(243, 885);
+            weightThesisTextBox.Name = "weightthesis";
+            weightThesisTextBox.Size = new Size(165, 27);
+            weightThesisTextBox.TabIndex = 66;
             // 
-            // AnotherExaminationGradeTextBox
+            // weightexam
             // 
-            AnotherExaminationGradeTextBox.Location = new Point(243, 918);
-            AnotherExaminationGradeTextBox.Name = "AnotherExaminationGradeTextBox";
-            AnotherExaminationGradeTextBox.Size = new Size(165, 27);
-            AnotherExaminationGradeTextBox.TabIndex = 67;
+            weightexamTextBox.Location = new Point(243, 918);
+            weightexamTextBox.Name = "weightexam";
+            weightexamTextBox.Size = new Size(165, 27);
+            weightexamTextBox.TabIndex = 67;
             // 
-            // FinalResultOfStudiesTextBox
+            // resultWord
             // 
-            FinalResultOfStudiesTextBox.Location = new Point(243, 951);
-            FinalResultOfStudiesTextBox.Name = "FinalResultOfStudiesTextBox";
-            FinalResultOfStudiesTextBox.Size = new Size(165, 27);
-            FinalResultOfStudiesTextBox.TabIndex = 68;
+            resultWordTextBox.Location = new Point(243, 951);
+            resultWordTextBox.Name = "resultWord";
+            resultWordTextBox.Size = new Size(165, 27);
+            resultWordTextBox.TabIndex = 68;
             // 
-            // AnotherExaminationGradeXTextBox
+            // weightx02examx
             // 
-            AnotherExaminationGradeXTextBox.Location = new Point(533, 919);
-            AnotherExaminationGradeXTextBox.Name = "AnotherExaminationGradeXTextBox";
-            AnotherExaminationGradeXTextBox.Size = new Size(165, 27);
-            AnotherExaminationGradeXTextBox.TabIndex = 71;
+            weightx02examxTextBox.Location = new Point(533, 919);
+            weightx02examxTextBox.Name = "weightx02examx";
+            weightx02examxTextBox.Size = new Size(165, 27);
+            weightx02examxTextBox.TabIndex = 71;
             // 
-            // GradeForTheDiplomaThesisXTextBox
+            // weightx02thesis
             // 
-            GradeForTheDiplomaThesisXTextBox.Location = new Point(533, 886);
-            GradeForTheDiplomaThesisXTextBox.Name = "GradeForTheDiplomaThesisXTextBox";
-            GradeForTheDiplomaThesisXTextBox.Size = new Size(165, 27);
-            GradeForTheDiplomaThesisXTextBox.TabIndex = 70;
+            weightx02thesisTextBox.Location = new Point(533, 886);
+            weightx02thesisTextBox.Name = "weightx02thesis";
+            weightx02thesisTextBox.Size = new Size(165, 27);
+            weightx02thesisTextBox.TabIndex = 70;
             // 
-            // WeightedAverageOfGradesXTextBox
+            // weightx06
             // 
-            WeightedAverageOfGradesXTextBox.Location = new Point(533, 853);
-            WeightedAverageOfGradesXTextBox.Name = "WeightedAverageOfGradesXTextBox";
-            WeightedAverageOfGradesXTextBox.Size = new Size(165, 27);
-            WeightedAverageOfGradesXTextBox.TabIndex = 69;
+            weightx06TextBox.Location = new Point(533, 853);
+            weightx06TextBox.Name = "weightx06";
+            weightx06TextBox.Size = new Size(165, 27);
+            weightx06TextBox.TabIndex = 69;
             // 
-            // FinalResultOfStudiesLetterTextBox
+            // resultLetter
             // 
-            FinalResultOfStudiesLetterTextBox.Location = new Point(413, 952);
-            FinalResultOfStudiesLetterTextBox.Name = "FinalResultOfStudiesLetterTextBox";
-            FinalResultOfStudiesLetterTextBox.Size = new Size(111, 27);
-            FinalResultOfStudiesLetterTextBox.TabIndex = 72;
+            resultLetterTextBox.Location = new Point(413, 952);
+            resultLetterTextBox.Name = "resultLetter";
+            resultLetterTextBox.Size = new Size(111, 27);
+            resultLetterTextBox.TabIndex = 72;
             // 
             // label28
             // 
@@ -596,7 +596,7 @@
             SaveButton.TabIndex = 77;
             SaveButton.Text = "SAVE";
             SaveButton.UseVisualStyleBackColor = true;
-            
+            SaveButton.Click += SaveButton_Click;
             // 
             // ReadButton
             // 
@@ -625,7 +625,6 @@
             label32.Size = new Size(214, 20);
             label32.TabIndex = 80;
             label32.Text = "obtained in the course of study";
-            
             // 
             // label33
             // 
@@ -635,7 +634,6 @@
             label33.Size = new Size(197, 20);
             label33.TabIndex = 81;
             label33.Text = "grade for the diploma thesis";
-            
             // 
             // label34
             // 
@@ -656,12 +654,12 @@
             label35.TabIndex = 83;
             label35.Text = "final result of studies";
             // 
-            // FinalResultOfStudiesNumericTextBox
+            // resultNumber
             // 
-            FinalResultOfStudiesNumericTextBox.Location = new Point(532, 951);
-            FinalResultOfStudiesNumericTextBox.Name = "FinalResultOfStudiesNumericTextBox";
-            FinalResultOfStudiesNumericTextBox.Size = new Size(165, 27);
-            FinalResultOfStudiesNumericTextBox.TabIndex = 73;
+            resultNumberTextBox.Location = new Point(532, 951);
+            resultNumberTextBox.Name = "resultNumber";
+            resultNumberTextBox.Size = new Size(165, 27);
+            resultNumberTextBox.TabIndex = 73;
             // 
             // ExamProtocol
             // 
@@ -678,15 +676,15 @@
             Controls.Add(label30);
             Controls.Add(label29);
             Controls.Add(label28);
-            Controls.Add(FinalResultOfStudiesNumericTextBox);
-            Controls.Add(FinalResultOfStudiesLetterTextBox);
-            Controls.Add(AnotherExaminationGradeXTextBox);
-            Controls.Add(GradeForTheDiplomaThesisXTextBox);
-            Controls.Add(WeightedAverageOfGradesXTextBox);
-            Controls.Add(FinalResultOfStudiesTextBox);
-            Controls.Add(AnotherExaminationGradeTextBox);
-            Controls.Add(GradeForTheDiplomaThesisTextBox);
-            Controls.Add(WeightedAverageOfGradesTextBox);
+            Controls.Add(resultNumberTextBox);
+            Controls.Add(resultLetterTextBox);
+            Controls.Add(weightx02examxTextBox);
+            Controls.Add(weightx02thesisTextBox);
+            Controls.Add(weightx06TextBox);
+            Controls.Add(resultWordTextBox);
+            Controls.Add(weightexamTextBox);
+            Controls.Add(weightThesisTextBox);
+            Controls.Add(weightAverageTextBox);
             Controls.Add(DiplomaExaminationGradeTextBox);
             Controls.Add(label27);
             Controls.Add(label26);
@@ -739,7 +737,6 @@
             Controls.Add(label1);
             Name = "ExamProtocol";
             Text = "ExamProtocol";
-           
             ResumeLayout(false);
             PerformLayout();
         }
@@ -796,14 +793,14 @@
         private Label label26;
         private Label label27;
         private TextBox DiplomaExaminationGradeTextBox;
-        private TextBox WeightedAverageOfGradesTextBox;
-        private TextBox GradeForTheDiplomaThesisTextBox;
-        private TextBox AnotherExaminationGradeTextBox;
-        private TextBox FinalResultOfStudiesTextBox;
-        private TextBox AnotherExaminationGradeXTextBox;
-        private TextBox GradeForTheDiplomaThesisXTextBox;
-        private TextBox WeightedAverageOfGradesXTextBox;
-        private TextBox FinalResultOfStudiesLetterTextBox;
+        private TextBox weightAverageTextBox;
+        private TextBox weightThesisTextBox;
+        private TextBox weightexamTextBox;
+        private TextBox resultWordTextBox;
+        private TextBox weightx02examxTextBox;
+        private TextBox weightx02thesisTextBox;
+        private TextBox weightx06TextBox;
+        private TextBox resultLetterTextBox;
         private Label label28;
         private Label label29;
         private Label label30;
@@ -814,6 +811,6 @@
         private Label label33;
         private Label label34;
         private Label label35;
-        private TextBox FinalResultOfStudiesNumericTextBox;
+        private TextBox resultNumberTextBox;
     }
 }

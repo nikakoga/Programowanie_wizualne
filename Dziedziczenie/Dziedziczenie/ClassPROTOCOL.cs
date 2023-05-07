@@ -8,16 +8,16 @@ namespace Dziedziczenie
 {
     public class ClassPROTOCOL : ClassFORM
     {
-        string nameSurname;
-        string dateBirth, dateExamination, dateCommencement;
-        string chairperson, supervisor, reviewer;
-        double defenseGrade;
-        string[] questions;
-        double[] questionGrade;
-        double diplomaGrade;
-        double weightAverage,weightthesis,weightexam,weightx06,weightx02thesis,weightx02examx;
-        string resultWord, resultLetter;
-        double resultNumber;
+        public string nameSurname;
+        public string placeBirth, dateBirth, dateExamination, dateCommencement;
+        public string chairperson, supervisor, reviewer;
+        public double defenseGrade;
+        public string[] questions;
+        public double[] questionGrade;
+        public double diplomaGrade;
+        public double weightAverage,weightthesis,weightexam,weightx06,weightx02thesis,weightx02examx;
+        public string resultWord, resultLetter;
+        public double resultNumber;
         
         
     }

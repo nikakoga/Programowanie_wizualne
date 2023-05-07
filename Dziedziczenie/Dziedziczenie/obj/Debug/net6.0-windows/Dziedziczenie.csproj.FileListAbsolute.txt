@@ -18,3 +18,4 @@ C:\Users\weron\Documents\Pani Informatyk\Programowanie_wizualne\Dziedziczenie\Dz
 C:\Users\weron\Documents\Pani Informatyk\Programowanie_wizualne\Dziedziczenie\Dziedziczenie\obj\Debug\net6.0-windows\Dziedziczenie.ExamProtocol.resources
 C:\Users\weron\Documents\Pani Informatyk\Programowanie_wizualne\Dziedziczenie\Dziedziczenie\obj\Debug\net6.0-windows\Dziedziczenie.TopicCard.resources
 C:\Users\weron\Documents\Pani Informatyk\Programowanie_wizualne\Dziedziczenie\Dziedziczenie\obj\Debug\net6.0-windows\Dziedziczenie.Opinion.resources
+C:\Users\weron\Documents\Pani Informatyk\Programowanie_wizualne\Dziedziczenie\Dziedziczenie\obj\Debug\net6.0-windows\Dziedziczenie.ClassOPINION.resources

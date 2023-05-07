@@ -7,55 +7,29 @@ using System.Xml.Serialization;
 
 namespace Dziedziczenie
 {
-    public abstract class ClassFORM
+    public abstract class ClassFORM : Form
     {
-        public int StudentID;
-        public string ThesisTitle, FieldOfStudy, AreaOfStudy;
-        public string studyProfile, studyForm, studyLevel;
+        protected int StudentID;
+        protected string ThesisTitle, FieldOfStudy, AreaOfStudy;
+        protected string studyProfile, studyForm, studyLevel;
         //study profilem form i level w 2 na 3
 
-        public void Save (TopicCard card=null, ExamProtocol protocol=null, Opinion opinion=null)
+        protected virtual void Save()
         {
-            if(card != null)
+            Type t = this.GetType();
+            if (t != null)
             {
                 SaveFileDialog sfd = new SaveFileDialog();
                 sfd.Filter = "XML|*.xml";
                 if (sfd.ShowDialog() == DialogResult.OK)
                 {
-                    XmlSerializer mySerializer = new XmlSerializer(typeof(ClassTOPIC));
+                    XmlSerializer mySerializer = new XmlSerializer(t);
                     StreamWriter myWriter = new StreamWriter(sfd.FileName);
-                    mySerializer.Serialize(myWriter, card);
+                    mySerializer.Serialize(myWriter, this);
                     myWriter.Close();
                 }
             }
-            if(protocol != null) 
-            {
-                SaveFileDialog sfd = new SaveFileDialog();
-                sfd.Filter = "XML|*.xml";
-                if (sfd.ShowDialog() == DialogResult.OK)
-                {
-                    XmlSerializer mySerializer = new XmlSerializer(typeof(ClassPROTOCOL));
-                    StreamWriter myWriter = new StreamWriter(sfd.FileName);
-                    mySerializer.Serialize(myWriter, protocol);
-                    myWriter.Close();
-                }
-            }
-            if(opinion != null)
-            {
-                SaveFileDialog sfd = new SaveFileDialog();
-                sfd.Filter = "XML|*.xml";
-                if (sfd.ShowDialog() == DialogResult.OK)
-                {
-                    XmlSerializer mySerializer = new XmlSerializer(typeof(ClassOPINION));
-                    StreamWriter myWriter = new StreamWriter(sfd.FileName);
-                    mySerializer.Serialize(myWriter, opinion);
-                    myWriter.Close();
-                }
-            }
-
-            
         }
-
         
     }
 }
