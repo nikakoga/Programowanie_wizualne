@@ -13,6 +13,7 @@ namespace Edycja_picturebox
         private void LoadPictureButton_Click(object sender, EventArgs e)
         {
             OpenFileDialog ofd = new OpenFileDialog();
+            ofd.Filter = "PNG|*.png|JPG|*.jpg;*.jpeg";
 
             if (ofd.ShowDialog() == DialogResult.OK)
             {
