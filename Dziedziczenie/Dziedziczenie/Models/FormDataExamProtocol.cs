@@ -5,13 +5,13 @@
         public string NameSurname;
         public string PlaceBirth, DateBirth, DateExamination, DateCommencement;
         public string ChairPerson, Supervisor, Reviewer;
-        public double DefenseGrade;
+        public string DefenseGrade;
         public string[] Questions;
-        public double[] QuestionGrade;
-        public double DiplomaGrade;
-        public double WeightAverage, WeightThesis, WeightExam, WeightX06, WeightX02Thesis, WeightX02Exam;
+        public string[] QuestionGrade;
+        public string DiplomaGrade;
+        public string WeightAverage, WeightThesis, WeightExam, WeightX06, WeightX02Thesis, WeightX02Exam;
         public string ResultWord, ResultLetter;
-        public double ResultNumber;
+        public string ResultNumber;
 
         protected override void OnLoad(FormDataBase obj)
         {

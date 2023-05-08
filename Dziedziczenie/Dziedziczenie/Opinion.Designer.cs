@@ -85,7 +85,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(151, 109);
+            label2.Location = new Point(202, 102);
             label2.Name = "label2";
             label2.Size = new Size(237, 20);
             label2.TabIndex = 1;
@@ -94,7 +94,7 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(26, 155);
+            label3.Location = new Point(77, 125);
             label3.Name = "label3";
             label3.Size = new Size(93, 20);
             label3.TabIndex = 2;
@@ -103,7 +103,7 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(26, 189);
+            label4.Location = new Point(77, 159);
             label4.Name = "label4";
             label4.Size = new Size(36, 20);
             label4.TabIndex = 3;
@@ -112,7 +112,7 @@
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(151, 247);
+            label5.Location = new Point(151, 208);
             label5.Name = "label5";
             label5.Size = new Size(414, 20);
             label5.TabIndex = 4;
@@ -121,7 +121,7 @@
             // label6
             // 
             label6.AutoSize = true;
-            label6.Location = new Point(26, 289);
+            label6.Location = new Point(26, 234);
             label6.Name = "label6";
             label6.Size = new Size(122, 20);
             label6.TabIndex = 5;
@@ -130,7 +130,7 @@
             // label7
             // 
             label7.AutoSize = true;
-            label7.Location = new Point(26, 330);
+            label7.Location = new Point(26, 275);
             label7.Name = "label7";
             label7.Size = new Size(128, 20);
             label7.TabIndex = 6;
@@ -139,7 +139,7 @@
             // label8
             // 
             label8.AutoSize = true;
-            label8.Location = new Point(26, 356);
+            label8.Location = new Point(26, 301);
             label8.Name = "label8";
             label8.Size = new Size(98, 20);
             label8.TabIndex = 7;
@@ -148,7 +148,7 @@
             // label9
             // 
             label9.AutoSize = true;
-            label9.Location = new Point(362, 330);
+            label9.Location = new Point(362, 275);
             label9.Name = "label9";
             label9.Size = new Size(103, 20);
             label9.TabIndex = 8;
@@ -157,7 +157,7 @@
             // label10
             // 
             label10.AutoSize = true;
-            label10.Location = new Point(362, 356);
+            label10.Location = new Point(362, 301);
             label10.Name = "label10";
             label10.Size = new Size(97, 20);
             label10.TabIndex = 9;
@@ -166,7 +166,7 @@
             // label11
             // 
             label11.AutoSize = true;
-            label11.Location = new Point(18, 441);
+            label11.Location = new Point(26, 350);
             label11.Name = "label11";
             label11.Size = new Size(566, 20);
             label11.TabIndex = 10;
@@ -175,7 +175,7 @@
             // label12
             // 
             label12.AutoSize = true;
-            label12.Location = new Point(90, 472);
+            label12.Location = new Point(98, 381);
             label12.Name = "label12";
             label12.Size = new Size(281, 20);
             label12.TabIndex = 11;
@@ -184,7 +184,7 @@
             // label13
             // 
             label13.AutoSize = true;
-            label13.Location = new Point(90, 516);
+            label13.Location = new Point(98, 425);
             label13.Name = "label13";
             label13.Size = new Size(303, 20);
             label13.TabIndex = 12;
@@ -193,7 +193,7 @@
             // label14
             // 
             label14.AutoSize = true;
-            label14.Location = new Point(90, 557);
+            label14.Location = new Point(98, 466);
             label14.Name = "label14";
             label14.Size = new Size(282, 20);
             label14.TabIndex = 13;
@@ -202,7 +202,7 @@
             // label15
             // 
             label15.AutoSize = true;
-            label15.Location = new Point(90, 601);
+            label15.Location = new Point(98, 510);
             label15.Name = "label15";
             label15.Size = new Size(310, 20);
             label15.TabIndex = 14;
@@ -211,7 +211,7 @@
             // label16
             // 
             label16.AutoSize = true;
-            label16.Location = new Point(90, 642);
+            label16.Location = new Point(98, 551);
             label16.Name = "label16";
             label16.Size = new Size(247, 20);
             label16.TabIndex = 15;
@@ -220,7 +220,7 @@
             // label17
             // 
             label17.AutoSize = true;
-            label17.Location = new Point(90, 683);
+            label17.Location = new Point(98, 592);
             label17.Name = "label17";
             label17.Size = new Size(230, 20);
             label17.TabIndex = 16;
@@ -229,7 +229,7 @@
             // label18
             // 
             label18.AutoSize = true;
-            label18.Location = new Point(590, 441);
+            label18.Location = new Point(598, 350);
             label18.Name = "label18";
             label18.Size = new Size(93, 20);
             label18.TabIndex = 17;
@@ -238,7 +238,7 @@
             // label19
             // 
             label19.AutoSize = true;
-            label19.Location = new Point(109, 800);
+            label19.Location = new Point(109, 698);
             label19.Name = "label19";
             label19.Size = new Size(584, 20);
             label19.TabIndex = 18;
@@ -247,7 +247,7 @@
             // label20
             // 
             label20.AutoSize = true;
-            label20.Location = new Point(143, 877);
+            label20.Location = new Point(229, 763);
             label20.Name = "label20";
             label20.Size = new Size(273, 20);
             label20.TabIndex = 19;
@@ -256,7 +256,7 @@
             // label21
             // 
             label21.AutoSize = true;
-            label21.Location = new Point(69, 934);
+            label21.Location = new Point(150, 806);
             label21.Name = "label21";
             label21.Size = new Size(77, 20);
             label21.TabIndex = 20;
@@ -265,7 +265,7 @@
             // label22
             // 
             label22.AutoSize = true;
-            label22.Location = new Point(297, 934);
+            label22.Location = new Point(378, 806);
             label22.Name = "label22";
             label22.Size = new Size(65, 20);
             label22.TabIndex = 21;
@@ -273,14 +273,14 @@
             // 
             // AreaOfStudyTextBox
             // 
-            AreaOfStudyTextBox.Location = new Point(471, 356);
+            AreaOfStudyTextBox.Location = new Point(471, 301);
             AreaOfStudyTextBox.Name = "AreaOfStudyTextBox";
             AreaOfStudyTextBox.Size = new Size(191, 27);
             AreaOfStudyTextBox.TabIndex = 28;
             // 
             // StudentIDTextBox
             // 
-            StudentIDTextBox.Location = new Point(471, 323);
+            StudentIDTextBox.Location = new Point(471, 268);
             StudentIDTextBox.Name = "StudentIDTextBox";
             StudentIDTextBox.Size = new Size(191, 27);
             StudentIDTextBox.TabIndex = 29;
@@ -288,7 +288,7 @@
             // label23
             // 
             label23.AutoSize = true;
-            label23.Location = new Point(90, 727);
+            label23.Location = new Point(98, 636);
             label23.Name = "label23";
             label23.Size = new Size(456, 40);
             label23.TabIndex = 30;
@@ -296,112 +296,112 @@
             // 
             // SummaryTextBox
             // 
-            SummaryTextBox.Location = new Point(77, 823);
+            SummaryTextBox.Location = new Point(77, 721);
             SummaryTextBox.Name = "SummaryTextBox";
             SummaryTextBox.Size = new Size(648, 27);
             SummaryTextBox.TabIndex = 31;
             // 
             // GradeNumericalTextBox
             // 
-            GradeNumericalTextBox.Location = new Point(152, 931);
+            GradeNumericalTextBox.Location = new Point(233, 803);
             GradeNumericalTextBox.Name = "GradeNumericalTextBox";
             GradeNumericalTextBox.Size = new Size(125, 27);
             GradeNumericalTextBox.TabIndex = 32;
             // 
             // GradeLetterTextBox
             // 
-            GradeLetterTextBox.Location = new Point(383, 927);
+            GradeLetterTextBox.Location = new Point(464, 799);
             GradeLetterTextBox.Name = "GradeLetterTextBox";
             GradeLetterTextBox.Size = new Size(125, 27);
             GradeLetterTextBox.TabIndex = 33;
             // 
             // ReviewerTextBox
             // 
-            ReviewerTextBox.Location = new Point(109, 155);
+            ReviewerTextBox.Location = new Point(160, 125);
             ReviewerTextBox.Name = "ReviewerTextBox";
             ReviewerTextBox.Size = new Size(299, 27);
             ReviewerTextBox.TabIndex = 34;
             // 
             // UnitTextBox
             // 
-            UnitTextBox.Location = new Point(109, 189);
+            UnitTextBox.Location = new Point(160, 159);
             UnitTextBox.Name = "UnitTextBox";
             UnitTextBox.Size = new Size(299, 27);
             UnitTextBox.TabIndex = 35;
             // 
             // DegreeCandidateTextBox
             // 
-            DegreeCandidateTextBox.Location = new Point(160, 323);
+            DegreeCandidateTextBox.Location = new Point(160, 268);
             DegreeCandidateTextBox.Name = "DegreeCandidateTextBox";
             DegreeCandidateTextBox.Size = new Size(191, 27);
             DegreeCandidateTextBox.TabIndex = 36;
             // 
             // FieldOfStudyTextBox
             // 
-            FieldOfStudyTextBox.Location = new Point(160, 356);
+            FieldOfStudyTextBox.Location = new Point(160, 301);
             FieldOfStudyTextBox.Name = "FieldOfStudyTextBox";
             FieldOfStudyTextBox.Size = new Size(191, 27);
             FieldOfStudyTextBox.TabIndex = 37;
             // 
             // TitleOfTheThesisTextBox
             // 
-            TitleOfTheThesisTextBox.Location = new Point(160, 286);
+            TitleOfTheThesisTextBox.Location = new Point(160, 231);
             TitleOfTheThesisTextBox.Name = "TitleOfTheThesisTextBox";
             TitleOfTheThesisTextBox.Size = new Size(502, 27);
             TitleOfTheThesisTextBox.TabIndex = 38;
             // 
             // GradeATextBox
             // 
-            GradeATextBox.Location = new Point(590, 469);
+            GradeATextBox.Location = new Point(598, 378);
             GradeATextBox.Name = "GradeATextBox";
             GradeATextBox.Size = new Size(93, 27);
             GradeATextBox.TabIndex = 39;
             // 
             // GradeBTextBox
             // 
-            GradeBTextBox.Location = new Point(590, 509);
+            GradeBTextBox.Location = new Point(598, 418);
             GradeBTextBox.Name = "GradeBTextBox";
             GradeBTextBox.Size = new Size(93, 27);
             GradeBTextBox.TabIndex = 40;
             // 
             // GradeCTextBox
             // 
-            GradeCTextBox.Location = new Point(590, 550);
+            GradeCTextBox.Location = new Point(598, 459);
             GradeCTextBox.Name = "GradeCTextBox";
             GradeCTextBox.Size = new Size(93, 27);
             GradeCTextBox.TabIndex = 41;
             // 
             // GradeDTextBox
             // 
-            GradeDTextBox.Location = new Point(590, 594);
+            GradeDTextBox.Location = new Point(598, 503);
             GradeDTextBox.Name = "GradeDTextBox";
             GradeDTextBox.Size = new Size(93, 27);
             GradeDTextBox.TabIndex = 42;
             // 
             // GradeETextBox
             // 
-            GradeETextBox.Location = new Point(590, 635);
+            GradeETextBox.Location = new Point(598, 544);
             GradeETextBox.Name = "GradeETextBox";
             GradeETextBox.Size = new Size(93, 27);
             GradeETextBox.TabIndex = 43;
             // 
             // GradeFTextBox
             // 
-            GradeFTextBox.Location = new Point(590, 676);
+            GradeFTextBox.Location = new Point(598, 585);
             GradeFTextBox.Name = "GradeFTextBox";
             GradeFTextBox.Size = new Size(93, 27);
             GradeFTextBox.TabIndex = 44;
             // 
             // GradeGTextBox
             // 
-            GradeGTextBox.Location = new Point(590, 724);
+            GradeGTextBox.Location = new Point(598, 633);
             GradeGTextBox.Name = "GradeGTextBox";
             GradeGTextBox.Size = new Size(93, 27);
             GradeGTextBox.TabIndex = 45;
             // 
             // ReadButton
             // 
-            ReadButton.Location = new Point(160, 1007);
+            ReadButton.Location = new Point(248, 849);
             ReadButton.Name = "ReadButton";
             ReadButton.Size = new Size(94, 29);
             ReadButton.TabIndex = 46;
@@ -411,7 +411,7 @@
             // 
             // SaveButton
             // 
-            SaveButton.Location = new Point(383, 1007);
+            SaveButton.Location = new Point(471, 849);
             SaveButton.Name = "SaveButton";
             SaveButton.Size = new Size(94, 29);
             SaveButton.TabIndex = 47;
@@ -423,7 +423,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 1077);
+            ClientSize = new Size(800, 905);
             Controls.Add(SaveButton);
             Controls.Add(ReadButton);
             Controls.Add(GradeGTextBox);

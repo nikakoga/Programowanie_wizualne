@@ -12,7 +12,7 @@ namespace Dziedziczenie
             Data = new FormDataTopic()
             {
                 Students = new string[4],
-                StudentsID = new int[4],
+                StudentsID = new string[4],
             };
         }
 
@@ -42,10 +42,10 @@ namespace Dziedziczenie
             Data.Students[2] = student2.Text;
             Data.Students[3] = student3.Text;
 
-            Data.StudentsID[0] = Convert.ToInt32(student0ID.Text);
-            Data.StudentsID[1] = Convert.ToInt32(student1ID.Text);
-            Data.StudentsID[2] = Convert.ToInt32(student2ID.Text);
-            Data.StudentsID[3] = Convert.ToInt32(student3ID.Text);
+            Data.StudentsID[0] = student0ID.Text;
+            Data.StudentsID[1] = student1ID.Text;
+            Data.StudentsID[2] = student2ID.Text;
+            Data.StudentsID[3] = student3ID.Text;
 
             Data.Save();
         }

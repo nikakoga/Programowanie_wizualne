@@ -4,7 +4,7 @@ namespace Dziedziczenie.Models
 {
     public abstract class FormDataBase
     {
-        public int StudentID;
+        public string StudentID;
         public string ThesisTitle, FieldOfStudy, AreaOfStudy;
 
         public virtual void Save()
@@ -53,5 +53,7 @@ namespace Dziedziczenie.Models
         }
 
         protected abstract void OnLoad(FormDataBase obj);
+
+        
     }
 }

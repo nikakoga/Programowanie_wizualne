@@ -3,9 +3,9 @@
     public class FormDataOpinion : FormDataBase
     {
         public string Who, Unit, Degree;
-        public double A, B, C, D, E, F, G;
+        public string A, B, C, D, E, F, G;
         public string Summary, GradeLetter;
-        public double Grade;
+        public string Grade;
 
         protected override void OnLoad(FormDataBase obj)
         {

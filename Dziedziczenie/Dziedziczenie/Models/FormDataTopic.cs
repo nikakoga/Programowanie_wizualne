@@ -4,7 +4,7 @@
     {
         public string University;
         public string[] Students;
-        public int[] StudentsID;
+        public string[] StudentsID;
         public string EnglishTitle, InputData, Scope, Deadline, Supervisor, Unit;
 
         protected override void OnLoad(FormDataBase obj)

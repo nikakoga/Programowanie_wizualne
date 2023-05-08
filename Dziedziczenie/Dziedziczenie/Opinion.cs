@@ -24,22 +24,22 @@ namespace Dziedziczenie
             Data.AreaOfStudy = AreaOfStudyTextBox.Text;
             Data.FieldOfStudy = FieldOfStudyTextBox.Text;
             Data.ThesisTitle = TitleOfTheThesisTextBox.Text;
-            Data.StudentID = Convert.ToInt32(StudentIDTextBox.Text);
+            Data.StudentID = StudentIDTextBox.Text;
 
             // From FormDataOpinion
             Data.Who = ReviewerTextBox.Text;
             Data.Unit = UnitTextBox.Text;
             Data.Degree = DegreeCandidateTextBox.Text;
-            Data.A = Convert.ToInt32(GradeATextBox.Text);
-            Data.B = Convert.ToInt32(GradeBTextBox.Text);
-            Data.C = Convert.ToInt32(GradeCTextBox.Text);
-            Data.D = Convert.ToInt32(GradeDTextBox.Text);
-            Data.E = Convert.ToInt32(GradeETextBox.Text);
-            Data.F = Convert.ToInt32(GradeFTextBox.Text);
-            Data.G = Convert.ToInt32(GradeGTextBox.Text);
+            Data.A = GradeATextBox.Text;
+            Data.B = GradeBTextBox.Text;
+            Data.C = GradeCTextBox.Text;
+            Data.D = GradeDTextBox.Text;
+            Data.E = GradeETextBox.Text;
+            Data.F = GradeFTextBox.Text;
+            Data.G = GradeGTextBox.Text;
             Data.Summary = SummaryTextBox.Text;
             Data.GradeLetter = GradeLetterTextBox.Text;
-            Data.Grade = Convert.ToInt32(GradeNumericalTextBox.Text);
+            Data.Grade = GradeNumericalTextBox.Text;
 
             Data.Save();
         }

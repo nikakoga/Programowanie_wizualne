@@ -12,7 +12,7 @@ namespace Dziedziczenie
             Data = new FormDataExamProtocol()
             {
                 Questions = new string[3],
-                QuestionGrade = new double[3],
+                QuestionGrade = new string[3],
             };
         }
 
@@ -67,14 +67,15 @@ namespace Dziedziczenie
         {
             // From FormDataBase
             Data.AreaOfStudy = AreaOfStudyTextBox.Text;
-            Data.StudyForm = FormOfStudiesTextBox.Text;
-            Data.StudyLevel = LevelOfStudiesTextBox.Text;
             Data.FieldOfStudy = FieldOfStudyTextBox.Text;
             Data.ThesisTitle = TitleOfDiplomaThesisTextBox.Text;
+            Data.StudentID = StudentIDTextBox.Text;
 
             // From FormDataProtocolBase
             Data.StudyProfile = ProfileOfStudyTextBox.Text;
-            Data.StudentID = Convert.ToInt32(StudentIDTextBox.Text);
+            Data.StudyForm = FormOfStudiesTextBox.Text;
+            Data.StudyLevel = LevelOfStudiesTextBox.Text;
+
 
             // From FormDataExamProtocol
             Data.NameSurname = NameSurenameTextBox.Text;
@@ -85,26 +86,26 @@ namespace Dziedziczenie
             Data.ChairPerson = ChairpersonTextBox.Text;
             Data.Supervisor = SupervisorTextBox.Text;
             Data.Reviewer = ReviewerTextBox.Text;
-            Data.DefenseGrade = Convert.ToDouble(DefenseOfDiplomaThesisTextBox.Text);
-            Data.DiplomaGrade = Convert.ToDouble(DiplomaExaminationGradeTextBox.Text);
+            Data.DefenseGrade = DefenseOfDiplomaThesisTextBox.Text;
+            Data.DiplomaGrade = DiplomaExaminationGradeTextBox.Text;
 
             Data.Questions[0] = Question1TextBox.Text;
             Data.Questions[1] = Question2TextBox.Text;
             Data.Questions[2] = Question3TextBox.Text;
 
-            Data.QuestionGrade[0] = Convert.ToDouble(QuestionGrade1TextBox.Text);
-            Data.QuestionGrade[1] = Convert.ToDouble(QuestionGrade2TextBox.Text);
-            Data.QuestionGrade[2] = Convert.ToDouble(QuestionGrade3TextBox.Text);
+            Data.QuestionGrade[0] = QuestionGrade1TextBox.Text;
+            Data.QuestionGrade[1] = QuestionGrade2TextBox.Text;
+            Data.QuestionGrade[2] = QuestionGrade3TextBox.Text;
 
-            Data.WeightAverage = Convert.ToDouble(weightAverageTextBox.Text);
-            Data.WeightThesis = Convert.ToDouble(weightThesisTextBox.Text);
-            Data.WeightExam = Convert.ToDouble(weightexamTextBox.Text);
-            Data.WeightX06 = Convert.ToDouble(weightx06TextBox.Text);
-            Data.WeightX02Thesis = Convert.ToDouble(weightx02thesisTextBox.Text);
-            Data.WeightX02Exam = Convert.ToDouble(weightx02examxTextBox.Text);
+            Data.WeightAverage = weightAverageTextBox.Text;
+            Data.WeightThesis = weightThesisTextBox.Text;
+            Data.WeightExam = weightexamTextBox.Text;
+            Data.WeightX06 = weightx06TextBox.Text;
+            Data.WeightX02Thesis = weightx02thesisTextBox.Text;
+            Data.WeightX02Exam = weightx02examxTextBox.Text;
             Data.ResultWord = resultWordTextBox.Text;
             Data.ResultLetter = resultLetterTextBox.Text;
-            Data.ResultNumber = Convert.ToDouble(resultNumberTextBox.Text);
+            Data.ResultNumber = resultNumberTextBox.Text;
 
             Data.Save();
         }
