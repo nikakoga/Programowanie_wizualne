@@ -1,5 +1,6 @@
 ﻿using ShipsGame.Properties;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Configuration;
@@ -20,7 +21,13 @@ namespace ShipsGame
         double moves;
         double fieldsNum;
         double ships;
-        Label[,] fields;
+
+        double shipsLeft;
+        double oceanLeft;
+
+        Image imgOcean = Resources.ocean;
+        Image imgShip = Resources.ship;
+        Image imgQuestion = Resources.questionmark;
 
         public Game(int sqr, int level)
         {
@@ -32,9 +39,11 @@ namespace ShipsGame
             ships = fieldsNum * 0.2;
             ships = (int)Math.Ceiling(ships);
 
-            double modificator;
-            //Label[,] fields = new Label[cols, rws];
+            shipsLeft = ships;
+            oceanLeft = fieldsNum - ships;
 
+            double modificator;
+           
             switch (gameLevel)
             {
                 case 0:
@@ -68,10 +77,6 @@ namespace ShipsGame
 
         void FillBoard(int size)
         {
-            Image imgShip = Resources.ship;
-            Image imgQuestion = Resources.questionmark;
-            Image imgOcean = Resources.ocean;
-
             TableLayoutPanel gamePanel = new TableLayoutPanel();
             gamePanel.RowCount = size;
             gamePanel.ColumnCount = size;
@@ -96,7 +101,7 @@ namespace ShipsGame
                     label.Size = new Size(40, 40);
                     gamePanel.Controls.Add(label, col, row);
 
-                    // Przypisujemy akcję po kliknięciu
+                    
                     label.Click += new EventHandler(label_Click);
 
                     gamePanel.Controls.Add(label, col, row);
@@ -104,41 +109,61 @@ namespace ShipsGame
             }
 
             this.Controls.Add(gamePanel);
-            int margin = 50; // margines na górze i na dol
+            int margin = 50; 
             ClientSize = new Size(gamePanel.Width + margin * 2, gamePanel.Height + margin * 3);
             this.CenterToScreen();
             this.ShowDialog();
         }
 
-        private int Draw(double ships, double fieldsNum)
+        private bool Draw()
         {
+            bool [] arrOcean = new bool[Convert.ToInt32(oceanLeft)];
+            bool [] arrShips = new bool [Convert.ToInt32(shipsLeft)];
 
-            return 0;
+            for (int i = 0; i < arrOcean.Length; i++)
+            {
+                arrOcean[i] = false;
+            }
+            for (int j = 0; j < arrShips.Length; j++)
+            {
+                arrShips[j] = true;
+            }
+
+            bool [] result = new bool [arrOcean.Length + arrShips.Length];
+            arrOcean.CopyTo(result, 0);
+            arrShips.CopyTo(result, arrOcean.Length);
+
+            Random random = new Random();
+            int randomNumber = random.Next(0, result.Length-1);
+            
+            bool sink=result[randomNumber];
+
+            if(sink)
+            {
+                shipsLeft -= 1;
+            }
+            else
+            {
+                oceanLeft -= 1;
+            }
+
+            return sink;
         }
 
         private void label_Click(object sender, EventArgs e)
         {
             Label tmp = (Label)sender;
+            if (Draw())
+            {
+                tmp.Image = imgShip;
+            }
+            else
+            {
+                tmp.Image = imgOcean;
+            }
         }
     }
 
-//    int x = 40, y = 40;
 
-//            for (int col = 0; col<columns; col++)
-//            {
-//                for (int row = 0; row<rows; row++)
-//                {
-
-//                    fields[col, row].Location = new Point(x, y);
-//    fields[col, row].BackColor = Color.White;
-//                    fields[col, row].Image = imgQuestion;
-//                    fields[col, row].Text = string.Empty;
-//                    fields[col, row].Click += label_Click;
-//                    fields[col, row].Size = new Size(40, 40);
-//    Controls.Add(fields[col, row]);
-//                    x += 40;
-//                }
-//y += 40;
-//x = 40;
             
 }

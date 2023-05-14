@@ -80,11 +80,11 @@
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(172, 98);
+            label5.Location = new Point(172, 123);
             label5.Name = "label5";
-            label5.Size = new Size(242, 20);
+            label5.Size = new Size(269, 20);
             label5.TabIndex = 8;
-            label5.Text = "Fill size with one number. At least 3\r\n";
+            label5.Text = "Fill size with one number. Min 3 Max 20\r\n";
             // 
             // tbxSize
             // 
