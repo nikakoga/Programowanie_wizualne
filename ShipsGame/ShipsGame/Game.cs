@@ -60,7 +60,6 @@ namespace ShipsGame
                         modificator = 0.5;
                         moves = (int)Math.Floor(fieldsNum * modificator);
                         break;
-
                     }
                 case 2:
                     {
@@ -70,7 +69,7 @@ namespace ShipsGame
                     }
                 case 3:
                     {
-                        moves = ships;
+                        moves = ships + (int)Math.Floor(0.2 * ships);
                         break;
                     }
             }
@@ -114,8 +113,6 @@ namespace ShipsGame
                     gamePanel.Controls.Add(label, col, row);
                 }
             }
-            
-
             this.Controls.Add(gamePanel);
             int margin = 50;
             ClientSize = new Size(gamePanel.Width + margin * 2, gamePanel.Height + margin * 3);
@@ -125,8 +122,8 @@ namespace ShipsGame
 
         private bool Draw()
         {
-            bool[] arrOcean = new bool[Convert.ToInt32(oceanLeft)];
-            bool[] arrShips = new bool[Convert.ToInt32(shipsLeft)];
+            bool[] arrOcean = new bool[Convert.ToInt32(ships)];
+            bool[] arrShips = new bool[Convert.ToInt32(ships)];
 
             for (int i = 0; i < arrOcean.Length; i++)
             {
@@ -167,8 +164,6 @@ namespace ShipsGame
         private void label_Click(object sender, EventArgs e)
         {
             Label tmp = (Label)sender;
-
-            
                 if (tmp.Image == imgQuestion && movesLeft > 0)
                 {
                     movesLeft -= 1;
@@ -187,9 +182,6 @@ namespace ShipsGame
                 this.Close();
             }
             }
-            
-           
-
         }
     }
 
