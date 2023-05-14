@@ -75,13 +75,14 @@ namespace ShipsGame
             TableLayoutPanel gamePanel = new TableLayoutPanel();
             gamePanel.RowCount = size;
             gamePanel.ColumnCount = size;
-            //gamePanel.Anchor = AnchorStyles.None;
-            //gamePanel.Dock = DockStyle.Fill;
+          
 
             gamePanel.Anchor = AnchorStyles.None;
             gamePanel.Dock = DockStyle.None;
             gamePanel.Size = new Size(size * 40, size * 40);
             gamePanel.Location = new Point((this.ClientSize.Width - gamePanel.Width) / 2, (this.ClientSize.Height - gamePanel.Height) / 2);
+            
+
 
 
             for (int row = 0; row < gamePanel.RowCount; row++)
@@ -103,6 +104,9 @@ namespace ShipsGame
             }
 
             this.Controls.Add(gamePanel);
+            int margin = 50; // margines na górze i na dol
+            ClientSize = new Size(gamePanel.Width + margin * 2, gamePanel.Height + margin * 3);
+            this.CenterToScreen();
             this.ShowDialog();
         }
 
