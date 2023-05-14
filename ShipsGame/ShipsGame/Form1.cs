@@ -1,5 +1,6 @@
 using Microsoft.VisualBasic;
 
+
 namespace ShipsGame
 {
     public partial class Form1 : Form
@@ -7,7 +8,7 @@ namespace ShipsGame
         public Form1()
         {
             InitializeComponent();
-            MessageBox.Show("SZANOWNY PANIE DOKTORZE\nWiem, ¿e projekt mia³ mieæ planszê kwadratow¹ i wiem, ¿e udziwniam go dodaj¹c opcjê przegrania,poziom trudnoœci oraz obrazki w miejscach ikonek, ale bardzo chcia³am nauczyæ siê w tym projekcie czegoœ wiêcej i aby moje portfolio na githubie by³o bardziej zaawansowane. Jeœli jest to niezgodne z wymaganiami, mogê cofn¹æ projekt do wersji podstawowej");
+            //MessageBox.Show("SZANOWNY PANIE DOKTORZE\nWiem, ¿e projekt mia³ mieæ planszê kwadratow¹ i wiem, ¿e udziwniam go dodaj¹c opcjê przegrania,poziom trudnoœci oraz obrazki w miejscach ikonek, ale bardzo chcia³am nauczyæ siê w tym projekcie czegoœ wiêcej i aby moje portfolio na githubie by³o bardziej zaawansowane. Jeœli jest to niezgodne z wymaganiami, mogê cofn¹æ projekt do wersji podstawowej");
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -17,8 +18,10 @@ namespace ShipsGame
 
             if (cols > 0 && rows > 0)
             {
+                int gameLevel = level.SelectedIndex;
+                Game game = new Game(cols, rows, gameLevel);
+                game.Show();
                 this.Close();
-                Game game = new Game(cols, rows);
             }
             else
             {

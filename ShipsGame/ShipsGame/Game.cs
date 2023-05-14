@@ -14,11 +14,47 @@ namespace ShipsGame
     {
         int columns;
         int rows;
-        public Game(int cols, int rws)
+        int gameLevel;
+
+        double moves;
+        double fields;
+        double ships;
+        double modificator;
+       
+        public Game(int cols, int rws, int level)
         {
             InitializeComponent();
             columns = cols;
             rows = rws;
+            gameLevel = level;
+
+            fields= (columns*rows);
+            ships = fields * 0.2;
+            ships = (int)Math.Ceiling(ships);
+
+            switch (gameLevel)
+            {
+                    case 0:
+                    {
+                        modificator = 0.8;
+                        break;
+                    }
+                    case 1:
+                    {
+                        modificator = 0.5;
+                        break;
+
+                    }
+                    case 2:
+                    {
+                        modificator = 0.35;
+                        break;
+                    }
+                         
+            }
+            moves = (int)Math.Floor(fields * modificator);
+
+            MessageBox.Show($"Ruchow {moves} statkow {ships}");
         }
     }
 }

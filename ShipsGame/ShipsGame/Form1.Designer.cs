@@ -35,7 +35,7 @@
             label2 = new Label();
             label3 = new Label();
             button1 = new Button();
-            comboBox1 = new ComboBox();
+            level = new ComboBox();
             label4 = new Label();
             SuspendLayout();
             // 
@@ -93,14 +93,14 @@
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
             // 
-            // comboBox1
+            // level
             // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Items.AddRange(new object[] { "Easy", "Medium", "Hard", "Extreme" });
-            comboBox1.Location = new Point(217, 152);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(151, 28);
-            comboBox1.TabIndex = 6;
+            level.FormattingEnabled = true;
+            level.Items.AddRange(new object[] { "Easy", "Medium", "Extreme" });
+            level.Location = new Point(217, 152);
+            level.Name = "level";
+            level.Size = new Size(151, 28);
+            level.TabIndex = 6;
             // 
             // label4
             // 
@@ -117,7 +117,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(543, 349);
             Controls.Add(label4);
-            Controls.Add(comboBox1);
+            Controls.Add(level);
             Controls.Add(button1);
             Controls.Add(label3);
             Controls.Add(label2);
@@ -138,7 +138,7 @@
         private Label label2;
         private Label label3;
         private Button button1;
-        private ComboBox comboBox1;
+        private ComboBox level;
         private Label label4;
     }
 }
