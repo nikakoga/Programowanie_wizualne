@@ -29,14 +29,12 @@
         private void InitializeComponent()
         {
             label1 = new Label();
-            tbxRows = new TextBox();
-            tbxCols = new TextBox();
-            label2 = new Label();
-            label3 = new Label();
             btnCheck = new Button();
             level = new ComboBox();
             label4 = new Label();
             label5 = new Label();
+            tbxSize = new TextBox();
+            label2 = new Label();
             SuspendLayout();
             // 
             // label1
@@ -49,38 +47,6 @@
             label1.Size = new Size(110, 28);
             label1.TabIndex = 0;
             label1.Text = "Board size";
-            // 
-            // tbxRows
-            // 
-            tbxRows.Location = new Point(217, 130);
-            tbxRows.Name = "tbxRows";
-            tbxRows.Size = new Size(151, 27);
-            tbxRows.TabIndex = 1;
-            // 
-            // tbxCols
-            // 
-            tbxCols.Location = new Point(217, 163);
-            tbxCols.Name = "tbxCols";
-            tbxCols.Size = new Size(151, 27);
-            tbxCols.TabIndex = 2;
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Location = new Point(146, 163);
-            label2.Name = "label2";
-            label2.Size = new Size(64, 20);
-            label2.TabIndex = 3;
-            label2.Text = "columns";
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Location = new Point(170, 133);
-            label3.Name = "label3";
-            label3.Size = new Size(40, 20);
-            label3.TabIndex = 4;
-            label3.Text = "rows";
             // 
             // btnCheck
             // 
@@ -114,25 +80,39 @@
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(199, 78);
+            label5.Location = new Point(172, 98);
             label5.Name = "label5";
-            label5.Size = new Size(184, 20);
+            label5.Size = new Size(242, 20);
             label5.TabIndex = 8;
-            label5.Text = "Size should be at least 3x3";
+            label5.Text = "Fill size with one number. At least 3\r\n";
+            // 
+            // tbxSize
+            // 
+            tbxSize.Location = new Point(217, 161);
+            tbxSize.Name = "tbxSize";
+            tbxSize.Size = new Size(151, 27);
+            tbxSize.TabIndex = 9;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Location = new Point(172, 161);
+            label2.Name = "label2";
+            label2.Size = new Size(34, 20);
+            label2.TabIndex = 10;
+            label2.Text = "size";
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(543, 349);
+            Controls.Add(label2);
+            Controls.Add(tbxSize);
             Controls.Add(label5);
             Controls.Add(label4);
             Controls.Add(level);
             Controls.Add(btnCheck);
-            Controls.Add(label3);
-            Controls.Add(label2);
-            Controls.Add(tbxCols);
-            Controls.Add(tbxRows);
             Controls.Add(label1);
             Name = "Form1";
             Text = "Form1";
@@ -143,13 +123,11 @@
         #endregion
 
         private Label label1;
-        private TextBox tbxRows;
-        private TextBox tbxCols;
-        private Label label2;
-        private Label label3;
         private Button btnCheck;
         private ComboBox level;
         private Label label4;
         private Label label5;
+        private TextBox tbxSize;
+        private Label label2;
     }
 }

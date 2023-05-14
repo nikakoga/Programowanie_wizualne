@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Configuration;
 using System.Data;
 using System.Drawing;
 using System.Linq;
@@ -13,8 +14,7 @@ namespace ShipsGame
 {
     public partial class Game : Form
     {
-        int columns;
-        int rows;
+        int size;
         int gameLevel;
 
         double moves;
@@ -22,19 +22,18 @@ namespace ShipsGame
         double ships;
         Label[,] fields;
 
-        public Game(int cols, int rws, int level)
+        public Game(int sqr, int level)
         {
             InitializeComponent();
-            columns = cols;
-            rows = rws;
+            size = sqr;
             gameLevel = level;
 
-            fieldsNum = (columns * rows);
+            fieldsNum = (size*size);
             ships = fieldsNum * 0.2;
             ships = (int)Math.Ceiling(ships);
 
             double modificator;
-            Label[,] fields = new Label[cols, rws];
+            //Label[,] fields = new Label[cols, rws];
 
             switch (gameLevel)
             {
@@ -64,16 +63,47 @@ namespace ShipsGame
                     }
             }
             //MessageBox.Show($"Ruchow {moves} statkow {ships}");
-            FillBoard(columns, rows);
+            FillBoard(size);
         }
 
-        void FillBoard(int columns, int rows)
+        void FillBoard(int size)
         {
             Image imgShip = Resources.ship;
             Image imgQuestion = Resources.questionmark;
             Image imgOcean = Resources.ocean;
 
-            
+            TableLayoutPanel gamePanel = new TableLayoutPanel();
+            gamePanel.RowCount = size;
+            gamePanel.ColumnCount = size;
+            //gamePanel.Anchor = AnchorStyles.None;
+            //gamePanel.Dock = DockStyle.Fill;
+
+            gamePanel.Anchor = AnchorStyles.None;
+            gamePanel.Dock = DockStyle.None;
+            gamePanel.Size = new Size(size * 40, size * 40);
+            gamePanel.Location = new Point((this.ClientSize.Width - gamePanel.Width) / 2, (this.ClientSize.Height - gamePanel.Height) / 2);
+
+
+            for (int row = 0; row < gamePanel.RowCount; row++)
+            {
+                for (int col = 0; col < gamePanel.ColumnCount; col++)
+                {
+                    Label label = new Label();
+                    label.Image = imgQuestion;
+                    label.BorderStyle = BorderStyle.FixedSingle;
+                    label.Margin = new Padding(0);
+                    label.Size = new Size(40, 40);
+                    gamePanel.Controls.Add(label, col, row);
+
+                    // Przypisujemy akcję po kliknięciu
+                    label.Click += new EventHandler(label_Click);
+
+                    gamePanel.Controls.Add(label, col, row);
+                }
+            }
+
+            this.Controls.Add(gamePanel);
+            this.ShowDialog();
         }
 
         private int Draw(double ships, double fieldsNum)

@@ -13,13 +13,13 @@ namespace ShipsGame
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Int32.TryParse(tbxCols.Text, out int cols);
-            Int32.TryParse(tbxRows.Text, out int rows);
+            Int32.TryParse(tbxSize.Text, out int size);
 
-            if (cols > 2 && rows > 2)
+
+            if (size > 2)
             {
                 int gameLevel = level.SelectedIndex;
-                Game game = new Game(cols, rows, gameLevel);
+                Game game = new Game(size, gameLevel);
                 game.Show();
                 this.Close();
             }
