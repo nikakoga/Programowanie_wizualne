@@ -24,6 +24,9 @@ namespace ShipsGame
 
         double shipsLeft;
         double oceanLeft;
+        double movesLeft;
+
+        bool win = false;
 
         Image imgOcean = Resources.ocean;
         Image imgShip = Resources.ship;
@@ -35,7 +38,7 @@ namespace ShipsGame
             size = sqr;
             gameLevel = level;
 
-            fieldsNum = (size*size);
+            fieldsNum = (size * size);
             ships = fieldsNum * 0.2;
             ships = (int)Math.Ceiling(ships);
 
@@ -43,7 +46,7 @@ namespace ShipsGame
             oceanLeft = fieldsNum - ships;
 
             double modificator;
-           
+
             switch (gameLevel)
             {
                 case 0:
@@ -71,7 +74,7 @@ namespace ShipsGame
                         break;
                     }
             }
-            //MessageBox.Show($"Ruchow {moves} statkow {ships}");
+            movesLeft = moves;
             FillBoard(size);
         }
 
@@ -80,15 +83,19 @@ namespace ShipsGame
             TableLayoutPanel gamePanel = new TableLayoutPanel();
             gamePanel.RowCount = size;
             gamePanel.ColumnCount = size;
-          
+
 
             gamePanel.Anchor = AnchorStyles.None;
             gamePanel.Dock = DockStyle.None;
             gamePanel.Size = new Size(size * 40, size * 40);
             gamePanel.Location = new Point((this.ClientSize.Width - gamePanel.Width) / 2, (this.ClientSize.Height - gamePanel.Height) / 2);
-            
 
-
+            Label lblMoves;
+            lblMoves = new Label();
+            lblMoves.Text = $"moves{movesLeft}";
+            Label lblShips;
+            lblShips = new Label();
+            lblShips.Text = $"ships{shipsLeft}";
 
             for (int row = 0; row < gamePanel.RowCount; row++)
             {
@@ -101,15 +108,16 @@ namespace ShipsGame
                     label.Size = new Size(40, 40);
                     gamePanel.Controls.Add(label, col, row);
 
-                    
+
                     label.Click += new EventHandler(label_Click);
 
                     gamePanel.Controls.Add(label, col, row);
                 }
             }
+            
 
             this.Controls.Add(gamePanel);
-            int margin = 50; 
+            int margin = 50;
             ClientSize = new Size(gamePanel.Width + margin * 2, gamePanel.Height + margin * 3);
             this.CenterToScreen();
             this.ShowDialog();
@@ -117,8 +125,8 @@ namespace ShipsGame
 
         private bool Draw()
         {
-            bool [] arrOcean = new bool[Convert.ToInt32(oceanLeft)];
-            bool [] arrShips = new bool [Convert.ToInt32(shipsLeft)];
+            bool[] arrOcean = new bool[Convert.ToInt32(oceanLeft)];
+            bool[] arrShips = new bool[Convert.ToInt32(shipsLeft)];
 
             for (int i = 0; i < arrOcean.Length; i++)
             {
@@ -129,18 +137,24 @@ namespace ShipsGame
                 arrShips[j] = true;
             }
 
-            bool [] result = new bool [arrOcean.Length + arrShips.Length];
+            bool[] result = new bool[arrOcean.Length + arrShips.Length];
             arrOcean.CopyTo(result, 0);
             arrShips.CopyTo(result, arrOcean.Length);
 
             Random random = new Random();
-            int randomNumber = random.Next(0, result.Length-1);
-            
-            bool sink=result[randomNumber];
+            int randomNumber = random.Next(0, result.Length - 1);
 
-            if(sink)
+            bool sink = result[randomNumber];
+
+            if (sink)
             {
                 shipsLeft -= 1;
+                if(shipsLeft==0)
+                {
+                    MessageBox.Show("Win!!");
+                    win = true;
+                    this.Close();
+                }
             }
             else
             {
@@ -153,17 +167,32 @@ namespace ShipsGame
         private void label_Click(object sender, EventArgs e)
         {
             Label tmp = (Label)sender;
-            if (Draw())
+
+            
+                if (tmp.Image == imgQuestion && movesLeft > 0)
+                {
+                    movesLeft -= 1;
+                    if (Draw())
+                    {
+                        tmp.Image = imgShip;
+                    }
+                    else
+                    {
+                        tmp.Image = imgOcean;
+                    }
+                }
+                if(movesLeft==0 && !win)
             {
-                tmp.Image = imgShip;
+                MessageBox.Show("Lose :(");
+                this.Close();
             }
-            else
-            {
-                tmp.Image = imgOcean;
             }
+            
+           
+
         }
     }
 
 
-            
-}
+
+
