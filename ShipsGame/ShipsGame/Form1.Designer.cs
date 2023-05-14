@@ -35,6 +35,8 @@
             label2 = new Label();
             label3 = new Label();
             button1 = new Button();
+            comboBox1 = new ComboBox();
+            label4 = new Label();
             SuspendLayout();
             // 
             // label1
@@ -50,22 +52,22 @@
             // 
             // tbxRows
             // 
-            tbxRows.Location = new Point(217, 104);
+            tbxRows.Location = new Point(217, 86);
             tbxRows.Name = "tbxRows";
-            tbxRows.Size = new Size(125, 27);
+            tbxRows.Size = new Size(151, 27);
             tbxRows.TabIndex = 1;
             // 
             // tbxCols
             // 
-            tbxCols.Location = new Point(217, 137);
+            tbxCols.Location = new Point(217, 119);
             tbxCols.Name = "tbxCols";
-            tbxCols.Size = new Size(125, 27);
+            tbxCols.Size = new Size(151, 27);
             tbxCols.TabIndex = 2;
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(146, 137);
+            label2.Location = new Point(146, 119);
             label2.Name = "label2";
             label2.Size = new Size(64, 20);
             label2.TabIndex = 3;
@@ -74,7 +76,7 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(170, 107);
+            label3.Location = new Point(170, 89);
             label3.Name = "label3";
             label3.Size = new Size(40, 20);
             label3.TabIndex = 4;
@@ -84,18 +86,38 @@
             // 
             button1.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
             button1.Image = (Image)resources.GetObject("button1.Image");
-            button1.Location = new Point(242, 198);
+            button1.Location = new Point(274, 281);
             button1.Name = "button1";
             button1.Size = new Size(53, 44);
             button1.TabIndex = 5;
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
             // 
+            // comboBox1
+            // 
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Items.AddRange(new object[] { "Easy", "Medium", "Hard", "Extreme" });
+            comboBox1.Location = new Point(217, 152);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new Size(151, 28);
+            comboBox1.TabIndex = 6;
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Location = new Point(172, 155);
+            label4.Name = "label4";
+            label4.Size = new Size(40, 20);
+            label4.TabIndex = 7;
+            label4.Text = "level";
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(543, 287);
+            ClientSize = new Size(543, 349);
+            Controls.Add(label4);
+            Controls.Add(comboBox1);
             Controls.Add(button1);
             Controls.Add(label3);
             Controls.Add(label2);
@@ -116,5 +138,7 @@
         private Label label2;
         private Label label3;
         private Button button1;
+        private ComboBox comboBox1;
+        private Label label4;
     }
 }

@@ -7,22 +7,26 @@ namespace ShipsGame
         public Form1()
         {
             InitializeComponent();
+            MessageBox.Show("SZANOWNY PANIE DOKTORZE\nWiem, ¿e projekt mia³ mieæ planszê kwadratow¹ i wiem, ¿e udziwniam go dodaj¹c opcjê przegrania,poziom trudnoœci oraz obrazki w miejscach ikonek, ale bardzo chcia³am nauczyæ siê w tym projekcie czegoœ wiêcej i aby moje portfolio na githubie by³o bardziej zaawansowane. Jeœli jest to niezgodne z wymaganiami, mogê cofn¹æ projekt do wersji podstawowej");
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            int cols = Int32.Parse(tbxCols.Text);
-            int rows = Int32.Parse(tbxRows.Text);
-            if (cols>0&&rows>0)
+            Int32.TryParse(tbxCols.Text, out int cols);
+            Int32.TryParse(tbxRows.Text, out int rows);
+
+            if (cols > 0 && rows > 0)
             {
                 this.Close();
-                Game game = new Game(cols,rows);
+                Game game = new Game(cols, rows);
             }
             else
             {
                 MessageBox.Show("Please give apropriate parameters");
             }
-                
+
         }
+
+
     }
 }
