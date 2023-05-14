@@ -28,15 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             label1 = new Label();
             tbxRows = new TextBox();
             tbxCols = new TextBox();
             label2 = new Label();
             label3 = new Label();
-            button1 = new Button();
+            btnCheck = new Button();
             level = new ComboBox();
             label4 = new Label();
+            label5 = new Label();
             SuspendLayout();
             // 
             // label1
@@ -52,14 +52,14 @@
             // 
             // tbxRows
             // 
-            tbxRows.Location = new Point(217, 86);
+            tbxRows.Location = new Point(217, 130);
             tbxRows.Name = "tbxRows";
             tbxRows.Size = new Size(151, 27);
             tbxRows.TabIndex = 1;
             // 
             // tbxCols
             // 
-            tbxCols.Location = new Point(217, 119);
+            tbxCols.Location = new Point(217, 163);
             tbxCols.Name = "tbxCols";
             tbxCols.Size = new Size(151, 27);
             tbxCols.TabIndex = 2;
@@ -67,7 +67,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(146, 119);
+            label2.Location = new Point(146, 163);
             label2.Name = "label2";
             label2.Size = new Size(64, 20);
             label2.TabIndex = 3;
@@ -76,28 +76,28 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(170, 89);
+            label3.Location = new Point(170, 133);
             label3.Name = "label3";
             label3.Size = new Size(40, 20);
             label3.TabIndex = 4;
             label3.Text = "rows";
             // 
-            // button1
+            // btnCheck
             // 
-            button1.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            button1.Image = (Image)resources.GetObject("button1.Image");
-            button1.Location = new Point(274, 281);
-            button1.Name = "button1";
-            button1.Size = new Size(53, 44);
-            button1.TabIndex = 5;
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
+            btnCheck.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            btnCheck.Image = Properties.Resources.check2;
+            btnCheck.Location = new Point(274, 281);
+            btnCheck.Name = "btnCheck";
+            btnCheck.Size = new Size(53, 44);
+            btnCheck.TabIndex = 5;
+            btnCheck.UseVisualStyleBackColor = true;
+            btnCheck.Click += button1_Click;
             // 
             // level
             // 
             level.FormattingEnabled = true;
-            level.Items.AddRange(new object[] { "Easy", "Medium", "Extreme" });
-            level.Location = new Point(217, 152);
+            level.Items.AddRange(new object[] { "Easy", "Medium", "Hard", "Extreme" });
+            level.Location = new Point(217, 196);
             level.Name = "level";
             level.Size = new Size(151, 28);
             level.TabIndex = 6;
@@ -105,20 +105,30 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(172, 155);
+            label4.Location = new Point(172, 199);
             label4.Name = "label4";
             label4.Size = new Size(40, 20);
             label4.TabIndex = 7;
             label4.Text = "level";
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Location = new Point(199, 78);
+            label5.Name = "label5";
+            label5.Size = new Size(184, 20);
+            label5.TabIndex = 8;
+            label5.Text = "Size should be at least 3x3";
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(543, 349);
+            Controls.Add(label5);
             Controls.Add(label4);
             Controls.Add(level);
-            Controls.Add(button1);
+            Controls.Add(btnCheck);
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(tbxCols);
@@ -137,8 +147,9 @@
         private TextBox tbxCols;
         private Label label2;
         private Label label3;
-        private Button button1;
+        private Button btnCheck;
         private ComboBox level;
         private Label label4;
+        private Label label5;
     }
 }

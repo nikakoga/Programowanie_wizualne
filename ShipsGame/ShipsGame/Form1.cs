@@ -16,7 +16,7 @@ namespace ShipsGame
             Int32.TryParse(tbxCols.Text, out int cols);
             Int32.TryParse(tbxRows.Text, out int rows);
 
-            if (cols > 0 && rows > 0)
+            if (cols > 2 && rows > 2)
             {
                 int gameLevel = level.SelectedIndex;
                 Game game = new Game(cols, rows, gameLevel);
