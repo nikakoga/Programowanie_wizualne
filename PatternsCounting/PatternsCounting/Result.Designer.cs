@@ -28,23 +28,23 @@
         /// </summary>
         private void InitializeComponent()
         {
-            dataGridView1 = new DataGridView();
+            dgvCounter = new DataGridView();
             Sequence = new DataGridViewTextBoxColumn();
             Counts = new DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dgvCounter).BeginInit();
             SuspendLayout();
             // 
-            // dataGridView1
+            // dgvCounter
             // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { Sequence, Counts });
-            dataGridView1.Location = new Point(173, 85);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.RowTemplate.Height = 29;
-            dataGridView1.Size = new Size(304, 188);
-            dataGridView1.TabIndex = 0;
-            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
+            dgvCounter.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvCounter.Columns.AddRange(new DataGridViewColumn[] { Sequence, Counts });
+            dgvCounter.Location = new Point(173, 85);
+            dgvCounter.Name = "dgvCounter";
+            dgvCounter.RowHeadersWidth = 51;
+            dgvCounter.RowTemplate.Height = 29;
+            dgvCounter.Size = new Size(304, 188);
+            dgvCounter.TabIndex = 0;
+            dgvCounter.CellContentClick += dataGridView1_CellContentClick;
             // 
             // Sequence
             // 
@@ -65,16 +65,16 @@
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Controls.Add(dataGridView1);
+            Controls.Add(dgvCounter);
             Name = "Result";
             Text = "Result";
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgvCounter).EndInit();
             ResumeLayout(false);
         }
 
         #endregion
 
-        private DataGridView dataGridView1;
+        private DataGridView dgvCounter;
         private DataGridViewTextBoxColumn Sequence;
         private DataGridViewTextBoxColumn Counts;
     }

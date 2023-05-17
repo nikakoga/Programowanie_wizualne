@@ -1,3 +1,4 @@
+using System.Drawing;
 using System.Text.RegularExpressions;
 
 namespace PatternsCounting
@@ -23,7 +24,9 @@ namespace PatternsCounting
                 }
                 else
                 {
-                    MessageBox.Show("OK");
+                    Result res = new Result(tbxDNA.Text);
+                    res.ShowDialog();
+                    this.Close();
                 }
             }
             else

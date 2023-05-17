@@ -19,23 +19,38 @@ namespace PatternsCounting
         {
             InitializeComponent();
             sequence = DNA;
+            createPatterns();
+            DataGridViewCreator();
+
+
         }
 
         private void createPatterns()
         {
-            for (int i=0; i<sequence.Length-4; i++) 
+            for (int i = 0; i < sequence.Length - 3; i++)
             {
                 string find = sequence.Substring(i, 4);
                 if (!patterns.ContainsKey(find))
                 {
-                    patterns.Add(find, i);
+                    patterns.Add(find, 1);
                 }
                 else
                 {
                     int counter = patterns[find];
-                    patterns[find] = counter+1;
+                    patterns[find] = counter + 1;
                 }
             }
+        }
+
+        private void DataGridViewCreator()
+        {
+            foreach (var kvp in patterns)
+            {
+                dgvCounter.Rows.Add(kvp.Key, kvp.Value);
+            }
+
+            // Dodanie DataGridView do formularza lub innego kontenera
+            Controls.Add(dgvCounter);
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
