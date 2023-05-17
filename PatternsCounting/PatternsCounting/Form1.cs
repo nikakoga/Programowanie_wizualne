@@ -10,7 +10,7 @@ namespace PatternsCounting
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnSave_Click(object sender, EventArgs e)
         {
             var regex = @"[^ACTG]";
             Match match = Regex.Match(tbxDNA.Text, regex);

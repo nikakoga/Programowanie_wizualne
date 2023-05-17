@@ -116,7 +116,7 @@ namespace PatternsCounting
                     File.WriteAllText(path, csv);
                 }
 
-                
+
                 catch (Exception ex)
                 {
                     MessageBox.Show(ex.ToString());
@@ -125,5 +125,5 @@ namespace PatternsCounting
 
         }
     }
-    }
+}
 
