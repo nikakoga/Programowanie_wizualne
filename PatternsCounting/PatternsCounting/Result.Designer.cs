@@ -31,6 +31,7 @@
             dgvCounter = new DataGridView();
             Sequence = new DataGridViewTextBoxColumn();
             Counts = new DataGridViewTextBoxColumn();
+            button1 = new Button();
             ((System.ComponentModel.ISupportInitialize)dgvCounter).BeginInit();
             SuspendLayout();
             // 
@@ -60,11 +61,22 @@
             Counts.Name = "Counts";
             Counts.Width = 125;
             // 
+            // button1
+            // 
+            button1.Location = new Point(287, 324);
+            button1.Name = "button1";
+            button1.Size = new Size(94, 29);
+            button1.TabIndex = 1;
+            button1.Text = "Save";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
+            // 
             // Result
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(669, 450);
+            Controls.Add(button1);
             Controls.Add(dgvCounter);
             Name = "Result";
             Text = "Result";
@@ -77,5 +89,6 @@
         private DataGridView dgvCounter;
         private DataGridViewTextBoxColumn Sequence;
         private DataGridViewTextBoxColumn Counts;
+        private Button button1;
     }
 }

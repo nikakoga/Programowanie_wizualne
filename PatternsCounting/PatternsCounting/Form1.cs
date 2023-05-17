@@ -27,6 +27,7 @@ namespace PatternsCounting
                     Result res = new Result(tbxDNA.Text);
                     res.ShowDialog();
                     this.Close();
+
                 }
             }
             else

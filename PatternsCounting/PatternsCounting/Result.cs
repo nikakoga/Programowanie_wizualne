@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -57,5 +58,72 @@ namespace PatternsCounting
         {
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            SaveFileDialog sfd = new SaveFileDialog();
+            sfd.Filter = "CSV| *.csv";
+            if (sfd.ShowDialog() == DialogResult.OK)
+            {
+                string extension = Path.GetExtension(sfd.FileName).ToLower();
+                string path = sfd.FileName;
+
+                try
+                {
+                    //Build the CSV file data as a Comma separated string.
+                    string csv = string.Empty;
+
+                    //Add the Header row for CSV file.
+                    foreach (DataGridViewColumn column in dgvCounter.Columns)
+                    {
+                        csv += column.HeaderText + ',';
+                    }
+
+                    //To remove coma after last value in a row
+                    csv = csv.Remove(csv.Length - 1);
+
+                    //Add new line.
+                    csv += "\r\n";
+
+                    //Adding the Rows
+
+                    foreach (DataGridViewRow row in dgvCounter.Rows)
+                    {
+
+                        foreach (DataGridViewCell cell in row.Cells)
+                        {
+                            //Add the Data rows.
+                            if (cell.Value != null)
+                            {
+                                csv += cell.Value.ToString() + ',';
+
+                            }
+
+                        }
+
+                        //To remove coma after last value in a row
+                        csv = csv.Remove(csv.Length - 1);
+
+                        //Add new line.
+                        csv += "\r\n";
+                    }
+
+                    //To remove new line after last value in a row
+                    csv = csv.Remove(csv.Length - 2);
+
+                    //Exporting to CSV.
+
+                    File.WriteAllText(path, csv);
+                }
+
+                
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.ToString());
+                }
+            }
+
+        }
     }
-}
+    }
+
