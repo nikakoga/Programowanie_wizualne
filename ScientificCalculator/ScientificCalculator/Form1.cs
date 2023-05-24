@@ -8,6 +8,7 @@ namespace ScientificCalculator
     {
         string expression;
         string lastValue;
+        bool result;
         Button[] Scientific;
         Button[] NotScientific;
         public Form1()
@@ -42,10 +43,12 @@ namespace ScientificCalculator
             tbxWindow.Text = lastValue;
 
             History.Items.Insert(0,expression + "=" + lastValue);
-            while (History.Items.Count > 20)
+            while (History.Items.Count > 13)
             {
                 History.Items.RemoveAt(History.Items.Count - 1);
             }
+            expression = lastValue;
+            result = true;
         }
         private void btnAc_Click(object sender, EventArgs e)
         {
@@ -75,6 +78,13 @@ namespace ScientificCalculator
         {
 
             Button clickedButton = (Button)sender;
+
+            if(result) //for "fresh start" after result
+            {
+                expression = "";
+                result = false;
+            }
+
             if (clickedButton.Text == "÷")
             {
                 expression += "/";
@@ -82,12 +92,14 @@ namespace ScientificCalculator
             else if (clickedButton.Text == "×")
             {
                 expression += "*";
+                
             }
             else
             {
                 expression += clickedButton.Text;
-                tbxWindow.Text = expression;
+                
             }
+            tbxWindow.Text = expression;
 
 
         }
