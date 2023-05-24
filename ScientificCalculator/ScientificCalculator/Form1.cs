@@ -4,15 +4,21 @@ namespace ScientificCalculator
     {
         string expression;
         Button[] Scientific;
+        Button[] NotScientific;
         public Form1()
         {
             InitializeComponent();
 
             Scientific = new Button[] {btnRad,btnDeg,btnInv,btnPi,btnE,btnAns,btnSin,btnCos,btnTan,btnExp,btnx,btnLn,btnLog,btnPierw,btnxy };
+            NotScientific = new Button[] { btn0, btn1, btn2, btn3, btn4, btn5, btn6, btn7, btn8, btn9, btnMnoz, btnDod, btnDziel, btnOdj,btnProc,btnNawO,btnNawZa,btnAc,btnKrop };
 
             foreach (var btn in Scientific)
             {
                 btn.Visible = false;
+            }
+            foreach (var btn in NotScientific)
+            {
+                btn.Click += ButtonClick();
             }
         }
 
@@ -39,10 +45,11 @@ namespace ScientificCalculator
             }
         }
 
-        void Button_Click(object sender, EventArgs e)
+        private System.EventHandler ButtonClick(object sender, EventArgs e)
         {
             Button clickedButton = (Button)sender;
             expression += clickedButton.Text;
+            return 
         }
     }
 }
