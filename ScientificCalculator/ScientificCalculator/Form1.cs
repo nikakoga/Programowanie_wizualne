@@ -79,29 +79,26 @@ namespace ScientificCalculator
 
             Button clickedButton = (Button)sender;
 
-            if(result) //for "fresh start" after result
+            if (result) //for "fresh start" after result
             {
                 expression = "";
                 result = false;
             }
 
-            if (clickedButton.Text == "÷")
-            {
-                expression += "/";
+            switch (clickedButton.Text){
+
+                case "÷":
+                    expression += "/";
+                    break;
+                case "×":
+                    expression += "*";
+                    break;
+                default:
+                    expression += clickedButton.Text;
+                    break;
             }
-            else if (clickedButton.Text == "×")
-            {
-                expression += "*";
-                
-            }
-            else
-            {
-                expression += clickedButton.Text;
-                
-            }
+
             tbxWindow.Text = expression;
-
-
         }
 
 
