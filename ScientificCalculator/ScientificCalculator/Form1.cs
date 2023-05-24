@@ -1,8 +1,13 @@
+using System;
+using System.Data;
+using System.Windows.Forms;
+
 namespace ScientificCalculator
 {
     public partial class Form1 : Form
     {
         string expression;
+        string lastValue;
         Button[] Scientific;
         Button[] NotScientific;
         public Form1()
@@ -33,7 +38,14 @@ namespace ScientificCalculator
         private void btnRow_Click(object sender, EventArgs e)
         {
             //tutaj przekazywanie do parsera i jesli bedzie ok to wpisywanie tego na liste ostatnich operacji a jesli nie to nie wpisywanie
-            expression = "";
+            lastValue = new DataTable().Compute(expression, null).ToString();
+            tbxWindow.Text = lastValue;
+
+            History.Items.Insert(0,expression + "=" + lastValue);
+            while (History.Items.Count > 20)
+            {
+                History.Items.RemoveAt(History.Items.Count - 1);
+            }
         }
         private void btnAc_Click(object sender, EventArgs e)
         {
@@ -63,11 +75,23 @@ namespace ScientificCalculator
         {
 
             Button clickedButton = (Button)sender;
-            expression += clickedButton.Text;
-            tbxWindow.Text = expression;
+            if (clickedButton.Text == "÷")
+            {
+                expression += "/";
+            }
+            else if (clickedButton.Text == "×")
+            {
+                expression += "*";
+            }
+            else
+            {
+                expression += clickedButton.Text;
+                tbxWindow.Text = expression;
+            }
+
 
         }
 
-        
+
     }
 }

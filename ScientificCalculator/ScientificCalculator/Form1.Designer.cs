@@ -29,8 +29,6 @@
         private void InitializeComponent()
         {
             tbxWindow = new TextBox();
-            listView1 = new ListView();
-            lblHistory = new Label();
             btnLn = new Button();
             btn7 = new Button();
             btn8 = new Button();
@@ -68,6 +66,7 @@
             btnDziel = new Button();
             label1 = new Label();
             checkBox1 = new CheckBox();
+            History = new ListBox();
             SuspendLayout();
             // 
             // tbxWindow
@@ -76,25 +75,6 @@
             tbxWindow.Name = "tbxWindow";
             tbxWindow.Size = new Size(505, 27);
             tbxWindow.TabIndex = 0;
-            // 
-            // listView1
-            // 
-            listView1.Location = new Point(12, 72);
-            listView1.Name = "listView1";
-            listView1.Size = new Size(219, 271);
-            listView1.TabIndex = 1;
-            listView1.UseCompatibleStateImageBehavior = false;
-            // 
-            // lblHistory
-            // 
-            lblHistory.AutoSize = true;
-            lblHistory.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            lblHistory.ForeColor = SystemColors.MenuHighlight;
-            lblHistory.Location = new Point(82, 44);
-            lblHistory.Name = "lblHistory";
-            lblHistory.Size = new Size(59, 20);
-            lblHistory.TabIndex = 2;
-            lblHistory.Text = "History";
             // 
             // btnLn
             // 
@@ -402,7 +382,7 @@
             btnMnoz.Name = "btnMnoz";
             btnMnoz.Size = new Size(67, 41);
             btnMnoz.TabIndex = 34;
-            btnMnoz.Text = "x";
+            btnMnoz.Text = "×";
             btnMnoz.UseVisualStyleBackColor = true;
             // 
             // btnDziel
@@ -438,11 +418,21 @@
             checkBox1.UseVisualStyleBackColor = true;
             checkBox1.CheckedChanged += checkBox1_CheckedChanged;
             // 
+            // History
+            // 
+            History.FormattingEnabled = true;
+            History.ItemHeight = 20;
+            History.Location = new Point(28, 72);
+            History.Name = "History";
+            History.Size = new Size(190, 264);
+            History.TabIndex = 40;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(806, 394);
+            Controls.Add(History);
             Controls.Add(checkBox1);
             Controls.Add(label1);
             Controls.Add(btnAc);
@@ -480,8 +470,6 @@
             Controls.Add(btn8);
             Controls.Add(btn7);
             Controls.Add(btnLn);
-            Controls.Add(lblHistory);
-            Controls.Add(listView1);
             Controls.Add(tbxWindow);
             Name = "Form1";
             Text = "Form1";
@@ -492,8 +480,6 @@
         #endregion
 
         private TextBox tbxWindow;
-        private ListView listView1;
-        private Label lblHistory;
         private Button btnLn;
         private Button btn7;
         private Button btn8;
@@ -531,5 +517,6 @@
         private Button btnDziel;
         private Label label1;
         private CheckBox checkBox1;
+        private ListBox History;
     }
 }
