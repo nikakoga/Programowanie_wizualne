@@ -15,16 +15,25 @@ namespace ScientificCalculator
             foreach (var btn in Scientific)
             {
                 btn.Visible = false;
+                if (btn!=btnAns)
+                {
+                    btn.Click += (s, e) => ButtonClick(s, e);
+                }
+                
             }
             foreach (var btn in NotScientific)
             {
-                btn.Click += ButtonClick();
+                if (btn != btnAc)
+                {
+                    btn.Click += (s, e) => ButtonClick(s, e);
+                }
             }
         }
 
         private void btnRow_Click(object sender, EventArgs e)
         {
-
+            MessageBox.Show(expression);
+            expression = "";
         }
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
@@ -45,11 +54,12 @@ namespace ScientificCalculator
             }
         }
 
-        private System.EventHandler ButtonClick(object sender, EventArgs e)
+        private void ButtonClick(object sender, EventArgs e)
         {
+            
             Button clickedButton = (Button)sender;
             expression += clickedButton.Text;
-            return 
+            
         }
     }
 }
