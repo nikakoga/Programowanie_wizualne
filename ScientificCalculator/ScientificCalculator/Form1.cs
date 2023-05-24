@@ -9,17 +9,17 @@ namespace ScientificCalculator
         {
             InitializeComponent();
 
-            Scientific = new Button[] {btnRad,btnDeg,btnInv,btnPi,btnE,btnAns,btnSin,btnCos,btnTan,btnExp,btnx,btnLn,btnLog,btnPierw,btnxy };
-            NotScientific = new Button[] { btn0, btn1, btn2, btn3, btn4, btn5, btn6, btn7, btn8, btn9, btnMnoz, btnDod, btnDziel, btnOdj,btnProc,btnNawO,btnNawZa,btnAc,btnKrop };
+            Scientific = new Button[] { btnRad, btnDeg, btnInv, btnPi, btnE, btnAns, btnSin, btnCos, btnTan, btnExp, btnx, btnLn, btnLog, btnPierw, btnxy };
+            NotScientific = new Button[] { btn0, btn1, btn2, btn3, btn4, btn5, btn6, btn7, btn8, btn9, btnMnoz, btnDod, btnDziel, btnOdj, btnProc, btnNawO, btnNawZa, btnAc, btnKrop };
 
             foreach (var btn in Scientific)
             {
                 btn.Visible = false;
-                if (btn!=btnAns)
+                if (btn != btnAns)
                 {
                     btn.Click += (s, e) => ButtonClick(s, e);
                 }
-                
+
             }
             foreach (var btn in NotScientific)
             {
@@ -32,13 +32,18 @@ namespace ScientificCalculator
 
         private void btnRow_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(expression);
+            //tutaj przekazywanie do parsera i jesli bedzie ok to wpisywanie tego na liste ostatnich operacji a jesli nie to nie wpisywanie
             expression = "";
+        }
+        private void btnAc_Click(object sender, EventArgs e)
+        {
+            expression = "";
+            tbxWindow.Text = expression;
         }
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
-            if(checkBox1.Checked)
+            if (checkBox1.Checked)
             {
                 foreach (var btn in Scientific)
                 {
@@ -56,10 +61,13 @@ namespace ScientificCalculator
 
         private void ButtonClick(object sender, EventArgs e)
         {
-            
+
             Button clickedButton = (Button)sender;
             expression += clickedButton.Text;
-            
+            tbxWindow.Text = expression;
+
         }
+
+        
     }
 }

@@ -376,6 +376,7 @@
             btnAc.TabIndex = 37;
             btnAc.Text = "AC";
             btnAc.UseVisualStyleBackColor = true;
+            btnAc.Click += btnAc_Click;
             // 
             // btnDod
             // 
