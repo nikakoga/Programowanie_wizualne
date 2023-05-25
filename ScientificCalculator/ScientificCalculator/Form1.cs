@@ -6,11 +6,11 @@ namespace ScientificCalculator
 {
     public partial class Form1 : Form
     {
-        string expression;
+        string expression="";
         string lastValue;
         bool result;
         Button[] ScientificRest;
-        Button[] NotScientific;
+        Button[] NotScientificNotSpecial;
         Button[] ScientificTrygonomic;
         Button[] ScientificBracketNeeded;
         public Form1()
@@ -20,36 +20,13 @@ namespace ScientificCalculator
             tbxWindow.ReadOnly = true;
 
             ScientificRest = new Button[] { btnE, btnAns, btnx, btnxy, btnPi };
-            NotScientific = new Button[] { btn0, btn1, btn2, btn3, btn4, btn5, btn6, btn7, btn8, btn9, btnMnoz, btnDod, btnDziel, btnOdj, btnProc, btnNawO, btnNawZa, btnAc, btnKrop, btnPierw };
+            NotScientificNotSpecial = new Button[] { btn0, btn1, btn2, btn3, btn4, btn5, btn6, btn7, btn8, btn9, btnDod, btnOdj, btnProc, btnNawO, btnNawZa, btnKrop };
 
             ScientificTrygonomic = new Button[] { btnCos, btnTan, btnSin };
             ScientificBracketNeeded = new Button[] { btnLn, btnLog, btnExp }; //+jeszcze te co sa w trygonomic
 
             HideScientific();
-
-            foreach (var btn in ScientificRest)
-            {
-                if (btn != btnAns)
-                {
-                    btn.Click += (s, e) => ButtonClick(s, e);
-                }
-
-            }
-            foreach (var btn in ScientificTrygonomic)
-            {
-                btn.Click += (s, e) => ButtonTrygonomicClick(s, e);
-            }
-            foreach (var btn in ScientificBracketNeeded)
-            {
-                btn.Click += (s, e) => ButtonBracketClick(s, e);
-            }
-            foreach (var btn in NotScientific)
-            {
-                if (btn != btnAc && btn != btnMnoz && btn != btnDziel && btn != btnPierw)
-                {
-                    btn.Click += (s, e) => ButtonClick(s, e);
-                }
-            }
+            AddActionsToButtons();
 
             cbxRadDeg.Visible = false;
         }
@@ -100,7 +77,7 @@ namespace ScientificCalculator
         private void btnRow_Click(object sender, EventArgs e)
         {
             SetDegreeOrRadians(); //if trygonometric functions are used combobox Rad/Deg have to be selected
-            if(SafeCheck()) //if no missing brackets
+            if (SafeCheck()) //if no missing brackets
             {
                 Expression rownanie = new Expression(expression);
                 lastValue = rownanie.calculate().ToString();
@@ -122,12 +99,21 @@ namespace ScientificCalculator
                     lastValue = "";
                     result = true;
                 }
-            }  
+            }
         }
         private void btnAc_Click(object sender, EventArgs e)
         {
             expression = "";
             tbxWindow.Text = expression;
+        }
+        private void btnDel_Click(object sender, EventArgs e)
+        {
+            var len = expression.Length;
+            if (len > 0) 
+            {
+                expression = expression.Remove(len - 1);
+                tbxWindow.Text = expression;
+            }
         }
         private void btnxy_Click(object sender, EventArgs e)
         {
@@ -166,7 +152,7 @@ namespace ScientificCalculator
 
             int count_open = expression.Count(c => c == '(');//lambda expression to count open bracket
             int count_close = expression.Count(c => c == ')');
-            if(count_open!=count_close)
+            if (count_open != count_close)
             {
                 MessageBox.Show("Missing Bracket");
                 return false;
@@ -233,6 +219,28 @@ namespace ScientificCalculator
             }
         }
 
+        private void AddActionsToButtons()
+        {
+            foreach (var btn in ScientificRest)
+            {
+                if (btn != btnAns)
+                {
+                    btn.Click += (s, e) => ButtonClick(s, e);
+                }
 
+            }
+            foreach (var btn in ScientificTrygonomic)
+            {
+                btn.Click += (s, e) => ButtonTrygonomicClick(s, e);
+            }
+            foreach (var btn in ScientificBracketNeeded)
+            {
+                btn.Click += (s, e) => ButtonBracketClick(s, e);
+            }
+            foreach (var btn in NotScientificNotSpecial)
+            {
+                btn.Click += (s, e) => ButtonClick(s, e);
+            }
+        }
     }
 }

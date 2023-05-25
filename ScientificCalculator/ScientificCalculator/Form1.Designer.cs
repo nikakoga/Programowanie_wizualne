@@ -66,6 +66,7 @@
             History = new ListBox();
             cbxRadDeg = new ComboBox();
             label2 = new Label();
+            btnDel = new Button();
             SuspendLayout();
             // 
             // tbxWindow
@@ -77,7 +78,7 @@
             // 
             // btnLn
             // 
-            btnLn.Location = new Point(394, 161);
+            btnLn.Location = new Point(394, 255);
             btnLn.Name = "btnLn";
             btnLn.Size = new Size(67, 41);
             btnLn.TabIndex = 3;
@@ -225,7 +226,7 @@
             // 
             // btnProc
             // 
-            btnProc.Location = new Point(613, 114);
+            btnProc.Location = new Point(394, 161);
             btnProc.Name = "btnProc";
             btnProc.Size = new Size(67, 41);
             btnProc.TabIndex = 22;
@@ -252,7 +253,7 @@
             // 
             // btnx
             // 
-            btnx.Location = new Point(394, 255);
+            btnx.Location = new Point(248, 161);
             btnx.Name = "btnx";
             btnx.Size = new Size(67, 41);
             btnx.TabIndex = 19;
@@ -424,11 +425,22 @@
             label2.TabIndex = 42;
             label2.Text = "History";
             // 
+            // btnDel
+            // 
+            btnDel.Location = new Point(613, 114);
+            btnDel.Name = "btnDel";
+            btnDel.Size = new Size(67, 41);
+            btnDel.TabIndex = 43;
+            btnDel.Text = "DEL";
+            btnDel.UseVisualStyleBackColor = true;
+            btnDel.Click += btnDel_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(806, 394);
+            Controls.Add(btnDel);
             Controls.Add(label2);
             Controls.Add(cbxRadDeg);
             Controls.Add(History);
@@ -513,5 +525,6 @@
         private ListBox History;
         private ComboBox cbxRadDeg;
         private Label label2;
+        private Button btnDel;
     }
 }
