@@ -69,7 +69,7 @@ namespace ScientificCalculator
         {
 
             Button clickedButton = (Button)sender;
-            FreshStart();
+            //FreshStart();
             expression += clickedButton.Text;
             tbxWindow.Text = expression;
         }
@@ -77,7 +77,7 @@ namespace ScientificCalculator
         {
 
             Button clickedButton = (Button)sender;
-            FreshStart();
+            //FreshStart();
             if (cbxRadDeg.SelectedIndex == -1)
             {
                 MessageBox.Show("If you want to use that function select Radians or Degrees first");
@@ -92,7 +92,7 @@ namespace ScientificCalculator
         private void ButtonBracketClick(object sender, EventArgs e)
         {
             Button clickedButton = (Button)sender;
-            FreshStart();
+            //FreshStart();
             expression += clickedButton.Text + "(";
             tbxWindow.Text = expression;
         }
@@ -101,7 +101,7 @@ namespace ScientificCalculator
             SetDegreeOrRadians();
             SafeCheck();
             Expression rownanie = new Expression(expression);
-            
+
             lastValue = rownanie.calculate().ToString();
             if (lastValue != "NaN")
             {
@@ -129,48 +129,48 @@ namespace ScientificCalculator
         }
         private void btnxy_Click(object sender, EventArgs e)
         {
-            FreshStart();
+            //FreshStart();
             expression += "^";
             tbxWindow.Text = expression;
         }
         private void btnDziel_Click(object sender, EventArgs e)
         {
-            FreshStart();
+            //FreshStart();
             expression += "/";
             tbxWindow.Text = expression;
         }
         private void btnMnoz_Click(object sender, EventArgs e)
         {
-            FreshStart();
+            //FreshStart();
             expression += "*";
             tbxWindow.Text = expression;
         }
         private void btnPierw_Click(object sender, EventArgs e)
         {
-            FreshStart();
+            //FreshStart();
             expression += "sqrt(";
             tbxWindow.Text = expression;
         }
         private void btnAns_Click(object sender, EventArgs e)
         {
-            FreshStart();
+            //FreshStart();
             expression += lastValue;
             tbxWindow.Text = expression;
         }
 
         private void SafeCheck()
         {
-            expression = expression.Replace( ',',  '.');
+            expression = expression.Replace(',', '.');
         }
 
-        private void FreshStart()
-        {
-            if (result) //for "fresh start" after result
-            {
-                expression = "";
-                result = false;
-            }
-        }
+        //private void FreshStart()
+        //{
+        //    if (result) //for "fresh start" after result
+        //    {
+        //        expression = "";
+        //        result = false;
+        //    }
+        //}
         private void SetDegreeOrRadians()
         {
             if (cbxRadDeg.SelectedIndex == 0)
