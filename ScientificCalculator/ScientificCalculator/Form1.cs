@@ -36,12 +36,10 @@ namespace ScientificCalculator
             {
                 btn.Click += (s, e) => ButtonTrygonomicClick(s, e);
             }
-
             foreach (var btn in ScientificBracketNeeded)
             {
                 btn.Click += (s, e) => ButtonBracketClick(s, e);
             }
-
             foreach (var btn in NotScientific)
             {
                 if (btn != btnAc && btn != btnMnoz && btn != btnDziel && btn != btnPierw)
@@ -99,6 +97,7 @@ namespace ScientificCalculator
         private void btnRow_Click(object sender, EventArgs e)
         {
             SetDegreeOrRadians();
+            expression = tbxWindow.Text;
             Expression rownanie = new Expression(expression);
             lastValue = rownanie.calculate().ToString();
             if (lastValue != "NaN")
@@ -125,14 +124,12 @@ namespace ScientificCalculator
             expression = "";
             tbxWindow.Text = expression;
         }
-
         private void btnxy_Click(object sender, EventArgs e)
         {
             FreshStart();
             expression += "^";
             tbxWindow.Text = expression;
         }
-
         private void btnDziel_Click(object sender, EventArgs e)
         {
             FreshStart();
@@ -145,15 +142,12 @@ namespace ScientificCalculator
             expression += "*";
             tbxWindow.Text = expression;
         }
-
         private void btnPierw_Click(object sender, EventArgs e)
         {
             FreshStart();
             expression += "sqrt(";
             tbxWindow.Text = expression;
         }
-
-
         private void btnAns_Click(object sender, EventArgs e)
         {
             FreshStart();
@@ -169,7 +163,6 @@ namespace ScientificCalculator
                 result = false;
             }
         }
-
         private void SetDegreeOrRadians()
         {
             if (cbxRadDeg.SelectedIndex == 0)
@@ -181,7 +174,6 @@ namespace ScientificCalculator
                 mXparser.setDegreesMode();
             }
         }
-
         private void HideScientific()
         {
             foreach (var btn in ScientificRest)
@@ -202,7 +194,6 @@ namespace ScientificCalculator
 
             cbxRadDeg.Visible = false;
         }
-
         private void ShowScientific()
         {
             foreach (var btn in ScientificRest)
