@@ -82,7 +82,6 @@
             btnLn.TabIndex = 3;
             btnLn.Text = "ln";
             btnLn.UseVisualStyleBackColor = true;
-            btnLn.Click += btnLn_Click;
             // 
             // btn7
             // 
@@ -126,9 +125,9 @@
             btnLog.Name = "btnLog";
             btnLog.Size = new Size(67, 41);
             btnLog.TabIndex = 6;
-            btnLog.Text = "log";
+            btnLog.Text = "lg";
             btnLog.UseVisualStyleBackColor = true;
-            btnLog.Click += btnLog_Click;
+            
             // 
             // btn2
             // 
@@ -266,9 +265,9 @@
             btnExp.Name = "btnExp";
             btnExp.Size = new Size(67, 41);
             btnExp.TabIndex = 30;
-            btnExp.Text = "EXP";
+            btnExp.Text = "exp";
             btnExp.UseVisualStyleBackColor = true;
-            btnExp.Click += btnExp_Click;
+            
             // 
             // btnAns
             // 

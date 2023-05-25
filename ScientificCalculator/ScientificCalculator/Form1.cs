@@ -8,34 +8,38 @@ namespace ScientificCalculator
         string expression;
         string lastValue;
         bool result;
-        Button[] Scientific;
+        Button[] ScientificRest;
         Button[] NotScientific;
-        Button[] Trygonomic;
-        Button[] BracketNeeded;
+        Button[] ScientificTrygonomic;
+        Button[] ScientificBracketNeeded;
         public Form1()
         {
             InitializeComponent();
 
-            Scientific = new Button[] { btnE, btnAns, btnExp, btnx, btnLn, btnLog, btnxy, btnPi };
+            ScientificRest = new Button[] { btnE, btnAns, btnx, btnxy, btnPi };
             NotScientific = new Button[] { btn0, btn1, btn2, btn3, btn4, btn5, btn6, btn7, btn8, btn9, btnMnoz, btnDod, btnDziel, btnOdj, btnProc, btnNawO, btnNawZa, btnAc, btnKrop, btnPierw };
 
-            Trygonomic = new Button[] { btnCos, btnTan, btnSin };
-            //BracketNeeded = new Button[] { btnLn, btnLog, btnExp }; //+jeszcze te co sa w trygonomic
+            ScientificTrygonomic = new Button[] { btnCos, btnTan, btnSin };
+            ScientificBracketNeeded = new Button[] { btnLn, btnLog, btnExp }; //+jeszcze te co sa w trygonomic
 
+            HideScientific();
 
-            foreach (var btn in Scientific)
+            foreach (var btn in ScientificRest)
             {
-                btn.Visible = false;
-                if (btn != btnAns && btn != btnLog && btn != btnLn && btn != btnExp)
+                if (btn != btnAns)
                 {
                     btn.Click += (s, e) => ButtonClick(s, e);
                 }
 
             }
-            foreach (var btn in Trygonomic)
+            foreach (var btn in ScientificTrygonomic)
             {
-                btn.Visible = false;
                 btn.Click += (s, e) => ButtonTrygonomicClick(s, e);
+            }
+
+            foreach (var btn in ScientificBracketNeeded)
+            {
+                btn.Click += (s, e) => ButtonBracketClick(s, e);
             }
 
             foreach (var btn in NotScientific)
@@ -84,6 +88,13 @@ namespace ScientificCalculator
                 tbxWindow.Text = expression;
             }
 
+        }
+        private void ButtonBracketClick(object sender, EventArgs e)
+        {
+            Button clickedButton = (Button)sender;
+            FreshStart();
+            expression += clickedButton.Text + "(";
+            tbxWindow.Text = expression;
         }
         private void btnRow_Click(object sender, EventArgs e)
         {
@@ -142,26 +153,6 @@ namespace ScientificCalculator
             tbxWindow.Text = expression;
         }
 
-        private void btnLog_Click(object sender, EventArgs e)
-        {
-            FreshStart();
-            expression += "lg(";
-            tbxWindow.Text = expression;
-        }
-
-        private void btnLn_Click(object sender, EventArgs e)
-        {
-            FreshStart();
-            expression += "ln(";
-            tbxWindow.Text = expression;
-        }
-
-        private void btnExp_Click(object sender, EventArgs e)
-        {
-            FreshStart();
-            expression += "exp(";
-            tbxWindow.Text = expression;
-        }
 
         private void btnAns_Click(object sender, EventArgs e)
         {
@@ -193,13 +184,18 @@ namespace ScientificCalculator
 
         private void HideScientific()
         {
-            foreach (var btn in Scientific)
+            foreach (var btn in ScientificRest)
             {
                 btn.Visible = false;
 
             }
 
-            foreach (var btn in Trygonomic)
+            foreach (var btn in ScientificTrygonomic)
+            {
+                btn.Visible = false;
+            }
+
+            foreach (var btn in ScientificBracketNeeded)
             {
                 btn.Visible = false;
             }
@@ -209,19 +205,24 @@ namespace ScientificCalculator
 
         private void ShowScientific()
         {
-            foreach (var btn in Scientific)
+            foreach (var btn in ScientificRest)
             {
                 btn.Visible = true;
             }
 
             cbxRadDeg.Visible = true;
 
-            foreach (var btn in Trygonomic)
+            foreach (var btn in ScientificTrygonomic)
+            {
+                btn.Visible = true;
+            }
+
+            foreach (var btn in ScientificBracketNeeded)
             {
                 btn.Visible = true;
             }
         }
 
-        
+
     }
 }
