@@ -49,8 +49,6 @@
             btnNawZa = new Button();
             btnNawO = new Button();
             btnx = new Button();
-            btnDeg = new Button();
-            btnRad = new Button();
             btnExp = new Button();
             btnAns = new Button();
             btnTan = new Button();
@@ -58,7 +56,6 @@
             btnCos = new Button();
             btnPi = new Button();
             btnSin = new Button();
-            btnInv = new Button();
             btnAc = new Button();
             btnDod = new Button();
             btnOdj = new Button();
@@ -67,6 +64,7 @@
             label1 = new Label();
             checkBox1 = new CheckBox();
             History = new ListBox();
+            cbxRadDeg = new ComboBox();
             SuspendLayout();
             // 
             // tbxWindow
@@ -84,6 +82,7 @@
             btnLn.TabIndex = 3;
             btnLn.Text = "ln";
             btnLn.UseVisualStyleBackColor = true;
+            btnLn.Click += btnLn_Click;
             // 
             // btn7
             // 
@@ -129,6 +128,7 @@
             btnLog.TabIndex = 6;
             btnLog.Text = "log";
             btnLog.UseVisualStyleBackColor = true;
+            btnLog.Click += btnLog_Click;
             // 
             // btn2
             // 
@@ -150,12 +150,13 @@
             // 
             // btnPierw
             // 
-            btnPierw.Location = new Point(394, 255);
+            btnPierw.Location = new Point(394, 114);
             btnPierw.Name = "btnPierw";
             btnPierw.Size = new Size(67, 41);
             btnPierw.TabIndex = 9;
             btnPierw.Text = "√ ";
             btnPierw.UseVisualStyleBackColor = true;
+            btnPierw.Click += btnPierw_Click;
             // 
             // btnKrop
             // 
@@ -183,6 +184,7 @@
             btnxy.TabIndex = 12;
             btnxy.Text = "x^y";
             btnxy.UseVisualStyleBackColor = true;
+            btnxy.Click += btnxy_Click;
             // 
             // btnRow
             // 
@@ -251,30 +253,12 @@
             // 
             // btnx
             // 
-            btnx.Location = new Point(394, 114);
+            btnx.Location = new Point(394, 255);
             btnx.Name = "btnx";
             btnx.Size = new Size(67, 41);
             btnx.TabIndex = 19;
             btnx.Text = "x!";
             btnx.UseVisualStyleBackColor = true;
-            // 
-            // btnDeg
-            // 
-            btnDeg.Location = new Point(321, 114);
-            btnDeg.Name = "btnDeg";
-            btnDeg.Size = new Size(67, 41);
-            btnDeg.TabIndex = 32;
-            btnDeg.Text = "Deg";
-            btnDeg.UseVisualStyleBackColor = true;
-            // 
-            // btnRad
-            // 
-            btnRad.Location = new Point(248, 114);
-            btnRad.Name = "btnRad";
-            btnRad.Size = new Size(67, 41);
-            btnRad.TabIndex = 31;
-            btnRad.Text = "Rad";
-            btnRad.UseVisualStyleBackColor = true;
             // 
             // btnExp
             // 
@@ -284,6 +268,7 @@
             btnExp.TabIndex = 30;
             btnExp.Text = "EXP";
             btnExp.UseVisualStyleBackColor = true;
+            btnExp.Click += btnExp_Click;
             // 
             // btnAns
             // 
@@ -293,6 +278,7 @@
             btnAns.TabIndex = 29;
             btnAns.Text = "Ans";
             btnAns.UseVisualStyleBackColor = true;
+            btnAns.Click += btnAns_Click;
             // 
             // btnTan
             // 
@@ -338,15 +324,6 @@
             btnSin.TabIndex = 24;
             btnSin.Text = "sin";
             btnSin.UseVisualStyleBackColor = true;
-            // 
-            // btnInv
-            // 
-            btnInv.Location = new Point(248, 161);
-            btnInv.Name = "btnInv";
-            btnInv.Size = new Size(67, 41);
-            btnInv.TabIndex = 23;
-            btnInv.Text = "Inv";
-            btnInv.UseVisualStyleBackColor = true;
             // 
             // btnAc
             // 
@@ -429,11 +406,21 @@
             History.Size = new Size(190, 264);
             History.TabIndex = 40;
             // 
+            // cbxRadDeg
+            // 
+            cbxRadDeg.FormattingEnabled = true;
+            cbxRadDeg.Items.AddRange(new object[] { "Rad", "Deg" });
+            cbxRadDeg.Location = new Point(248, 121);
+            cbxRadDeg.Name = "cbxRadDeg";
+            cbxRadDeg.Size = new Size(140, 28);
+            cbxRadDeg.TabIndex = 41;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(806, 394);
+            Controls.Add(cbxRadDeg);
             Controls.Add(History);
             Controls.Add(checkBox1);
             Controls.Add(label1);
@@ -442,8 +429,6 @@
             Controls.Add(btnOdj);
             Controls.Add(btnMnoz);
             Controls.Add(btnDziel);
-            Controls.Add(btnDeg);
-            Controls.Add(btnRad);
             Controls.Add(btnExp);
             Controls.Add(btnAns);
             Controls.Add(btnTan);
@@ -451,7 +436,6 @@
             Controls.Add(btnCos);
             Controls.Add(btnPi);
             Controls.Add(btnSin);
-            Controls.Add(btnInv);
             Controls.Add(btnProc);
             Controls.Add(btnNawZa);
             Controls.Add(btnNawO);
@@ -502,8 +486,6 @@
         private Button btnNawZa;
         private Button btnNawO;
         private Button btnx;
-        private Button btnDeg;
-        private Button btnRad;
         private Button btnExp;
         private Button btnAns;
         private Button btnTan;
@@ -511,7 +493,6 @@
         private Button btnCos;
         private Button btnPi;
         private Button btnSin;
-        private Button btnInv;
         private Button btnAc;
         private Button btnDod;
         private Button btnOdj;
@@ -520,5 +501,6 @@
         private Label label1;
         private CheckBox checkBox1;
         private ListBox History;
+        private ComboBox cbxRadDeg;
     }
 }

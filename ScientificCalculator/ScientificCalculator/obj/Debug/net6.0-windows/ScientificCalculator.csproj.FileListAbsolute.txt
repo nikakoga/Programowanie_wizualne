@@ -15,3 +15,5 @@ C:\Users\weron\Documents\Pani Informatyk\Programowanie_wizualne\ScientificCalcul
 C:\Users\weron\Documents\Pani Informatyk\Programowanie_wizualne\ScientificCalculator\ScientificCalculator\obj\Debug\net6.0-windows\ScientificCalculator.pdb
 C:\Users\weron\Documents\Pani Informatyk\Programowanie_wizualne\ScientificCalculator\ScientificCalculator\obj\Debug\net6.0-windows\ScientificCalculator.genruntimeconfig.cache
 C:\Users\weron\Documents\Pani Informatyk\Programowanie_wizualne\ScientificCalculator\ScientificCalculator\obj\Debug\net6.0-windows\ref\ScientificCalculator.dll
+C:\Users\weron\Documents\Pani Informatyk\Programowanie_wizualne\ScientificCalculator\ScientificCalculator\bin\Debug\net6.0-windows\MathParser.org-mXparser.dll
+C:\Users\weron\Documents\Pani Informatyk\Programowanie_wizualne\ScientificCalculator\ScientificCalculator\obj\Debug\net6.0-windows\ScientificCalculator.csproj.CopyComplete
