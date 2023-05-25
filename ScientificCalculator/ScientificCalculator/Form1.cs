@@ -1,6 +1,9 @@
 using System;
 using System.Data;
+using System.Linq.Expressions;
 using System.Windows.Forms;
+//using org.mariuszgromada.math.mxparser;
+
 
 namespace ScientificCalculator
 {
@@ -29,7 +32,7 @@ namespace ScientificCalculator
             }
             foreach (var btn in NotScientific)
             {
-                if (btn != btnAc)
+                if (btn != btnAc && btn != btnMnoz && btn != btnDziel)
                 {
                     btn.Click += (s, e) => ButtonClick(s, e);
                 }
@@ -40,9 +43,11 @@ namespace ScientificCalculator
         {
             //tutaj przekazywanie do parsera i jesli bedzie ok to wpisywanie tego na liste ostatnich operacji a jesli nie to nie wpisywanie
             lastValue = new DataTable().Compute(expression, null).ToString();
+            //Expression rownanie = new Expression(expression);
+            //lastValue= rownanie.calculate().ToString();
             tbxWindow.Text = lastValue;
 
-            History.Items.Insert(0,expression + "=" + lastValue);
+            History.Items.Insert(0, expression + "=" + lastValue);
             while (History.Items.Count > 13)
             {
                 History.Items.RemoveAt(History.Items.Count - 1);
@@ -78,29 +83,33 @@ namespace ScientificCalculator
         {
 
             Button clickedButton = (Button)sender;
+            FreshStart();
+            expression += clickedButton.Text;
+            tbxWindow.Text = expression;
+        }
 
+        private void btnDziel_Click(object sender, EventArgs e)
+        {
+            FreshStart();
+            expression += "/";
+            tbxWindow.Text = expression;
+        }
+        private void btnMnoz_Click(object sender, EventArgs e)
+        {
+            FreshStart();
+            expression += "*";
+            tbxWindow.Text = expression;
+        }
+
+        private void FreshStart()
+        {
             if (result) //for "fresh start" after result
             {
                 expression = "";
                 result = false;
             }
-
-            switch (clickedButton.Text){
-
-                case "÷":
-                    expression += "/";
-                    break;
-                case "×":
-                    expression += "*";
-                    break;
-                default:
-                    expression += clickedButton.Text;
-                    break;
-            }
-
-            tbxWindow.Text = expression;
         }
 
-
+        
     }
 }

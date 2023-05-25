@@ -384,6 +384,7 @@
             btnMnoz.TabIndex = 34;
             btnMnoz.Text = "×";
             btnMnoz.UseVisualStyleBackColor = true;
+            btnMnoz.Click += btnMnoz_Click;
             // 
             // btnDziel
             // 
@@ -393,6 +394,7 @@
             btnDziel.TabIndex = 33;
             btnDziel.Text = "÷";
             btnDziel.UseVisualStyleBackColor = true;
+            btnDziel.Click += btnDziel_Click;
             // 
             // label1
             // 
