@@ -1,4 +1,5 @@
 using org.mariuszgromada.math.mxparser;
+using static System.Net.Mime.MediaTypeNames;
 
 
 namespace ScientificCalculator
@@ -98,29 +99,30 @@ namespace ScientificCalculator
         }
         private void btnRow_Click(object sender, EventArgs e)
         {
-            SetDegreeOrRadians();
-            SafeCheck();
-            Expression rownanie = new Expression(expression);
-
-            lastValue = rownanie.calculate().ToString();
-            if (lastValue != "NaN")
+            SetDegreeOrRadians(); //if trygonometric functions are used combobox Rad/Deg have to be selected
+            if(SafeCheck()) //if no missing brackets
             {
-                tbxWindow.Text = lastValue;
-
-                History.Items.Insert(0, expression + "=" + lastValue);
-                while (History.Items.Count > 13)
+                Expression rownanie = new Expression(expression);
+                lastValue = rownanie.calculate().ToString();
+                if (lastValue != "NaN")
                 {
-                    History.Items.RemoveAt(History.Items.Count - 1);
+                    tbxWindow.Text = lastValue;
+
+                    History.Items.Insert(0, expression + "=" + lastValue);
+                    while (History.Items.Count > 13)
+                    {
+                        History.Items.RemoveAt(History.Items.Count - 1);
+                    }
+                    expression = lastValue;
+                    result = true;
                 }
-                expression = lastValue;
-                result = true;
-            }
-            else
-            {
-                tbxWindow.Text = "ERROR";
-                lastValue = "";
-                result = true;
-            }
+                else
+                {
+                    tbxWindow.Text = "ERROR";
+                    lastValue = "";
+                    result = true;
+                }
+            }  
         }
         private void btnAc_Click(object sender, EventArgs e)
         {
@@ -158,9 +160,18 @@ namespace ScientificCalculator
             tbxWindow.Text = expression;
         }
 
-        private void SafeCheck()
+        private bool SafeCheck()
         {
             expression = expression.Replace(',', '.');
+
+            int count_open = expression.Count(c => c == '(');//lambda expression to count open bracket
+            int count_close = expression.Count(c => c == ')');
+            if(count_open!=count_close)
+            {
+                MessageBox.Show("Missing Bracket");
+                return false;
+            }
+            return true;
         }
 
         //private void FreshStart()
