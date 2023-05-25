@@ -16,6 +16,8 @@ namespace ScientificCalculator
         {
             InitializeComponent();
 
+            tbxWindow.ReadOnly = true;
+
             ScientificRest = new Button[] { btnE, btnAns, btnx, btnxy, btnPi };
             NotScientific = new Button[] { btn0, btn1, btn2, btn3, btn4, btn5, btn6, btn7, btn8, btn9, btnMnoz, btnDod, btnDziel, btnOdj, btnProc, btnNawO, btnNawZa, btnAc, btnKrop, btnPierw };
 
@@ -97,8 +99,9 @@ namespace ScientificCalculator
         private void btnRow_Click(object sender, EventArgs e)
         {
             SetDegreeOrRadians();
-            expression = tbxWindow.Text;
+            SafeCheck();
             Expression rownanie = new Expression(expression);
+            
             lastValue = rownanie.calculate().ToString();
             if (lastValue != "NaN")
             {
@@ -153,6 +156,11 @@ namespace ScientificCalculator
             FreshStart();
             expression += lastValue;
             tbxWindow.Text = expression;
+        }
+
+        private void SafeCheck()
+        {
+            expression = expression.Replace( ',',  '.');
         }
 
         private void FreshStart()

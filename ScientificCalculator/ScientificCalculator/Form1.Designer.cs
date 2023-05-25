@@ -65,6 +65,7 @@
             checkBox1 = new CheckBox();
             History = new ListBox();
             cbxRadDeg = new ComboBox();
+            label2 = new Label();
             SuspendLayout();
             // 
             // tbxWindow
@@ -127,7 +128,6 @@
             btnLog.TabIndex = 6;
             btnLog.Text = "lg";
             btnLog.UseVisualStyleBackColor = true;
-            
             // 
             // btn2
             // 
@@ -267,7 +267,6 @@
             btnExp.TabIndex = 30;
             btnExp.Text = "exp";
             btnExp.UseVisualStyleBackColor = true;
-            
             // 
             // btnAns
             // 
@@ -414,11 +413,23 @@
             cbxRadDeg.Size = new Size(140, 28);
             cbxRadDeg.TabIndex = 41;
             // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            label2.ForeColor = SystemColors.MenuHighlight;
+            label2.Location = new Point(28, 49);
+            label2.Name = "label2";
+            label2.Size = new Size(59, 20);
+            label2.TabIndex = 42;
+            label2.Text = "History";
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(806, 394);
+            Controls.Add(label2);
             Controls.Add(cbxRadDeg);
             Controls.Add(History);
             Controls.Add(checkBox1);
@@ -501,5 +512,6 @@
         private CheckBox checkBox1;
         private ListBox History;
         private ComboBox cbxRadDeg;
+        private Label label2;
     }
 }
