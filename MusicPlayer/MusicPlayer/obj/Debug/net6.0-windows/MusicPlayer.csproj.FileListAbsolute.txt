@@ -17,3 +17,4 @@ C:\Users\weron\Documents\Pani Informatyk\Programowanie_wizualne\MusicPlayer\Musi
 C:\Users\weron\Documents\Pani Informatyk\Programowanie_wizualne\MusicPlayer\MusicPlayer\obj\Debug\net6.0-windows\MusicPlayer.pdb
 C:\Users\weron\Documents\Pani Informatyk\Programowanie_wizualne\MusicPlayer\MusicPlayer\obj\Debug\net6.0-windows\MusicPlayer.genruntimeconfig.cache
 C:\Users\weron\Documents\Pani Informatyk\Programowanie_wizualne\MusicPlayer\MusicPlayer\obj\Debug\net6.0-windows\ref\MusicPlayer.dll
+C:\Users\weron\Documents\Pani Informatyk\Programowanie_wizualne\MusicPlayer\MusicPlayer\obj\Debug\net6.0-windows\MusicPlayer.Properties.Resources.resources
