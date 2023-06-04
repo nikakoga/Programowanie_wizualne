@@ -10,10 +10,14 @@ namespace MusicPlayer
         public Form1()
         {
             InitializeComponent();
-            //player.URL = string.Empty;
+            TrbVolume.Value = 50;
+            lastVolume = 50;
+            
 
         }
+        int lastVolume;
         string[] paths, files, playlist;
+        bool sound = true;
         private void Form1_Load(object sender, EventArgs e)
         {
 
@@ -21,8 +25,12 @@ namespace MusicPlayer
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            player.URL = paths[lbxPlaylist.SelectedIndex];
-            player.controls.play();
+            if(lbxPlaylist.SelectedIndex>-1)
+            {
+                player.URL = paths[lbxPlaylist.SelectedIndex];
+                player.controls.play();
+            }
+           
         }
 
         private void BtnAdd_Click(object sender, EventArgs e)
@@ -90,25 +98,38 @@ namespace MusicPlayer
             try
             {
                 LblTrackStart.Text = player.controls.currentPositionString;
-                if(player.controls.currentItem != null)
+                if (player.controls.currentItem != null)
                 {
                     LblTrackEnd.Text = player.controls.currentItem.durationString;
                 }
-               
+
             }
             catch
             {
 
             }
         }
+
+        private void TrbVolume_Scroll(object sender, EventArgs e)
+        {
+            player.settings.volume = TrbVolume.Value;
+            lastVolume= player.settings.volume;
+            
+        }
+
+        private void BtnMute_Click(object sender, EventArgs e)
+        {
+            if (sound)
+            {
+                player.settings.volume = 0;
+                sound = false;
+            }
+            else
+            {
+                player.settings.volume = lastVolume;
+                sound = true;
+            }
+
+        }
     }
 }
-
-//private void BtnPlayPlaylist_Click(object sender, EventArgs e)
-//{
-//    if (playlist.Count > 0)
-//    {
-//        currentTrackIndex = 0;
-//        PlayTrack(playlist[currentTrackIndex]);
-//    }
-//}

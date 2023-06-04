@@ -38,7 +38,7 @@
             label1 = new Label();
             pBar = new ProgressBar();
             pictureBox1 = new PictureBox();
-            trackBar1 = new TrackBar();
+            TrbVolume = new TrackBar();
             BtnMute = new Button();
             LblTrackStart = new Label();
             LblTrackEnd = new Label();
@@ -46,7 +46,7 @@
             BtnPrev = new Button();
             timer1 = new System.Windows.Forms.Timer(components);
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)trackBar1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)TrbVolume).BeginInit();
             SuspendLayout();
             // 
             // lbxPlaylist
@@ -143,15 +143,16 @@
             pictureBox1.TabIndex = 9;
             pictureBox1.TabStop = false;
             // 
-            // trackBar1
+            // TrbVolume
             // 
-            trackBar1.Location = new Point(546, 257);
-            trackBar1.Maximum = 100;
-            trackBar1.Name = "trackBar1";
-            trackBar1.Orientation = Orientation.Vertical;
-            trackBar1.Size = new Size(56, 217);
-            trackBar1.TabIndex = 10;
-            trackBar1.TickStyle = TickStyle.TopLeft;
+            TrbVolume.Location = new Point(546, 257);
+            TrbVolume.Maximum = 100;
+            TrbVolume.Name = "TrbVolume";
+            TrbVolume.Orientation = Orientation.Vertical;
+            TrbVolume.Size = new Size(56, 217);
+            TrbVolume.TabIndex = 10;
+            TrbVolume.TickStyle = TickStyle.TopLeft;
+            TrbVolume.Scroll += TrbVolume_Scroll;
             // 
             // BtnMute
             // 
@@ -161,6 +162,7 @@
             BtnMute.Size = new Size(52, 40);
             BtnMute.TabIndex = 11;
             BtnMute.UseVisualStyleBackColor = true;
+            BtnMute.Click += BtnMute_Click;
             // 
             // LblTrackStart
             // 
@@ -222,7 +224,7 @@
             Controls.Add(LblTrackEnd);
             Controls.Add(LblTrackStart);
             Controls.Add(BtnMute);
-            Controls.Add(trackBar1);
+            Controls.Add(TrbVolume);
             Controls.Add(pictureBox1);
             Controls.Add(pBar);
             Controls.Add(label1);
@@ -235,7 +237,7 @@
             Name = "Form1";
             Load += Form1_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)trackBar1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)TrbVolume).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -251,7 +253,7 @@
         private Label label1;
         private ProgressBar pBar;
         private PictureBox pictureBox1;
-        private TrackBar trackBar1;
+        private TrackBar TrbVolume;
         private Button BtnMute;
         private Label LblTrackStart;
         private Label LblTrackEnd;
