@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             lbxPlaylist = new ListBox();
             BtnAdd = new Button();
             BtnDelete = new Button();
@@ -35,15 +36,15 @@
             BtnPlay = new Button();
             BtnStop = new Button();
             label1 = new Label();
-            progressBar1 = new ProgressBar();
+            pBar = new ProgressBar();
             pictureBox1 = new PictureBox();
             trackBar1 = new TrackBar();
             BtnMute = new Button();
             LblTrackStart = new Label();
             LblTrackEnd = new Label();
-            backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             BtnNext = new Button();
             BtnPrev = new Button();
+            timer1 = new System.Windows.Forms.Timer(components);
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)trackBar1).BeginInit();
             SuspendLayout();
@@ -126,12 +127,12 @@
             label1.TabIndex = 7;
             label1.Text = "Playlist";
             // 
-            // progressBar1
+            // pBar
             // 
-            progressBar1.Location = new Point(58, 64);
-            progressBar1.Name = "progressBar1";
-            progressBar1.Size = new Size(796, 29);
-            progressBar1.TabIndex = 8;
+            pBar.Location = new Point(58, 64);
+            pBar.Name = "pBar";
+            pBar.Size = new Size(796, 29);
+            pBar.TabIndex = 8;
             // 
             // pictureBox1
             // 
@@ -205,6 +206,11 @@
             BtnPrev.UseVisualStyleBackColor = true;
             BtnPrev.Click += BtnPrev_Click;
             // 
+            // timer1
+            // 
+            timer1.Enabled = true;
+            timer1.Tick += timer1_Tick;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -218,7 +224,7 @@
             Controls.Add(BtnMute);
             Controls.Add(trackBar1);
             Controls.Add(pictureBox1);
-            Controls.Add(progressBar1);
+            Controls.Add(pBar);
             Controls.Add(label1);
             Controls.Add(BtnStop);
             Controls.Add(BtnPause);
@@ -243,14 +249,14 @@
         private Button BtnPlay;
         private Button BtnStop;
         private Label label1;
-        private ProgressBar progressBar1;
+        private ProgressBar pBar;
         private PictureBox pictureBox1;
         private TrackBar trackBar1;
         private Button BtnMute;
         private Label LblTrackStart;
         private Label LblTrackEnd;
-        private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private Button BtnNext;
         private Button BtnPrev;
+        private System.Windows.Forms.Timer timer1;
     }
 }

@@ -76,7 +76,16 @@ namespace MusicPlayer
         {
             if (lbxPlaylist.SelectedIndex > 0)
             {
-                lbxPlaylist.SelectedIndex = lbxPlaylist.SelectedIndex - 1 ;
+                lbxPlaylist.SelectedIndex = lbxPlaylist.SelectedIndex - 1;
+            }
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            if (player.playState == WMPLib.WMPPlayState.wmppsPlaying)
+            {
+                pBar.Maximum = (int)player.controls.currentItem.duration;
+                pBar.Value = (int)player.controls.currentPosition;
             }
         }
     }
