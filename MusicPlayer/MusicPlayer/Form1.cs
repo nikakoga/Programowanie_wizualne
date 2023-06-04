@@ -87,6 +87,19 @@ namespace MusicPlayer
                 pBar.Maximum = (int)player.controls.currentItem.duration;
                 pBar.Value = (int)player.controls.currentPosition;
             }
+            try
+            {
+                LblTrackStart.Text = player.controls.currentPositionString;
+                if(player.controls.currentItem != null)
+                {
+                    LblTrackEnd.Text = player.controls.currentItem.durationString;
+                }
+               
+            }
+            catch
+            {
+
+            }
         }
     }
 }
