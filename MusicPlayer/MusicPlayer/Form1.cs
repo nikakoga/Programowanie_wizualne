@@ -141,9 +141,9 @@ namespace MusicPlayer
             }
         }
 
-        private void Player_PlayStateChange(int NewState)
+        private void Player_PlayStateChange(int newState)
         {
-            if ((WMPPlayState)NewState == WMPPlayState.wmppsMediaEnded)
+            if ((WMPPlayState)newState == WMPPlayState.wmppsMediaEnded)
             {
                 PlayNextSong();
             }
@@ -152,16 +152,19 @@ namespace MusicPlayer
         {
             if (position_playing < lbxPlaylist.Items.Count - 1)
             {
-                DeletingFromPlaylist(position_playing);
+                //DeletingFromPlaylist(position_playing);
                 position_playing++;
                 lbxPlaylist.SelectedIndex = position_playing;
                 player.URL = playlist[position_playing];
-                player.controls.play();
+                BeginInvoke(() =>
+                player.controls.play());
+
             }
+        
             else
             {
                 // no more songs in playlist
-                DeletingFromPlaylist(position_playing);
+                //DeletingFromPlaylist(position_playing);
                 position_playing = -1;
                 player.controls.stop();
                 player.URL = null;
