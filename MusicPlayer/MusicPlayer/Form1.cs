@@ -14,6 +14,9 @@ namespace MusicPlayer
             TrbVolume.Value = 50;
             lastVolume = 50;
 
+            player.PlayStateChange += new WMPLib._WMPOCXEvents_PlayStateChangeEventHandler(Player_PlayStateChange);
+            
+
         }
         int lastVolume;
         int position_playing = -1;
@@ -22,7 +25,6 @@ namespace MusicPlayer
         List<string> playlist = new List<string>();
 
         bool sound = true;
-
         private void BtnAdd_Click(object sender, EventArgs e)
         {
             OpenFileDialog ofd = new OpenFileDialog();
@@ -67,7 +69,6 @@ namespace MusicPlayer
         }
         private void timer1_Tick(object sender, EventArgs e)
         {
-            
             if (player.playState == WMPLib.WMPPlayState.wmppsPlaying)
             {
                 pBar.Maximum = (int)player.controls.currentItem.duration;
@@ -86,6 +87,7 @@ namespace MusicPlayer
             {
 
             }
+            
         }
         private void TrbVolume_Scroll(object sender, EventArgs e)
         {
@@ -113,7 +115,10 @@ namespace MusicPlayer
         }
         private void pBar_MouseDown(object sender, MouseEventArgs e)
         {
-            player.controls.currentPosition=player.currentMedia.duration*e.X/pBar.Width;
+            if(player.URL!="")
+            {
+                player.controls.currentPosition = player.currentMedia.duration * e.X / pBar.Width;
+            }
         }
         private void DeletingFromPlaylist(int toDelete)
         {
@@ -133,6 +138,35 @@ namespace MusicPlayer
             else if (toDelete < position_playing)
             {
                 position_playing -= 1;
+            }
+        }
+
+        private void Player_PlayStateChange(int NewState)
+        {
+            if ((WMPPlayState)NewState == WMPPlayState.wmppsMediaEnded)
+            {
+                PlayNextSong();
+            }
+        }
+        private void PlayNextSong()
+        {
+            if (position_playing < lbxPlaylist.Items.Count - 1)
+            {
+                DeletingFromPlaylist(position_playing);
+                position_playing++;
+                lbxPlaylist.SelectedIndex = position_playing;
+                player.URL = playlist[position_playing];
+                player.controls.play();
+            }
+            else
+            {
+                // no more songs in playlist
+                DeletingFromPlaylist(position_playing);
+                position_playing = -1;
+                player.controls.stop();
+                player.URL = null;
+                LblTrackEnd.Text = null;
+                pBar.Value = 0;
             }
         }
     }
