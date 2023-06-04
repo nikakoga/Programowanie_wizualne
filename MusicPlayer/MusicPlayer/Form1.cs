@@ -16,6 +16,8 @@ namespace MusicPlayer
 
         }
         int lastVolume;
+        int position_playing=0;
+
         string[] paths, files;
         List<string> playlist = new List<string>();
 
@@ -29,11 +31,7 @@ namespace MusicPlayer
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (lbxPlaylist.SelectedIndex > -1)
-            {
-                player.URL = playlist[lbxPlaylist.SelectedIndex];
-                //player.controls.play();
-            }
+            
 
         }
 
@@ -59,6 +57,15 @@ namespace MusicPlayer
 
         private void BtnPlay_Click(object sender, EventArgs e)
         {
+            if (lbxPlaylist.SelectedIndex > -1)
+            {
+                if(player.URL!= playlist[lbxPlaylist.SelectedIndex])
+                {
+                    player.URL = playlist[lbxPlaylist.SelectedIndex];
+                    position_playing = lbxPlaylist.SelectedIndex;
+                }
+                
+            }
             player.controls.play();
         }
 
@@ -74,17 +81,21 @@ namespace MusicPlayer
 
         private void BtnNext_Click(object sender, EventArgs e)
         {
-            if (lbxPlaylist.SelectedIndex < lbxPlaylist.Items.Count - 1)
+            if (position_playing < lbxPlaylist.Items.Count - 1)
             {
-                lbxPlaylist.SelectedIndex = lbxPlaylist.SelectedIndex + 1;
+                lbxPlaylist.SelectedIndex = position_playing + 1;
+                player.URL = playlist[lbxPlaylist.SelectedIndex];
+                position_playing = lbxPlaylist.SelectedIndex;
             }
         }
 
         private void BtnPrev_Click(object sender, EventArgs e)
         {
-            if (lbxPlaylist.SelectedIndex > 0)
+            if (position_playing > 0)
             {
-                lbxPlaylist.SelectedIndex = lbxPlaylist.SelectedIndex - 1;
+                lbxPlaylist.SelectedIndex = position_playing - 1;
+                player.URL = playlist[lbxPlaylist.SelectedIndex];
+                position_playing = lbxPlaylist.SelectedIndex;
             }
         }
 
