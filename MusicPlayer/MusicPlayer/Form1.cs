@@ -14,12 +14,11 @@ namespace MusicPlayer
             TrbVolume.Value = 50;
             lastVolume = 50;
 
-
         }
         int lastVolume;
-        int position_playing = 0;
+        int position_playing = -1;
 
-        string[] paths, files;
+        string[] files;
         List<string> playlist = new List<string>();
 
         bool sound = true;
@@ -33,36 +32,48 @@ namespace MusicPlayer
             if (ofd.ShowDialog() == DialogResult.OK)
             {
                 files = ofd.FileNames;
-                paths = ofd.FileNames;
                 for (int x = 0; x < files.Length; x++)
                 {
                     lbxPlaylist.Items.Add(Path.GetFileName(files[x]));
-                    playlist.Add(paths[x]);
+                    playlist.Add(files[x]);
                 }
-
-
             }
         }
-
-        private void BtnPlay_Click(object sender, EventArgs e)
+        private void BtnDelete_Click(object sender, EventArgs e)
         {
             if (lbxPlaylist.SelectedIndex > -1)
             {
-                if (player.URL != playlist[lbxPlaylist.SelectedIndex])
+                int toDelete = lbxPlaylist.SelectedIndex;
+                lbxPlaylist.Items.RemoveAt(toDelete);
+                playlist.RemoveAt(toDelete);
+
+                if(lbxPlaylist.SelectedIndex == position_playing) 
                 {
-                    player.URL = playlist[lbxPlaylist.SelectedIndex];
-                    position_playing = lbxPlaylist.SelectedIndex;
+                    position_playing = -1;
                 }
 
+                //if i deleted sth before currently playing
+                else if(lbxPlaylist.SelectedIndex < position_playing)
+                {
+                    position_playing -= 1;
+                }
+                
+            }
+        }
+        private void BtnPlay_Click(object sender, EventArgs e)
+        {
+            if (lbxPlaylist.SelectedIndex > -1 && lbxPlaylist.SelectedIndex!= position_playing)
+            { 
+                 player.URL = playlist[lbxPlaylist.SelectedIndex];
+                 position_playing = lbxPlaylist.SelectedIndex;
+             
             }
             player.controls.play();
         }
-
         private void BtnPause_Click(object sender, EventArgs e)
         {
             player.controls.pause();
         }
-
         private void BtnStop_Click(object sender, EventArgs e)
         {
             player.controls.stop();
@@ -88,7 +99,6 @@ namespace MusicPlayer
 
             }
         }
-
         private void TrbVolume_Scroll(object sender, EventArgs e)
         {
             player.settings.volume = TrbVolume.Value;
@@ -97,7 +107,6 @@ namespace MusicPlayer
             LblVolume.Text = TrbVolume.Value.ToString() + "%";
 
         }
-
         private void BtnMute_Click(object sender, EventArgs e)
         {
             if (sound)
@@ -114,18 +123,6 @@ namespace MusicPlayer
             }
 
         }
-
-        private void BtnDelete_Click(object sender, EventArgs e)
-        {
-            if (lbxPlaylist.SelectedIndex > -1)
-            {
-                int toDelete = lbxPlaylist.SelectedIndex;
-                lbxPlaylist.Items.RemoveAt(toDelete);
-                playlist.RemoveAt(toDelete);
-
-            }
-        }
-
         private void pBar_MouseDown(object sender, MouseEventArgs e)
         {
             player.controls.currentPosition=player.currentMedia.duration*e.X/pBar.Width;
