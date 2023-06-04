@@ -1,3 +1,4 @@
+using System.Numerics;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace MusicPlayer
@@ -16,24 +17,12 @@ namespace MusicPlayer
 
         }
         int lastVolume;
-        int position_playing=0;
+        int position_playing = 0;
 
         string[] paths, files;
         List<string> playlist = new List<string>();
 
-
-
         bool sound = true;
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            
-
-        }
 
         private void BtnAdd_Click(object sender, EventArgs e)
         {
@@ -59,12 +48,12 @@ namespace MusicPlayer
         {
             if (lbxPlaylist.SelectedIndex > -1)
             {
-                if(player.URL!= playlist[lbxPlaylist.SelectedIndex])
+                if (player.URL != playlist[lbxPlaylist.SelectedIndex])
                 {
                     player.URL = playlist[lbxPlaylist.SelectedIndex];
                     position_playing = lbxPlaylist.SelectedIndex;
                 }
-                
+
             }
             player.controls.play();
         }
@@ -78,27 +67,6 @@ namespace MusicPlayer
         {
             player.controls.stop();
         }
-
-        private void BtnNext_Click(object sender, EventArgs e)
-        {
-            if (position_playing < lbxPlaylist.Items.Count - 1)
-            {
-                lbxPlaylist.SelectedIndex = position_playing + 1;
-                player.URL = playlist[lbxPlaylist.SelectedIndex];
-                position_playing = lbxPlaylist.SelectedIndex;
-            }
-        }
-
-        private void BtnPrev_Click(object sender, EventArgs e)
-        {
-            if (position_playing > 0)
-            {
-                lbxPlaylist.SelectedIndex = position_playing - 1;
-                player.URL = playlist[lbxPlaylist.SelectedIndex];
-                position_playing = lbxPlaylist.SelectedIndex;
-            }
-        }
-
         private void timer1_Tick(object sender, EventArgs e)
         {
             if (player.playState == WMPLib.WMPPlayState.wmppsPlaying)
@@ -149,7 +117,7 @@ namespace MusicPlayer
 
         private void BtnDelete_Click(object sender, EventArgs e)
         {
-            if(lbxPlaylist.SelectedIndex>-1)
+            if (lbxPlaylist.SelectedIndex > -1)
             {
                 int toDelete = lbxPlaylist.SelectedIndex;
                 lbxPlaylist.Items.RemoveAt(toDelete);
@@ -157,5 +125,31 @@ namespace MusicPlayer
 
             }
         }
+
+        private void pBar_MouseDown(object sender, MouseEventArgs e)
+        {
+            player.controls.currentPosition=player.currentMedia.duration*e.X/pBar.Width;
+        }
     }
 }
+
+//ZAKAMARKI AMBICJI, ZDUSZONE PRZEZ NADMIAR INNYCH OBOWI¥ZKÓW
+//private void BtnPrev_Click(object sender, EventArgs e)
+//{
+//    if (position_playing > 0)
+//    {
+//        lbxPlaylist.SelectedIndex = position_playing - 1;
+//        player.URL = playlist[lbxPlaylist.SelectedIndex];
+//        position_playing = lbxPlaylist.SelectedIndex;
+//    }
+//}
+
+//private void BtnNext_Click(object sender, EventArgs e)
+//{
+//    if (position_playing < lbxPlaylist.Items.Count - 1)
+//    {
+//        lbxPlaylist.SelectedIndex = position_playing + 1;
+//        player.URL = playlist[lbxPlaylist.SelectedIndex];
+//        position_playing = lbxPlaylist.SelectedIndex;
+//    }
+//}

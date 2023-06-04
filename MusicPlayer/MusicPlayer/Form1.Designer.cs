@@ -42,8 +42,6 @@
             BtnMute = new Button();
             LblTrackStart = new Label();
             LblTrackEnd = new Label();
-            BtnNext = new Button();
-            BtnPrev = new Button();
             timer1 = new System.Windows.Forms.Timer(components);
             LblVolume = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
@@ -61,7 +59,6 @@
             lbxPlaylist.Name = "lbxPlaylist";
             lbxPlaylist.Size = new Size(489, 300);
             lbxPlaylist.TabIndex = 0;
-            lbxPlaylist.SelectedIndexChanged += listBox1_SelectedIndexChanged;
             // 
             // BtnAdd
             // 
@@ -135,6 +132,7 @@
             pBar.Name = "pBar";
             pBar.Size = new Size(796, 29);
             pBar.TabIndex = 8;
+            pBar.MouseDown += pBar_MouseDown;
             // 
             // pictureBox1
             // 
@@ -190,26 +188,6 @@
             LblTrackEnd.TabIndex = 13;
             LblTrackEnd.Text = "00:00";
             // 
-            // BtnNext
-            // 
-            BtnNext.Image = Properties.Resources.iconForeward;
-            BtnNext.Location = new Point(552, 109);
-            BtnNext.Name = "BtnNext";
-            BtnNext.Size = new Size(55, 40);
-            BtnNext.TabIndex = 14;
-            BtnNext.UseVisualStyleBackColor = true;
-            BtnNext.Click += BtnNext_Click;
-            // 
-            // BtnPrev
-            // 
-            BtnPrev.Image = Properties.Resources.iconBack;
-            BtnPrev.Location = new Point(309, 109);
-            BtnPrev.Name = "BtnPrev";
-            BtnPrev.Size = new Size(55, 40);
-            BtnPrev.TabIndex = 15;
-            BtnPrev.UseVisualStyleBackColor = true;
-            BtnPrev.Click += BtnPrev_Click;
-            // 
             // timer1
             // 
             timer1.Enabled = true;
@@ -233,8 +211,6 @@
             BackColor = Color.FromArgb(31, 30, 68);
             ClientSize = new Size(904, 556);
             Controls.Add(LblVolume);
-            Controls.Add(BtnPrev);
-            Controls.Add(BtnNext);
             Controls.Add(LblTrackEnd);
             Controls.Add(LblTrackStart);
             Controls.Add(BtnMute);
@@ -249,7 +225,6 @@
             Controls.Add(BtnAdd);
             Controls.Add(lbxPlaylist);
             Name = "Form1";
-            Load += Form1_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)TrbVolume).EndInit();
             ResumeLayout(false);
@@ -271,8 +246,6 @@
         private Button BtnMute;
         private Label LblTrackStart;
         private Label LblTrackEnd;
-        private Button BtnNext;
-        private Button BtnPrev;
         private System.Windows.Forms.Timer timer1;
         private Label LblVolume;
     }
