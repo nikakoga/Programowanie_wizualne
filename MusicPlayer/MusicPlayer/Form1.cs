@@ -47,13 +47,17 @@ namespace MusicPlayer
                 lbxPlaylist.Items.RemoveAt(toDelete);
                 playlist.RemoveAt(toDelete);
 
-                if(lbxPlaylist.SelectedIndex == position_playing) 
+                if(toDelete == position_playing) 
                 {
                     position_playing = -1;
+                    player.controls.stop();
+                    player.URL = null;
+                    LblTrackEnd.Text= null;
+                    pBar.Value = 0;
                 }
 
                 //if i deleted sth before currently playing
-                else if(lbxPlaylist.SelectedIndex < position_playing)
+                else if(toDelete < position_playing)
                 {
                     position_playing -= 1;
                 }
@@ -80,6 +84,7 @@ namespace MusicPlayer
         }
         private void timer1_Tick(object sender, EventArgs e)
         {
+            
             if (player.playState == WMPLib.WMPPlayState.wmppsPlaying)
             {
                 pBar.Maximum = (int)player.controls.currentItem.duration;
