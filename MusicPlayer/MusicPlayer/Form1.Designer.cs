@@ -34,8 +34,17 @@
             BtnPause = new Button();
             BtnPlay = new Button();
             BtnStop = new Button();
-            trackBar1 = new TrackBar();
             label1 = new Label();
+            progressBar1 = new ProgressBar();
+            pictureBox1 = new PictureBox();
+            trackBar1 = new TrackBar();
+            BtnMute = new Button();
+            LblTrackStart = new Label();
+            LblTrackEnd = new Label();
+            backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            BtnNext = new Button();
+            BtnPrev = new Button();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)trackBar1).BeginInit();
             SuspendLayout();
             // 
@@ -46,9 +55,9 @@
             lbxPlaylist.ForeColor = Color.Red;
             lbxPlaylist.FormattingEnabled = true;
             lbxPlaylist.ItemHeight = 20;
-            lbxPlaylist.Location = new Point(-1, 110);
+            lbxPlaylist.Location = new Point(12, 244);
             lbxPlaylist.Name = "lbxPlaylist";
-            lbxPlaylist.Size = new Size(362, 340);
+            lbxPlaylist.Size = new Size(489, 300);
             lbxPlaylist.TabIndex = 0;
             lbxPlaylist.SelectedIndexChanged += listBox1_SelectedIndexChanged;
             // 
@@ -56,9 +65,9 @@
             // 
             BtnAdd.Font = new Font("Showcard Gothic", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
             BtnAdd.ForeColor = Color.Red;
-            BtnAdd.Location = new Point(17, 61);
+            BtnAdd.Location = new Point(144, 195);
             BtnAdd.Name = "BtnAdd";
-            BtnAdd.Size = new Size(53, 43);
+            BtnAdd.Size = new Size(36, 36);
             BtnAdd.TabIndex = 1;
             BtnAdd.Text = "+";
             BtnAdd.UseVisualStyleBackColor = true;
@@ -68,9 +77,9 @@
             // 
             BtnDelete.Font = new Font("Showcard Gothic", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
             BtnDelete.ForeColor = Color.Red;
-            BtnDelete.Location = new Point(85, 61);
+            BtnDelete.Location = new Point(186, 195);
             BtnDelete.Name = "BtnDelete";
-            BtnDelete.Size = new Size(47, 43);
+            BtnDelete.Size = new Size(36, 36);
             BtnDelete.TabIndex = 2;
             BtnDelete.Text = "-";
             BtnDelete.UseVisualStyleBackColor = true;
@@ -79,7 +88,7 @@
             // 
             BtnPause.ForeColor = SystemColors.ControlText;
             BtnPause.Image = Properties.Resources.iconPause;
-            BtnPause.Location = new Point(516, 188);
+            BtnPause.Location = new Point(428, 109);
             BtnPause.Name = "BtnPause";
             BtnPause.Size = new Size(57, 40);
             BtnPause.TabIndex = 4;
@@ -89,7 +98,7 @@
             // BtnPlay
             // 
             BtnPlay.Image = Properties.Resources.iconPlay;
-            BtnPlay.Location = new Point(458, 188);
+            BtnPlay.Location = new Point(370, 109);
             BtnPlay.Name = "BtnPlay";
             BtnPlay.Size = new Size(52, 40);
             BtnPlay.TabIndex = 3;
@@ -99,39 +108,118 @@
             // BtnStop
             // 
             BtnStop.Image = Properties.Resources.iconStop;
-            BtnStop.Location = new Point(579, 188);
+            BtnStop.Location = new Point(491, 109);
             BtnStop.Name = "BtnStop";
             BtnStop.Size = new Size(55, 40);
             BtnStop.TabIndex = 5;
             BtnStop.UseVisualStyleBackColor = true;
             BtnStop.Click += BtnStop_Click;
             // 
-            // trackBar1
-            // 
-            trackBar1.Location = new Point(406, 126);
-            trackBar1.Name = "trackBar1";
-            trackBar1.Size = new Size(294, 56);
-            trackBar1.TabIndex = 6;
-            // 
             // label1
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Showcard Gothic", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
             label1.ForeColor = Color.Red;
-            label1.Location = new Point(17, 21);
+            label1.Location = new Point(22, 202);
             label1.Name = "label1";
             label1.Size = new Size(116, 29);
             label1.TabIndex = 7;
             label1.Text = "Playlist";
+            // 
+            // progressBar1
+            // 
+            progressBar1.Location = new Point(58, 64);
+            progressBar1.Name = "progressBar1";
+            progressBar1.Size = new Size(796, 29);
+            progressBar1.TabIndex = 8;
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.Image = Properties.Resources.iconMusic1;
+            pictureBox1.Location = new Point(608, 257);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(270, 263);
+            pictureBox1.TabIndex = 9;
+            pictureBox1.TabStop = false;
+            // 
+            // trackBar1
+            // 
+            trackBar1.Location = new Point(546, 257);
+            trackBar1.Maximum = 100;
+            trackBar1.Name = "trackBar1";
+            trackBar1.Orientation = Orientation.Vertical;
+            trackBar1.Size = new Size(56, 217);
+            trackBar1.TabIndex = 10;
+            trackBar1.TickStyle = TickStyle.TopLeft;
+            // 
+            // BtnMute
+            // 
+            BtnMute.Image = Properties.Resources.iconMute;
+            BtnMute.Location = new Point(546, 480);
+            BtnMute.Name = "BtnMute";
+            BtnMute.Size = new Size(52, 40);
+            BtnMute.TabIndex = 11;
+            BtnMute.UseVisualStyleBackColor = true;
+            // 
+            // LblTrackStart
+            // 
+            LblTrackStart.AutoSize = true;
+            LblTrackStart.FlatStyle = FlatStyle.Flat;
+            LblTrackStart.Font = new Font("Showcard Gothic", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
+            LblTrackStart.ForeColor = Color.Red;
+            LblTrackStart.Location = new Point(56, 27);
+            LblTrackStart.Name = "LblTrackStart";
+            LblTrackStart.Size = new Size(77, 29);
+            LblTrackStart.TabIndex = 12;
+            LblTrackStart.Text = "00:00";
+            // 
+            // LblTrackEnd
+            // 
+            LblTrackEnd.AutoSize = true;
+            LblTrackEnd.FlatStyle = FlatStyle.Flat;
+            LblTrackEnd.Font = new Font("Showcard Gothic", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
+            LblTrackEnd.ForeColor = Color.Red;
+            LblTrackEnd.Location = new Point(777, 27);
+            LblTrackEnd.Name = "LblTrackEnd";
+            LblTrackEnd.Size = new Size(77, 29);
+            LblTrackEnd.TabIndex = 13;
+            LblTrackEnd.Text = "00:00";
+            // 
+            // BtnNext
+            // 
+            BtnNext.Image = Properties.Resources.iconForeward;
+            BtnNext.Location = new Point(552, 109);
+            BtnNext.Name = "BtnNext";
+            BtnNext.Size = new Size(55, 40);
+            BtnNext.TabIndex = 14;
+            BtnNext.UseVisualStyleBackColor = true;
+            BtnNext.Click += BtnNext_Click;
+            // 
+            // BtnPrev
+            // 
+            BtnPrev.Image = Properties.Resources.iconBack;
+            BtnPrev.Location = new Point(309, 109);
+            BtnPrev.Name = "BtnPrev";
+            BtnPrev.Size = new Size(55, 40);
+            BtnPrev.TabIndex = 15;
+            BtnPrev.UseVisualStyleBackColor = true;
+            BtnPrev.Click += BtnPrev_Click;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(31, 30, 68);
-            ClientSize = new Size(800, 450);
-            Controls.Add(label1);
+            ClientSize = new Size(904, 556);
+            Controls.Add(BtnPrev);
+            Controls.Add(BtnNext);
+            Controls.Add(LblTrackEnd);
+            Controls.Add(LblTrackStart);
+            Controls.Add(BtnMute);
             Controls.Add(trackBar1);
+            Controls.Add(pictureBox1);
+            Controls.Add(progressBar1);
+            Controls.Add(label1);
             Controls.Add(BtnStop);
             Controls.Add(BtnPause);
             Controls.Add(BtnPlay);
@@ -139,8 +227,8 @@
             Controls.Add(BtnAdd);
             Controls.Add(lbxPlaylist);
             Name = "Form1";
-            Text = "Form1";
             Load += Form1_Load;
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)trackBar1).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -154,7 +242,15 @@
         private Button BtnPause;
         private Button BtnPlay;
         private Button BtnStop;
-        private TrackBar trackBar1;
         private Label label1;
+        private ProgressBar progressBar1;
+        private PictureBox pictureBox1;
+        private TrackBar trackBar1;
+        private Button BtnMute;
+        private Label LblTrackStart;
+        private Label LblTrackEnd;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        private Button BtnNext;
+        private Button BtnPrev;
     }
 }

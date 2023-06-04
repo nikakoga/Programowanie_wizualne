@@ -121,6 +121,9 @@
   <data name="iconPause" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\iconPause.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="iconMute" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\iconMute.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="iconMusic1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\iconMusic1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -136,7 +139,10 @@
   <data name="iconMusic" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\iconMusic.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="iconMute" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\iconMute.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="iconBack" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\iconBack.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="iconForeward" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\iconForeward.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
