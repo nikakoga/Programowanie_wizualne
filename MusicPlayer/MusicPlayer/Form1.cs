@@ -12,11 +12,15 @@ namespace MusicPlayer
             InitializeComponent();
             TrbVolume.Value = 50;
             lastVolume = 50;
-            
+
 
         }
         int lastVolume;
-        string[] paths, files, playlist;
+        string[] paths, files;
+        List<string> playlist = new List<string>();
+
+
+
         bool sound = true;
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -25,12 +29,12 @@ namespace MusicPlayer
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if(lbxPlaylist.SelectedIndex>-1)
+            if (lbxPlaylist.SelectedIndex > -1)
             {
-                player.URL = paths[lbxPlaylist.SelectedIndex];
-                player.controls.play();
+                player.URL = playlist[lbxPlaylist.SelectedIndex];
+                //player.controls.play();
             }
-           
+
         }
 
         private void BtnAdd_Click(object sender, EventArgs e)
@@ -39,18 +43,14 @@ namespace MusicPlayer
             ofd.Multiselect = true;
             ofd.Filter = "MP3| *.mp3";
 
-
             if (ofd.ShowDialog() == DialogResult.OK)
             {
-                //string path_open = ofd.FileName;
-                //string filename = Path.GetFileName(path_open);
-                //lbxPlaylist.Items.Insert(0, filename);
-                ////player.URL = path_open;
                 files = ofd.FileNames;
                 paths = ofd.FileNames;
                 for (int x = 0; x < files.Length; x++)
                 {
                     lbxPlaylist.Items.Add(Path.GetFileName(files[x]));
+                    playlist.Add(paths[x]);
                 }
 
 
@@ -113,8 +113,10 @@ namespace MusicPlayer
         private void TrbVolume_Scroll(object sender, EventArgs e)
         {
             player.settings.volume = TrbVolume.Value;
-            lastVolume= player.settings.volume;
-            
+            lastVolume = player.settings.volume;
+
+            LblVolume.Text = TrbVolume.Value.ToString() + "%";
+
         }
 
         private void BtnMute_Click(object sender, EventArgs e)
@@ -122,14 +124,27 @@ namespace MusicPlayer
             if (sound)
             {
                 player.settings.volume = 0;
+                LblVolume.Text = "0%";
                 sound = false;
             }
             else
             {
                 player.settings.volume = lastVolume;
+                LblVolume.Text = TrbVolume.Value.ToString() + "%";
                 sound = true;
             }
 
+        }
+
+        private void BtnDelete_Click(object sender, EventArgs e)
+        {
+            if(lbxPlaylist.SelectedIndex>-1)
+            {
+                int toDelete = lbxPlaylist.SelectedIndex;
+                lbxPlaylist.Items.RemoveAt(toDelete);
+                playlist.RemoveAt(toDelete);
+
+            }
         }
     }
 }

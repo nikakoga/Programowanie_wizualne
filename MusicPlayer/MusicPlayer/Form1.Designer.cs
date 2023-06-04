@@ -45,6 +45,7 @@
             BtnNext = new Button();
             BtnPrev = new Button();
             timer1 = new System.Windows.Forms.Timer(components);
+            LblVolume = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)TrbVolume).BeginInit();
             SuspendLayout();
@@ -84,6 +85,7 @@
             BtnDelete.TabIndex = 2;
             BtnDelete.Text = "-";
             BtnDelete.UseVisualStyleBackColor = true;
+            BtnDelete.Click += BtnDelete_Click;
             // 
             // BtnPause
             // 
@@ -213,12 +215,24 @@
             timer1.Enabled = true;
             timer1.Tick += timer1_Tick;
             // 
+            // LblVolume
+            // 
+            LblVolume.AutoSize = true;
+            LblVolume.Font = new Font("Showcard Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            LblVolume.ForeColor = Color.Red;
+            LblVolume.Location = new Point(546, 234);
+            LblVolume.Name = "LblVolume";
+            LblVolume.Size = new Size(37, 18);
+            LblVolume.TabIndex = 16;
+            LblVolume.Text = "50%";
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(31, 30, 68);
             ClientSize = new Size(904, 556);
+            Controls.Add(LblVolume);
             Controls.Add(BtnPrev);
             Controls.Add(BtnNext);
             Controls.Add(LblTrackEnd);
@@ -260,5 +274,6 @@
         private Button BtnNext;
         private Button BtnPrev;
         private System.Windows.Forms.Timer timer1;
+        private Label LblVolume;
     }
 }
