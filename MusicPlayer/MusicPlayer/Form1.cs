@@ -44,24 +44,7 @@ namespace MusicPlayer
             if (lbxPlaylist.SelectedIndex > -1)
             {
                 int toDelete = lbxPlaylist.SelectedIndex;
-                lbxPlaylist.Items.RemoveAt(toDelete);
-                playlist.RemoveAt(toDelete);
-
-                if(toDelete == position_playing) 
-                {
-                    position_playing = -1;
-                    player.controls.stop();
-                    player.URL = null;
-                    LblTrackEnd.Text= null;
-                    pBar.Value = 0;
-                }
-
-                //if i deleted sth before currently playing
-                else if(toDelete < position_playing)
-                {
-                    position_playing -= 1;
-                }
-                
+                DeletingFromPlaylist(toDelete);
             }
         }
         private void BtnPlay_Click(object sender, EventArgs e)
@@ -131,6 +114,26 @@ namespace MusicPlayer
         private void pBar_MouseDown(object sender, MouseEventArgs e)
         {
             player.controls.currentPosition=player.currentMedia.duration*e.X/pBar.Width;
+        }
+        private void DeletingFromPlaylist(int toDelete)
+        {
+            lbxPlaylist.Items.RemoveAt(toDelete);
+            playlist.RemoveAt(toDelete);
+
+            if (toDelete == position_playing)
+            {
+                position_playing = -1;
+                player.controls.stop();
+                player.URL = null;
+                LblTrackEnd.Text = null;
+                pBar.Value = 0;
+            }
+
+            //if i deleted sth before currently playing
+            else if (toDelete < position_playing)
+            {
+                position_playing -= 1;
+            }
         }
     }
 }
